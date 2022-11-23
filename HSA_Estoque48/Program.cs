@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HSA_Coleta48
+namespace HSA_Estoque48
 {
     internal static class Program
     {

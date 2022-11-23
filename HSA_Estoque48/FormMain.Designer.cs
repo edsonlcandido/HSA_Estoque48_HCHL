@@ -1,6 +1,6 @@
-﻿namespace HSA_Coleta48
+﻿namespace HSA_Estoque48
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -61,13 +61,13 @@
             // tiposToolStripMenuItem
             // 
             this.tiposToolStripMenuItem.Name = "tiposToolStripMenuItem";
-            this.tiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiposToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.tiposToolStripMenuItem.Text = "Tipos";
             // 
             // unidadesToolStripMenuItem
             // 
             this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
-            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.unidadesToolStripMenuItem.Text = "Unidades";
             // 
             // relatóriosToolStripMenuItem
@@ -82,16 +82,16 @@
             // movimentaçãoToolStripMenuItem
             // 
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
-            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.movimentaçãoToolStripMenuItem.Text = "Movimentação";
             // 
             // resumoToolStripMenuItem
             // 
             this.resumoToolStripMenuItem.Name = "resumoToolStripMenuItem";
-            this.resumoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resumoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.resumoToolStripMenuItem.Text = "Resumo";
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FormMain";
             this.Text = "HSA Estoque";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
