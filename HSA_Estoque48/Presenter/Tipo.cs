@@ -33,7 +33,24 @@ namespace HSA_Estoque.Presenter
             modelTipo.name = this.name;
             modelTipo.visible = true;
             return _repository.add(modelTipo);
-        } 
+        }
+
+        public void update()
+        {
+            Model.Tipo modelTipo = new Model.Tipo();
+            modelTipo.id = this.id;
+            modelTipo.name = this.name;
+            modelTipo.visible = this.visible;
+            _repository.update(modelTipo);
+        }
+
+        public void get(int id)
+        {
+            Model.Tipo modelTipo =  _repository.get(id);
+            this.id = modelTipo.id;
+            this.name = modelTipo.name; 
+            this.visible = modelTipo.visible;
+        }
 
         public int id { get; set; }
         public string name { get; set; }

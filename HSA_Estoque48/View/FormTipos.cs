@@ -33,5 +33,22 @@ namespace HSA_Estoque.View
             dataGridViewMain.DataSource = tipoBindingSource;
             dataGridViewMain.Refresh();
         }
+
+        private void tipoBindingSource_CurrentItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewMain_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            Model.Tipo currentModelTipo = (Model.Tipo)tipoBindingSource.Current;
+            _presenterTipo.id = currentModelTipo.id;
+            _presenterTipo.name = dgv.Rows[e.RowIndex].Cells[0].Value.ToString().ToUpper();
+            _presenterTipo.visible = (bool)dgv.Rows[e.RowIndex].Cells[1].Value;
+
+            _presenterTipo.update();
+            updateBidingSource();
+        }
     }
 }

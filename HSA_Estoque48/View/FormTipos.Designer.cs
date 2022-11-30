@@ -56,8 +56,9 @@
             this.dataGridViewMain.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMain.MultiSelect = false;
             this.dataGridViewMain.Name = "dataGridViewMain";
-            this.dataGridViewMain.Size = new System.Drawing.Size(321, 332);
+            this.dataGridViewMain.Size = new System.Drawing.Size(278, 332);
             this.dataGridViewMain.TabIndex = 0;
+            this.dataGridViewMain.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellEndEdit);
             // 
             // label1
             // 
@@ -74,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTipoName.Location = new System.Drawing.Point(12, 31);
             this.textBoxTipoName.Name = "textBoxTipoName";
-            this.textBoxTipoName.Size = new System.Drawing.Size(303, 27);
+            this.textBoxTipoName.Size = new System.Drawing.Size(260, 27);
             this.textBoxTipoName.TabIndex = 3;
             // 
             // buttonAdiciona
@@ -111,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 434);
+            this.ClientSize = new System.Drawing.Size(284, 434);
             this.Controls.Add(this.buttonAdiciona);
             this.Controls.Add(this.textBoxTipoName);
             this.Controls.Add(this.label1);

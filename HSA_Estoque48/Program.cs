@@ -17,7 +17,6 @@ namespace HSA_Estoque
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             Application.Run(new FormTipos(new Presenter.Tipo()));
         }
     }

@@ -72,12 +72,48 @@ namespace HSA_Estoque.Repository
 
         public Model.Tipo get(int id)
         {
-            throw new NotImplementedException();
+            Model.Tipo modelTIpo = new Model.Tipo();
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            {
+                connection.Open();
+                SQLiteCommand command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                    SELECT id,
+                           name,
+                           visible
+                      FROM tipos
+                     WHERE id = @id;
+                ";
+                command.Parameters.Add("@id", DbType.Int32).Value = id;
+                SQLiteDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    modelTIpo.id = reader.GetInt32(0);
+                    modelTIpo.name = reader.GetString(1);
+                    modelTIpo.visible = reader.GetBoolean(2);
+                }
+            }
+            return modelTIpo;
         }
-
-        public void update(Model.Tipo tipoModel)
+        public void update(Model.Tipo modelTipo)
         {
-            throw new NotImplementedException();
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            {
+                connection.Open();
+                SQLiteCommand command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                    UPDATE tipos
+                       SET name = @name,
+                           visible = @visible
+                     WHERE id = @id;
+                ";
+                command.Parameters.Add("@name", DbType.String).Value = modelTipo.name;
+                command.Parameters.Add("@visible", DbType.Boolean).Value = modelTipo.visible;
+                command.Parameters.Add("@id", DbType.Int32).Value = modelTipo.id;
+                command.ExecuteNonQuery();
+            }
         }
     }
 }
