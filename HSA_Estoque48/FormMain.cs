@@ -28,5 +28,11 @@ namespace HSA_Estoque
             FormTipos formTipos = new FormTipos(new Presenter.Tipo());
             formTipos.ShowDialog();
         }
+
+        private void unidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUnidades formTipos = new FormUnidades(new Presenter.Unidade());
+            formTipos.ShowDialog();
+        }
     }
 }

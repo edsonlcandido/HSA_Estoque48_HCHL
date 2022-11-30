@@ -70,6 +70,7 @@
             this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
             this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unidadesToolStripMenuItem.Text = "Unidades";
+            this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 

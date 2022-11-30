@@ -4,30 +4,30 @@ using System.Windows.Forms;
 
 namespace HSA_Estoque.View
 {
-    public partial class FormTipos : Form
+    public partial class FormUnidades : Form
     {
-        Presenter.Tipo _presenterTipo;
-        public FormTipos(Presenter.Tipo presenterTipo)
+        Presenter.Unidade _presenterTipo;
+        public FormUnidades(Presenter.Unidade presenterUnidade)
         {
-            _presenterTipo = presenterTipo;
+            _presenterTipo = presenterUnidade;
             InitializeComponent();
             updateBidingSource();
-        }       
+        }
 
         private void buttonAdiciona_Click(object sender, EventArgs e)
         {
-            if (textBoxTipoName.Text.TrimEnd() != "")
+            if (textBoxUnidadeName.Text.TrimEnd() != "")
             {
-                _presenterTipo.name = textBoxTipoName.Text.ToUpper().TrimEnd();
+                _presenterTipo.name = textBoxUnidadeName.Text.ToUpper().TrimEnd();
                 _presenterTipo.add();
-                textBoxTipoName.Clear();
+                textBoxUnidadeName.Clear();
                 updateBidingSource();
             }
             else
             {
-                MessageBox.Show("Valor não pode ser em branco", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Valor não pode ser em branco","Alert",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+            
         }
 
         private void FormTipos_Load(object sender, EventArgs e)
@@ -37,8 +37,8 @@ namespace HSA_Estoque.View
 
         private void updateBidingSource()
         {
-            tipoBindingSource.DataSource = _presenterTipo.showAll;
-            dataGridViewMain.DataSource = tipoBindingSource;
+            unidadeBindingSource.DataSource = _presenterTipo.showAll;
+            dataGridViewMain.DataSource = unidadeBindingSource;
             dataGridViewMain.Refresh();
         }
 
@@ -50,7 +50,7 @@ namespace HSA_Estoque.View
         private void dataGridViewMain_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            Model.Tipo currentModelTipo = (Model.Tipo)tipoBindingSource.Current;
+            Model.Tipo currentModelTipo = (Model.Tipo)unidadeBindingSource.Current;
             _presenterTipo.id = currentModelTipo.id;
             _presenterTipo.name = dgv.Rows[e.RowIndex].Cells[0].Value.ToString().ToUpper();
             _presenterTipo.visible = (bool)dgv.Rows[e.RowIndex].Cells[1].Value;
