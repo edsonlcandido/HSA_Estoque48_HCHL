@@ -1,4 +1,4 @@
-﻿namespace HSA_Estoque48
+﻿namespace HSA_Estoque
 {
     partial class FormMain
     {
@@ -61,13 +61,14 @@
             // tiposToolStripMenuItem
             // 
             this.tiposToolStripMenuItem.Name = "tiposToolStripMenuItem";
-            this.tiposToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.tiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposToolStripMenuItem.Text = "Tipos";
+            this.tiposToolStripMenuItem.Click += new System.EventHandler(this.tiposToolStripMenuItem_Click);
             // 
             // unidadesToolStripMenuItem
             // 
             this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
-            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unidadesToolStripMenuItem.Text = "Unidades";
             // 
             // relatóriosToolStripMenuItem
