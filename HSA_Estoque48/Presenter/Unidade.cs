@@ -24,6 +24,33 @@ namespace HSA_Estoque.Presenter
 
         {            
             _repository = new Repository.Unidade();
+#if DEBUG
+            _showAll = (List<Model.Unidade>)_repository.findAll();
+            if (_showAll.Count() == 0)
+            {
+                List<Model.Unidade> populate = new List<Model.Unidade>()
+                    {
+                        new Model.Unidade(){name="KG", visible = true},
+                        new Model.Unidade(){name="PÇ", visible = true},
+                        new Model.Unidade(){name="RL", visible = false},
+                        new Model.Unidade(){name="MTS", visible = true},
+                        new Model.Unidade(){name="MT", visible = false},
+                        new Model.Unidade(){name="PAR", visible = true},
+                        new Model.Unidade(){name="PCT", visible = false},
+                        new Model.Unidade(){name="PC", visible = false},
+                        new Model.Unidade(){name="CONJ", visible = true},
+                        new Model.Unidade(){name="GL", visible = true},
+                        new Model.Unidade(){name="UNI.", visible = false},
+                        new Model.Unidade(){name="CX", visible = true},
+                        new Model.Unidade(){name="KIT", visible = true},
+                        new Model.Unidade(){name="ROLO", visible = true},
+                        new Model.Unidade(){name="PACOTE", visible = true},
+                        new Model.Unidade(){name="LT", visible = false},
+                        new Model.Unidade(){name="LTA", visible = true},
+                    };
+                populate.ForEach(t => _repository.add(t));
+            }
+#endif
             _showAll = (List<Model.Unidade>)_repository.findAll();
         }
 
