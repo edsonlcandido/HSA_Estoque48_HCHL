@@ -36,39 +36,39 @@
             this.movimentaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resumoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonEditarProduto = new System.Windows.Forms.Button();
+            this.buttonCadastrarNovoProduto = new System.Windows.Forms.Button();
+            this.buttonSaidaEstoque = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonEntradaEstoque = new System.Windows.Forms.Button();
+            this.tableLayoutPanelItensOK = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelProdutosOK = new System.Windows.Forms.Label();
+            this.tableLayoutPanelItensAcabando = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelProdutosAcabando = new System.Windows.Forms.Label();
+            this.tableLayoutPanelSemMaterial = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelSemMaterial = new System.Windows.Forms.Label();
+            this.tableLayoutPanelTodosProdutos = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonPesquisaPorDescricao = new System.Windows.Forms.Button();
+            this.textBoxPesquisaPordescricao = new System.Windows.Forms.TextBox();
+            this.buttonPesquisaPorCodigo = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanelItensOK.SuspendLayout();
+            this.tableLayoutPanelItensAcabando.SuspendLayout();
+            this.tableLayoutPanelSemMaterial.SuspendLayout();
+            this.tableLayoutPanelTodosProdutos.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -131,17 +131,62 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(60)))), ((int)(((byte)(137)))));
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonEditarProduto);
+            this.panel1.Controls.Add(this.buttonCadastrarNovoProduto);
+            this.panel1.Controls.Add(this.buttonSaidaEstoque);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonEntradaEstoque);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 699);
             this.panel1.TabIndex = 1;
+            // 
+            // buttonEditarProduto
+            // 
+            this.buttonEditarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarProduto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.EditarProduto32x32;
+            this.buttonEditarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditarProduto.Location = new System.Drawing.Point(5, 355);
+            this.buttonEditarProduto.Name = "buttonEditarProduto";
+            this.buttonEditarProduto.Size = new System.Drawing.Size(241, 53);
+            this.buttonEditarProduto.TabIndex = 4;
+            this.buttonEditarProduto.Text = "Editar produto";
+            this.buttonEditarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditarProduto.UseVisualStyleBackColor = true;
+            // 
+            // buttonCadastrarNovoProduto
+            // 
+            this.buttonCadastrarNovoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrarNovoProduto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarNovoProduto.Image = global::HSA_Estoque.Properties.Resources.CadastrarProduto32x32;
+            this.buttonCadastrarNovoProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarNovoProduto.Location = new System.Drawing.Point(5, 273);
+            this.buttonCadastrarNovoProduto.Name = "buttonCadastrarNovoProduto";
+            this.buttonCadastrarNovoProduto.Size = new System.Drawing.Size(241, 53);
+            this.buttonCadastrarNovoProduto.TabIndex = 3;
+            this.buttonCadastrarNovoProduto.Text = "Cadastrar novo produto";
+            this.buttonCadastrarNovoProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarNovoProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCadastrarNovoProduto.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaidaEstoque
+            // 
+            this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
+            this.buttonSaidaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaidaEstoque.Location = new System.Drawing.Point(5, 191);
+            this.buttonSaidaEstoque.Name = "buttonSaidaEstoque";
+            this.buttonSaidaEstoque.Size = new System.Drawing.Size(241, 53);
+            this.buttonSaidaEstoque.TabIndex = 2;
+            this.buttonSaidaEstoque.Text = "Saída";
+            this.buttonSaidaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaidaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSaidaEstoque.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -154,24 +199,39 @@
             this.label1.Text = "Controle de estoque";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
+            // buttonEntradaEstoque
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(237)))), ((int)(((byte)(218)))));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(71)))), ((int)(((byte)(65)))));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(265, 42);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 120);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
+            this.buttonEntradaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEntradaEstoque.Location = new System.Drawing.Point(5, 109);
+            this.buttonEntradaEstoque.Name = "buttonEntradaEstoque";
+            this.buttonEntradaEstoque.Size = new System.Drawing.Size(241, 53);
+            this.buttonEntradaEstoque.TabIndex = 0;
+            this.buttonEntradaEstoque.Text = "Entrada";
+            this.buttonEntradaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEntradaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEntradaEstoque.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanelItensOK
+            // 
+            this.tableLayoutPanelItensOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(237)))), ((int)(((byte)(218)))));
+            this.tableLayoutPanelItensOK.ColumnCount = 1;
+            this.tableLayoutPanelItensOK.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelItensOK.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanelItensOK.Controls.Add(this.labelProdutosOK, 0, 1);
+            this.tableLayoutPanelItensOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tableLayoutPanelItensOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(71)))), ((int)(((byte)(65)))));
+            this.tableLayoutPanelItensOK.Location = new System.Drawing.Point(265, 42);
+            this.tableLayoutPanelItensOK.Margin = new System.Windows.Forms.Padding(12);
+            this.tableLayoutPanelItensOK.Name = "tableLayoutPanelItensOK";
+            this.tableLayoutPanelItensOK.RowCount = 2;
+            this.tableLayoutPanelItensOK.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelItensOK.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelItensOK.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelItensOK.Size = new System.Drawing.Size(280, 120);
+            this.tableLayoutPanelItensOK.TabIndex = 2;
             // 
             // label2
             // 
@@ -179,76 +239,76 @@
             this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 37);
+            this.label2.Size = new System.Drawing.Size(211, 37);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Itens OK";
+            this.label2.Text = "Produtos OK";
             // 
-            // label3
+            // labelProdutosOK
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 44);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "{xxx} itens estão com a quantidades ok";
+            this.labelProdutosOK.AutoSize = true;
+            this.labelProdutosOK.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProdutosOK.Location = new System.Drawing.Point(3, 50);
+            this.labelProdutosOK.Name = "labelProdutosOK";
+            this.labelProdutosOK.Size = new System.Drawing.Size(208, 44);
+            this.labelProdutosOK.TabIndex = 1;
+            this.labelProdutosOK.Text = "{xxx} itens estão com a quantidades ok";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelItensAcabando
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(569, 42);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(12);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 120);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanelItensAcabando.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
+            this.tableLayoutPanelItensAcabando.ColumnCount = 1;
+            this.tableLayoutPanelItensAcabando.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelItensAcabando.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanelItensAcabando.Controls.Add(this.labelProdutosAcabando, 0, 1);
+            this.tableLayoutPanelItensAcabando.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tableLayoutPanelItensAcabando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
+            this.tableLayoutPanelItensAcabando.Location = new System.Drawing.Point(569, 42);
+            this.tableLayoutPanelItensAcabando.Margin = new System.Windows.Forms.Padding(12);
+            this.tableLayoutPanelItensAcabando.Name = "tableLayoutPanelItensAcabando";
+            this.tableLayoutPanelItensAcabando.RowCount = 2;
+            this.tableLayoutPanelItensAcabando.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelItensAcabando.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelItensAcabando.Size = new System.Drawing.Size(280, 120);
+            this.tableLayoutPanelItensAcabando.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 37);
+            this.label4.Size = new System.Drawing.Size(271, 32);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Itens acabando";
+            this.label4.Text = "Produtos acabando";
             // 
-            // label5
+            // labelProdutosAcabando
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(268, 44);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "{xxx} itens estão com a quantidades inferior ao minimo";
+            this.labelProdutosAcabando.AutoSize = true;
+            this.labelProdutosAcabando.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProdutosAcabando.Location = new System.Drawing.Point(3, 50);
+            this.labelProdutosAcabando.Name = "labelProdutosAcabando";
+            this.labelProdutosAcabando.Size = new System.Drawing.Size(268, 44);
+            this.labelProdutosAcabando.TabIndex = 1;
+            this.labelProdutosAcabando.Text = "{xxx} itens estão com a quantidades inferior ao minimo";
             // 
-            // tableLayoutPanel3
+            // tableLayoutPanelSemMaterial
             // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(265, 186);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(12);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 120);
-            this.tableLayoutPanel3.TabIndex = 4;
+            this.tableLayoutPanelSemMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
+            this.tableLayoutPanelSemMaterial.ColumnCount = 1;
+            this.tableLayoutPanelSemMaterial.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelSemMaterial.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanelSemMaterial.Controls.Add(this.labelSemMaterial, 0, 1);
+            this.tableLayoutPanelSemMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tableLayoutPanelSemMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
+            this.tableLayoutPanelSemMaterial.Location = new System.Drawing.Point(265, 186);
+            this.tableLayoutPanelSemMaterial.Margin = new System.Windows.Forms.Padding(12);
+            this.tableLayoutPanelSemMaterial.Name = "tableLayoutPanelSemMaterial";
+            this.tableLayoutPanelSemMaterial.RowCount = 2;
+            this.tableLayoutPanelSemMaterial.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelSemMaterial.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelSemMaterial.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelSemMaterial.Size = new System.Drawing.Size(280, 120);
+            this.tableLayoutPanelSemMaterial.TabIndex = 4;
             // 
             // label6
             // 
@@ -260,43 +320,43 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Sem material";
             // 
-            // label7
+            // labelSemMaterial
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(262, 22);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "{xxx} itens estão sem estoque";
+            this.labelSemMaterial.AutoSize = true;
+            this.labelSemMaterial.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSemMaterial.Location = new System.Drawing.Point(3, 50);
+            this.labelSemMaterial.Name = "labelSemMaterial";
+            this.labelSemMaterial.Size = new System.Drawing.Size(262, 22);
+            this.labelSemMaterial.TabIndex = 1;
+            this.labelSemMaterial.Text = "{xxx} itens estão sem estoque";
             // 
-            // tableLayoutPanel4
+            // tableLayoutPanelTodosProdutos
             // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label9, 0, 1);
-            this.tableLayoutPanel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(569, 186);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(12);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(280, 120);
-            this.tableLayoutPanel4.TabIndex = 5;
+            this.tableLayoutPanelTodosProdutos.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanelTodosProdutos.ColumnCount = 1;
+            this.tableLayoutPanelTodosProdutos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelTodosProdutos.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanelTodosProdutos.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanelTodosProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tableLayoutPanelTodosProdutos.Location = new System.Drawing.Point(569, 186);
+            this.tableLayoutPanelTodosProdutos.Margin = new System.Windows.Forms.Padding(12);
+            this.tableLayoutPanelTodosProdutos.Name = "tableLayoutPanelTodosProdutos";
+            this.tableLayoutPanelTodosProdutos.RowCount = 2;
+            this.tableLayoutPanelTodosProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelTodosProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelTodosProdutos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelTodosProdutos.Size = new System.Drawing.Size(280, 120);
+            this.tableLayoutPanelTodosProdutos.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(241, 37);
+            this.label8.Size = new System.Drawing.Size(264, 32);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Todos os itens";
+            this.label8.Text = "Todos os produtos";
             // 
             // label9
             // 
@@ -310,11 +370,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.buttonPesquisaPorDescricao);
+            this.groupBox1.Controls.Add(this.textBoxPesquisaPordescricao);
+            this.groupBox1.Controls.Add(this.buttonPesquisaPorCodigo);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxPesquisaPorCodigo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Location = new System.Drawing.Point(265, 321);
             this.groupBox1.Name = "groupBox1";
@@ -323,37 +383,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa produto";
             // 
-            // label10
+            // buttonPesquisaPorDescricao
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 18);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Cód.";
+            this.buttonPesquisaPorDescricao.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(361, 66);
+            this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
+            this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
+            this.buttonPesquisaPorDescricao.TabIndex = 9;
+            this.buttonPesquisaPorDescricao.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxPesquisaPordescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 26);
-            this.textBox1.TabIndex = 1;
+            this.textBoxPesquisaPordescricao.Location = new System.Drawing.Point(93, 69);
+            this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
+            this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
+            this.textBoxPesquisaPordescricao.TabIndex = 8;
             // 
-            // button6
+            // buttonPesquisaPorCodigo
             // 
-            this.button6.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
-            this.button6.Location = new System.Drawing.Point(361, 66);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(32, 32);
-            this.button6.TabIndex = 9;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(93, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 26);
-            this.textBox2.TabIndex = 8;
+            this.buttonPesquisaPorCodigo.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(361, 28);
+            this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
+            this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
+            this.buttonPesquisaPorCodigo.TabIndex = 2;
+            this.buttonPesquisaPorCodigo.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -364,97 +417,44 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Descrição";
             // 
-            // dataGridView1
+            // textBoxPesquisaPorCodigo
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxPesquisaPorCodigo.Location = new System.Drawing.Point(93, 31);
+            this.textBoxPesquisaPorCodigo.Name = "textBoxPesquisaPorCodigo";
+            this.textBoxPesquisaPorCodigo.Size = new System.Drawing.Size(262, 26);
+            this.textBoxPesquisaPorCodigo.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 18);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Cód.";
+            // 
+            // dataGridViewProdutos
+            // 
+            this.dataGridViewProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(256, 444);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 280);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
-            this.button5.Location = new System.Drawing.Point(361, 28);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 32);
-            this.button5.TabIndex = 2;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::HSA_Estoque.Properties.Resources.EditarProduto32x32;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(5, 355);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(241, 53);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Editar produto";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::HSA_Estoque.Properties.Resources.CadastrarProduto32x32;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(5, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(241, 53);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cadastrar novo produto";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(5, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(241, 53);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Saída";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(5, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Entrada";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(256, 444);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
+            this.dataGridViewProdutos.TabIndex = 7;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewProdutos);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanelTodosProdutos);
+            this.Controls.Add(this.tableLayoutPanelSemMaterial);
+            this.Controls.Add(this.tableLayoutPanelItensAcabando);
+            this.Controls.Add(this.tableLayoutPanelItensOK);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,17 +466,17 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanelItensOK.ResumeLayout(false);
+            this.tableLayoutPanelItensOK.PerformLayout();
+            this.tableLayoutPanelItensAcabando.ResumeLayout(false);
+            this.tableLayoutPanelItensAcabando.PerformLayout();
+            this.tableLayoutPanelSemMaterial.ResumeLayout(false);
+            this.tableLayoutPanelSemMaterial.PerformLayout();
+            this.tableLayoutPanelTodosProdutos.ResumeLayout(false);
+            this.tableLayoutPanelTodosProdutos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,30 +493,30 @@
         private System.Windows.Forms.ToolStripMenuItem resumoToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button buttonEntradaEstoque;
+        private System.Windows.Forms.Button buttonSaidaEstoque;
+        private System.Windows.Forms.Button buttonEditarProduto;
+        private System.Windows.Forms.Button buttonCadastrarNovoProduto;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItensOK;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label labelProdutosOK;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItensAcabando;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label labelProdutosAcabando;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSemMaterial;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label labelSemMaterial;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelTodosProdutos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPesquisaPorCodigo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonPesquisaPorDescricao;
+        private System.Windows.Forms.TextBox textBoxPesquisaPordescricao;
+        private System.Windows.Forms.Button buttonPesquisaPorCodigo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewProdutos;
     }
 }
 
