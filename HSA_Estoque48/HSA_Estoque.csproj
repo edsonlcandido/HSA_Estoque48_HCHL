@@ -85,7 +85,9 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\IProdutoModel.cs" />
     <Compile Include="Model\IUnidadeModel.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\ITipoModel.cs" />
@@ -132,6 +134,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Tipo.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Unidade.datasource" />
     <None Include="Properties\Settings.settings">

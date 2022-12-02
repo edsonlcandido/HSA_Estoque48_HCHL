@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,16 @@
             this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localizacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeMinimaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeMaximaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leadTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanelItensOK.SuspendLayout();
@@ -69,6 +80,7 @@
             this.tableLayoutPanelTodosProdutos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -172,6 +184,7 @@
             this.buttonCadastrarNovoProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrarNovoProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCadastrarNovoProduto.UseVisualStyleBackColor = true;
+            this.buttonCadastrarNovoProduto.Click += new System.EventHandler(this.buttonCadastrarNovoProduto_Click);
             // 
             // buttonSaidaEstoque
             // 
@@ -435,14 +448,108 @@
             // 
             // dataGridViewProdutos
             // 
+            this.dataGridViewProdutos.AllowUserToAddRows = false;
+            this.dataGridViewProdutos.AllowUserToDeleteRows = false;
             this.dataGridViewProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewProdutos.AutoGenerateColumns = false;
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.descricaoDataGridViewTextBoxColumn,
+            this.localizacaoDataGridViewTextBoxColumn,
+            this.caixaDataGridViewTextBoxColumn,
+            this.unidadeDataGridViewTextBoxColumn,
+            this.quantidadeTotalDataGridViewTextBoxColumn,
+            this.quantidadeMinimaDataGridViewTextBoxColumn,
+            this.quantidadeMaximaDataGridViewTextBoxColumn,
+            this.leadTimeDataGridViewTextBoxColumn});
+            this.dataGridViewProdutos.DataSource = this.produtoBindingSource;
             this.dataGridViewProdutos.Location = new System.Drawing.Point(256, 444);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.ReadOnly = true;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
+            // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // localizacaoDataGridViewTextBoxColumn
+            // 
+            this.localizacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.localizacaoDataGridViewTextBoxColumn.DataPropertyName = "localizacao";
+            this.localizacaoDataGridViewTextBoxColumn.HeaderText = "Localização";
+            this.localizacaoDataGridViewTextBoxColumn.Name = "localizacaoDataGridViewTextBoxColumn";
+            this.localizacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.localizacaoDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // caixaDataGridViewTextBoxColumn
+            // 
+            this.caixaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.caixaDataGridViewTextBoxColumn.DataPropertyName = "caixa";
+            this.caixaDataGridViewTextBoxColumn.HeaderText = "Caixa";
+            this.caixaDataGridViewTextBoxColumn.Name = "caixaDataGridViewTextBoxColumn";
+            this.caixaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.caixaDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // unidadeDataGridViewTextBoxColumn
+            // 
+            this.unidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.unidadeDataGridViewTextBoxColumn.DataPropertyName = "unidade";
+            this.unidadeDataGridViewTextBoxColumn.HeaderText = "UN";
+            this.unidadeDataGridViewTextBoxColumn.Name = "unidadeDataGridViewTextBoxColumn";
+            this.unidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unidadeDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // quantidadeTotalDataGridViewTextBoxColumn
+            // 
+            this.quantidadeTotalDataGridViewTextBoxColumn.DataPropertyName = "quantidadeTotal";
+            this.quantidadeTotalDataGridViewTextBoxColumn.HeaderText = "Qtd. atual";
+            this.quantidadeTotalDataGridViewTextBoxColumn.Name = "quantidadeTotalDataGridViewTextBoxColumn";
+            this.quantidadeTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeTotalDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // quantidadeMinimaDataGridViewTextBoxColumn
+            // 
+            this.quantidadeMinimaDataGridViewTextBoxColumn.DataPropertyName = "quantidadeMinima";
+            this.quantidadeMinimaDataGridViewTextBoxColumn.HeaderText = "Qtd. mín.";
+            this.quantidadeMinimaDataGridViewTextBoxColumn.Name = "quantidadeMinimaDataGridViewTextBoxColumn";
+            this.quantidadeMinimaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeMinimaDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // quantidadeMaximaDataGridViewTextBoxColumn
+            // 
+            this.quantidadeMaximaDataGridViewTextBoxColumn.DataPropertyName = "quantidadeMaxima";
+            this.quantidadeMaximaDataGridViewTextBoxColumn.HeaderText = "Qtd. máx.";
+            this.quantidadeMaximaDataGridViewTextBoxColumn.Name = "quantidadeMaximaDataGridViewTextBoxColumn";
+            this.quantidadeMaximaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeMaximaDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // leadTimeDataGridViewTextBoxColumn
+            // 
+            this.leadTimeDataGridViewTextBoxColumn.DataPropertyName = "leadTime";
+            this.leadTimeDataGridViewTextBoxColumn.HeaderText = "Lead time";
+            this.leadTimeDataGridViewTextBoxColumn.Name = "leadTimeDataGridViewTextBoxColumn";
+            this.leadTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.leadTimeDataGridViewTextBoxColumn.Width = 50;
             // 
             // FormMain
             // 
@@ -477,6 +584,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,6 +625,16 @@
         private System.Windows.Forms.Button buttonPesquisaPorCodigo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridViewProdutos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn localizacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caixaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeMinimaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeMaximaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leadTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource produtoBindingSource;
     }
 }
 

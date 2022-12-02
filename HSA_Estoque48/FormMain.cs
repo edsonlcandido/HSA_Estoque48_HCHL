@@ -34,5 +34,10 @@ namespace HSA_Estoque
             FormUnidades formTipos = new FormUnidades(new Presenter.Unidade());
             formTipos.ShowDialog();
         }
+
+        private void buttonCadastrarNovoProduto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
