@@ -1,10 +1,11 @@
-﻿using System;
+﻿using HSA_Estoque.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HSA_Coleta48
+namespace HSA_Estoque
 {
     internal static class Program
     {
@@ -16,7 +17,7 @@ namespace HSA_Coleta48
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }
