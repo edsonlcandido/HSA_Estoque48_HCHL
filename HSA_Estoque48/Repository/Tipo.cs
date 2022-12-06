@@ -6,20 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using Dapper;
+using System.Xml.Linq;
+using System.Configuration;
 
 namespace HSA_Estoque.Repository
 {
     public class Tipo : ITipoRepository
     {
+        string CONNECTIONSTRING = "Data Source=inventory.db";
         public int add(Model.Tipo modelTipo)
         {
             int last_id;
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
             {
-                connection.Open();
-                SQLiteCommand command = connection.CreateCommand();
-                command.CommandText =
-                @"
+                last_id = connection.Query<int>(@"
                     INSERT INTO tipos (
                                             name,
                                             visible
@@ -28,91 +29,58 @@ namespace HSA_Estoque.Repository
                                             @name,
                                             @visible
                                         );
-                ";
-                command.Parameters.Add("@name", DbType.String).Value = modelTipo.name;
-                command.Parameters.Add("@visible", DbType.Boolean).Value = modelTipo.visible;
-                command.ExecuteNonQuery();
-                command.CommandText = "select last_insert_rowid()";
-                Int64 LastRowID64 = (Int64)command.ExecuteScalar();
-
-                last_id = (int)LastRowID64;
+                    SELECT last_insert_rowid();
+                ", new
+                {
+                    name=modelTipo.name,
+                    visible=modelTipo.visible
+                }).Single();
             }
             return last_id;
         }
 
         public IEnumerable<Model.Tipo> findAll()
         {
-            List<Model.Tipo> _findall = new List<Model.Tipo>();
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
             {
-                connection.Open();
-                SQLiteCommand command = connection.CreateCommand();
-                command.CommandText =
-                @"
+                return connection.Query<Model.Tipo>(@"
                     SELECT id,
                            name,
                            visible
                       FROM tipos
                      ORDER BY name;
-                ";
-                using (SQLiteDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Model.Tipo modelTipo = new Model.Tipo();
-                        modelTipo.id = reader.GetInt32(0);
-                        modelTipo.name = reader.GetString(1);
-                        modelTipo.visible = reader.GetBoolean(2);
-                        _findall.Add(modelTipo);
-                    }
-                }
+                ");
             }
-            return _findall;
         }
 
         public Model.Tipo get(int id)
         {
-            Model.Tipo modelTIpo = new Model.Tipo();
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
             {
-                connection.Open();
-                SQLiteCommand command = connection.CreateCommand();
-                command.CommandText =
-                @"
+                return connection.QueryFirstOrDefault<Model.Tipo>(@"
                     SELECT id,
                            name,
                            visible
                       FROM tipos
                      WHERE id = @id;
-                ";
-                command.Parameters.Add("@id", DbType.Int32).Value = id;
-                SQLiteDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    modelTIpo.id = reader.GetInt32(0);
-                    modelTIpo.name = reader.GetString(1);
-                    modelTIpo.visible = reader.GetBoolean(2);
-                }
+                ", new { id = id });
             }
-            return modelTIpo;
         }
         public void update(Model.Tipo modelTipo)
         {
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source=inventory.db"))
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
             {
-                connection.Open();
-                SQLiteCommand command = connection.CreateCommand();
-                command.CommandText =
-                @"
+                connection.Execute(@"
                     UPDATE tipos
                        SET name = @name,
                            visible = @visible
                      WHERE id = @id;
-                ";
-                command.Parameters.Add("@name", DbType.String).Value = modelTipo.name;
-                command.Parameters.Add("@visible", DbType.Boolean).Value = modelTipo.visible;
-                command.Parameters.Add("@id", DbType.Int32).Value = modelTipo.id;
-                command.ExecuteNonQuery();
+                ", new
+                {
+                    id= modelTipo.id,
+                    name= modelTipo.name,
+                    visible= modelTipo.visible,
+                });
             }
         }
     }
