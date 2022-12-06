@@ -50,7 +50,7 @@ namespace HSA_Estoque.View
         private void dataGridViewMain_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            Model.Tipo currentModelTipo = (Model.Tipo)unidadeBindingSource.Current;
+            Model.Unidade currentModelTipo = (Model.Unidade)unidadeBindingSource.Current;
             _presenterTipo.id = currentModelTipo.id;
             _presenterTipo.name = dgv.Rows[e.RowIndex].Cells[0].Value.ToString().ToUpper();
             _presenterTipo.visible = (bool)dgv.Rows[e.RowIndex].Cells[1].Value;
