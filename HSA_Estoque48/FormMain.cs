@@ -37,7 +37,8 @@ namespace HSA_Estoque
 
         private void buttonCadastrarNovoProduto_Click(object sender, EventArgs e)
         {
-
+            FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), new Presenter.Unidade());
+            formProduto.ShowDialog();
         }
     }
 }

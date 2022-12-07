@@ -110,6 +110,12 @@
     <Compile Include="Repository\Produto.cs" />
     <Compile Include="Repository\Unidade.cs" />
     <Compile Include="Repository\Tipo.cs" />
+    <Compile Include="View\FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormProduto.resx">
+      <DependentUpon>FormProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTipos.resx">
       <DependentUpon>FormTipos.cs</DependentUpon>
@@ -170,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pesquisar16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adiciona16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
