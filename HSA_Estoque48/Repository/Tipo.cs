@@ -14,7 +14,7 @@ namespace HSA_Estoque.Repository
 {
     public class Tipo : ITipoRepository
     {
-        string CONNECTIONSTRING = "Data Source=inventory.db";
+        string CONNECTIONSTRING = HSA_Estoque.Properties.Settings.Default["ConnectionString"].ToString();
         public int add(Model.Tipo modelTipo)
         {
             int last_id;

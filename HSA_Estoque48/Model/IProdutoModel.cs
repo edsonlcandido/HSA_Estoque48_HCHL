@@ -8,12 +8,11 @@ namespace HSA_Estoque.Model
 {
     internal interface IProdutoModel
     {
-        string id { get; set; }
+        int id { get; set; }
         string descricao { get; set; }
-        double quantidadeInicial { get; set; }
         double quantidadeMinima { get; set; }
         double quantidadeMaxima { get; set; }
-        int quantidadeTotal { get; set;}
+        double quantidadeTotal { get; set;}
         int leadTime { get; set; }
         string tipo { get; set; }
         string unidade { get; set; }

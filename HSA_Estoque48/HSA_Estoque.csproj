@@ -94,6 +94,7 @@
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\ITipoModel.cs" />
+    <Compile Include="Presenter\Produto.cs" />
     <Compile Include="Presenter\Unidade.cs" />
     <Compile Include="Presenter\Tipo.cs" />
     <Compile Include="Program.cs" />
@@ -103,8 +104,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\IProdutoRepository.cs" />
     <Compile Include="Repository\IUnidadeRepository.cs" />
     <Compile Include="Repository\ITipoRepository.cs" />
+    <Compile Include="Repository\Produto.cs" />
     <Compile Include="Repository\Unidade.cs" />
     <Compile Include="Repository\Tipo.cs" />
     <Compile Include="View\FormTipos.cs">
