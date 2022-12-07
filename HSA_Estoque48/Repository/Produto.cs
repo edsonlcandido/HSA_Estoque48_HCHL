@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Repository
 {
-    internal class Produto : IProdutoRepository
+    public class Produto : IProdutoRepository
     {
         string CONNECTIONSTRING = HSA_Estoque.Properties.Settings.Default["ConnectionString"].ToString();
 
@@ -50,17 +50,63 @@ namespace HSA_Estoque.Repository
 
         public IEnumerable<Model.Produto> findAll()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                return connection.Query<Model.Produto>(@"
+                    SELECT id,
+                           descricao,
+                           quantidadeMinima,
+                           quantidadeMaxima,
+                           quantidadeTotal,
+                           leadTime,
+                           tipo,
+                           unidade,
+                           localizacao,
+                           caixa
+                      FROM produtos;
+                ");
+            }
         }
 
         public Model.Produto get(int id)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                return connection.QuerySingle<Model.Produto>(@"
+                    SELECT id,
+                           descricao,
+                           quantidadeMinima,
+                           quantidadeMaxima,
+                           quantidadeTotal,
+                           leadTime,
+                           tipo,
+                           unidade,
+                           localizacao,
+                           caixa
+                      FROM produtos
+                     WHERE id = @id;
+                ", new {id = id});
+            }
         }
 
         public void update(Model.Produto produtoModel)
         {
-            throw new NotImplementedException();
-        }
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                var affectedRows = connection.Execute(@"
+                    UPDATE produtos
+                       SET descricao = @descricao,
+                           quantidadeMinima = @quantidadeMinima,
+                           quantidadeMaxima = @quantidadeMaxima,
+                           quantidadeTotal = @quantidadeTotal,
+                           leadTime = @leadTime,
+                           tipo = @tipo,
+                           unidade = @unidade,
+                           localizacao = @localizacao,
+                           caixa = @caixa
+                     WHERE id = @id;
+                ", produtoModel);
+            }
+        }   
     }
 }

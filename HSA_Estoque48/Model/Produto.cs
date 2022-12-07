@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Model
 {
-    internal class Produto : IProdutoModel
+    public class Produto : IProdutoModel
     {
         [DisplayName("Código")]
         public int id { get ; set ; }

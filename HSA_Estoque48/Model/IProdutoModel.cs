@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Model
 {
-    internal interface IProdutoModel
+    public interface IProdutoModel
     {
         int id { get; set; }
         string descricao { get; set; }
