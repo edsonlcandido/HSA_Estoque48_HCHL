@@ -13,8 +13,33 @@ namespace HSA_Estoque
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        Presenter.Produto _presenterProduto;
+        List<Model.Produto> _todosProdutos;
+        List<Model.Produto> _semMaterial;
+        List<Model.Produto> _produtosAcabando;
+        List<Model.Produto> _produtosOK;
+        FormMain()
         {
+            InitializeComponent();
+        }
+
+        public FormMain(Presenter.Produto presenterProduto)
+        {
+            _presenterProduto= presenterProduto;
+            _todosProdutos = _presenterProduto.showAll;
+
+            _semMaterial = (from p in _todosProdutos
+                           where p.quantidadeTotal <= 0
+                           select p).ToList();
+
+            _produtosAcabando = (from p in _todosProdutos
+                            where p.quantidadeTotal <= p.quantidadeMinima && p.quantidadeTotal != 0
+                                 select p).ToList();
+
+            _produtosOK = (from p in _todosProdutos
+                                 where p.quantidadeTotal > p.quantidadeMinima
+                                 select p).ToList();
+
             InitializeComponent();
         }
 
@@ -39,6 +64,35 @@ namespace HSA_Estoque
         {
             FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), new Presenter.Unidade());
             formProduto.ShowDialog();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            labelSemMaterial.Text = String.Format(labelSemMaterial.Text, _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format(labelProdutosAcabando.Text, _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format(labelProdutosOK.Text, _produtosOK.Count());
+            produtoBindingSource.DataSource= _todosProdutos;
+        }
+
+        private void tableLayoutPanelTodosProdutos_Click(object sender, EventArgs e)
+        {
+            //_todosProdutos = _presenterProduto.showAll;
+            produtoBindingSource.DataSource = _todosProdutos;
+        }
+
+        private void tableLayoutPanelItensOK_Click(object sender, EventArgs e)
+        {
+            produtoBindingSource.DataSource = _produtosOK;
+        }
+
+        private void tableLayoutPanelItensAcabando_Click(object sender, EventArgs e)
+        {
+            produtoBindingSource.DataSource = _produtosAcabando;
+        }
+
+        private void tableLayoutPanelSemMaterial_Click(object sender, EventArgs e)
+        {
+            produtoBindingSource.DataSource = _semMaterial;
         }
     }
 }
