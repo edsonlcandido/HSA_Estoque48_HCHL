@@ -1,4 +1,5 @@
-﻿using HSA_Estoque.View;
+﻿using HSA_Estoque.Model;
+using HSA_Estoque.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace HSA_Estoque
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            
+            Application.Run(new FormMain(new Presenter.Produto()));
         }
     }
 }
