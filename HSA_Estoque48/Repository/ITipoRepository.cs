@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Repository
 {
-    internal interface ITipoRepository
+    interface ITipoRepository
     {
         int add(Model.Tipo tipoModel);
         void update(Model.Tipo tipoModel);
