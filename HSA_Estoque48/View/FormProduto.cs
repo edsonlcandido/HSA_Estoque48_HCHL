@@ -43,6 +43,28 @@ namespace HSA_Estoque.View
             textBoxDataInclusão.Text = DateTime.Now.ToString("d");
         }
 
+        private void buttonAdicionaProduto_Click(object sender, EventArgs e)
+        {
+            _presenterProduto.id =Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterProduto.descricao = textBoxProdutoDescricao.Text;
+            _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
+            _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
+            _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
+            _presenterProduto.leadTime = Convert.ToInt32(textBoxProdutoLeadTime.Text);
+            _presenterProduto.tipo = comboBoxTipo.Text;
+            _presenterProduto.unidade = comboBoxUnidade.Text;
+            _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
+            _presenterProduto.caixa = textBoxProdutoCaixa.Text;
 
+            if (_presenterProduto.add() > 1)
+            {
+                MessageBox.Show("Produto incluido com sucesso.");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Não foi possivél a inclusão.");
+            } 
+        }
     }
 }

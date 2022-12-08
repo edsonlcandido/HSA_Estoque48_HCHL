@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoId = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoDescricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoQuantidadeTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoQuantidadeMinima = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoQuantidadeMaxima = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoLeadTime = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
             this.comboBoxUnidade = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoLocalizacao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxProdutoCaixa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxInseridoPor = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxDataInclusão = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAdicionaProduto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,19 +64,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // textBox1
+            // textBoxProdutoId
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 1;
+            this.textBoxProdutoId.Location = new System.Drawing.Point(120, 16);
+            this.textBoxProdutoId.Name = "textBoxProdutoId";
+            this.textBoxProdutoId.Size = new System.Drawing.Size(200, 26);
+            this.textBoxProdutoId.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxProdutoDescricao
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(400, 26);
-            this.textBox2.TabIndex = 3;
+            this.textBoxProdutoDescricao.Location = new System.Drawing.Point(120, 48);
+            this.textBoxProdutoDescricao.Name = "textBoxProdutoDescricao";
+            this.textBoxProdutoDescricao.Size = new System.Drawing.Size(400, 26);
+            this.textBoxProdutoDescricao.TabIndex = 3;
             // 
             // label2
             // 
@@ -87,12 +87,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Descrição";
             // 
-            // textBox3
+            // textBoxProdutoQuantidadeTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 5;
+            this.textBoxProdutoQuantidadeTotal.Location = new System.Drawing.Point(120, 80);
+            this.textBoxProdutoQuantidadeTotal.Name = "textBoxProdutoQuantidadeTotal";
+            this.textBoxProdutoQuantidadeTotal.Size = new System.Drawing.Size(100, 26);
+            this.textBoxProdutoQuantidadeTotal.TabIndex = 5;
             // 
             // label3
             // 
@@ -103,12 +103,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Qtd. inicial";
             // 
-            // textBox4
+            // textBoxProdutoQuantidadeMinima
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 7;
+            this.textBoxProdutoQuantidadeMinima.Location = new System.Drawing.Point(120, 112);
+            this.textBoxProdutoQuantidadeMinima.Name = "textBoxProdutoQuantidadeMinima";
+            this.textBoxProdutoQuantidadeMinima.Size = new System.Drawing.Size(100, 26);
+            this.textBoxProdutoQuantidadeMinima.TabIndex = 7;
             // 
             // label4
             // 
@@ -119,12 +119,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Qtd. mínima";
             // 
-            // textBox5
+            // textBoxProdutoQuantidadeMaxima
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 9;
+            this.textBoxProdutoQuantidadeMaxima.Location = new System.Drawing.Point(120, 144);
+            this.textBoxProdutoQuantidadeMaxima.Name = "textBoxProdutoQuantidadeMaxima";
+            this.textBoxProdutoQuantidadeMaxima.Size = new System.Drawing.Size(100, 26);
+            this.textBoxProdutoQuantidadeMaxima.TabIndex = 9;
             // 
             // label5
             // 
@@ -135,12 +135,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Qtd. máxima";
             // 
-            // textBox6
+            // textBoxProdutoLeadTime
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 176);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 11;
+            this.textBoxProdutoLeadTime.Location = new System.Drawing.Point(120, 176);
+            this.textBoxProdutoLeadTime.Name = "textBoxProdutoLeadTime";
+            this.textBoxProdutoLeadTime.Size = new System.Drawing.Size(100, 26);
+            this.textBoxProdutoLeadTime.TabIndex = 11;
             // 
             // label6
             // 
@@ -185,12 +185,12 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Unidade";
             // 
-            // textBox7
+            // textBoxProdutoLocalização
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 272);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 26);
-            this.textBox7.TabIndex = 17;
+            this.textBoxProdutoLocalizacao.Location = new System.Drawing.Point(120, 272);
+            this.textBoxProdutoLocalizacao.Name = "textBoxProdutoLocalização";
+            this.textBoxProdutoLocalizacao.Size = new System.Drawing.Size(200, 26);
+            this.textBoxProdutoLocalizacao.TabIndex = 17;
             // 
             // label9
             // 
@@ -201,12 +201,12 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Localização";
             // 
-            // textBox8
+            // textBoxProdutoCaixa
             // 
-            this.textBox8.Location = new System.Drawing.Point(120, 304);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(200, 26);
-            this.textBox8.TabIndex = 19;
+            this.textBoxProdutoCaixa.Location = new System.Drawing.Point(120, 304);
+            this.textBoxProdutoCaixa.Name = "textBoxProdutoCaixa";
+            this.textBoxProdutoCaixa.Size = new System.Drawing.Size(200, 26);
+            this.textBoxProdutoCaixa.TabIndex = 19;
             // 
             // label10
             // 
@@ -251,49 +251,50 @@
             this.label12.TabIndex = 22;
             this.label12.Text = "Data inclusão";
             // 
-            // button1
+            // buttonAdicionaProduto
             // 
-            this.button1.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
-            this.button1.Location = new System.Drawing.Point(15, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 32);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Adicionar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
+            this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 426);
+            this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
+            this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
+            this.buttonAdicionaProduto.TabIndex = 24;
+            this.buttonAdicionaProduto.Text = "Adicionar";
+            this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
+            this.buttonAdicionaProduto.Click += new System.EventHandler(this.buttonAdicionaProduto_Click);
             // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 468);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAdicionaProduto);
             this.Controls.Add(this.textBoxDataInclusão);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBoxInseridoPor);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxProdutoCaixa);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxProdutoLocalizacao);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBoxUnidade);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxProdutoLeadTime);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxProdutoQuantidadeMaxima);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxProdutoQuantidadeMinima);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxProdutoQuantidadeTotal);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxProdutoDescricao);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProdutoId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProduto";
             this.Text = "HSA Estoque - Inclusão de produto";
             this.Load += new System.EventHandler(this.FormProduto_Load);
@@ -305,29 +306,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxProdutoId;
+        private System.Windows.Forms.TextBox textBoxProdutoDescricao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxProdutoQuantidadeTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxProdutoQuantidadeMinima;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxProdutoQuantidadeMaxima;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxProdutoLeadTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxTipo;
         private System.Windows.Forms.ComboBox comboBoxUnidade;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxProdutoLocalizacao;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxProdutoCaixa;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxInseridoPor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxDataInclusão;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAdicionaProduto;
     }
 }
