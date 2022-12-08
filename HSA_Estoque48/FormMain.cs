@@ -94,5 +94,29 @@ namespace HSA_Estoque
         {
             produtoBindingSource.DataSource = _semMaterial;
         }
+
+        private void buttonEditarProduto_Click(object sender, EventArgs e)
+        {
+            FormProduto formEditarProduto = new FormProduto(new Presenter.Produto(), 
+                new Presenter.Tipo(), new Presenter.Unidade(), (Model.Produto)produtoBindingSource.Current);
+
+            formEditarProduto.ShowDialog();
+
+            _todosProdutos = _presenterProduto.showAll;
+
+            _semMaterial = (from p in _todosProdutos
+                            where p.quantidadeTotal <= 0
+                            select p).ToList();
+
+            _produtosAcabando = (from p in _todosProdutos
+                                 where p.quantidadeTotal <= p.quantidadeMinima && p.quantidadeTotal != 0
+                                 select p).ToList();
+
+            _produtosOK = (from p in _todosProdutos
+                           where p.quantidadeTotal > p.quantidadeMinima
+                           select p).ToList();
+
+            produtoBindingSource.DataSource = _todosProdutos;
+        }
     }
 }

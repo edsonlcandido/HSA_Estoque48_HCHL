@@ -169,6 +169,7 @@
             this.buttonEditarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEditarProduto.UseVisualStyleBackColor = true;
+            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
             // 
             // buttonCadastrarNovoProduto
             // 
@@ -479,8 +480,10 @@
             this.leadTimeDataGridViewTextBoxColumn});
             this.dataGridViewProdutos.DataSource = this.produtoBindingSource;
             this.dataGridViewProdutos.Location = new System.Drawing.Point(256, 444);
+            this.dataGridViewProdutos.MultiSelect = false;
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
+            this.dataGridViewProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
             // 
