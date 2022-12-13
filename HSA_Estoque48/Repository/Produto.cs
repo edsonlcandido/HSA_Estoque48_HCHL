@@ -48,6 +48,48 @@ namespace HSA_Estoque.Repository
             return produtoModel.id;
         }
 
+        public IEnumerable<Model.Produto> filterByDescricao(string descricao)
+        {
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                return connection.Query<Model.Produto>(@"
+                    SELECT id,
+                           descricao,
+                           quantidadeMinima,
+                           quantidadeMaxima,
+                           quantidadeTotal,
+                           leadTime,
+                           tipo,
+                           unidade,
+                           localizacao,
+                           caixa       
+                      FROM produtos
+                      WHERE descricao LIKE @descricao;
+                ", new { descricao = "%" + descricao + "%"});
+            }
+        }
+
+        public IEnumerable<Model.Produto> filterByID(string id)
+        {
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                return connection.Query<Model.Produto>(@"
+                    SELECT id,
+                           descricao,
+                           quantidadeMinima,
+                           quantidadeMaxima,
+                           quantidadeTotal,
+                           leadTime,
+                           tipo,
+                           unidade,
+                           localizacao,
+                           caixa       
+                      FROM produtos
+                      WHERE id LIKE @id;
+                ", new { id = "%" + id + "%" });
+            }
+        }
+
         public IEnumerable<Model.Produto> findAll()
         {
             using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))

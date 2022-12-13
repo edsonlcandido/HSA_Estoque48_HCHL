@@ -169,6 +169,7 @@
             this.buttonEditarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEditarProduto.UseVisualStyleBackColor = true;
+            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
             // 
             // buttonCadastrarNovoProduto
             // 
@@ -188,6 +189,7 @@
             // 
             // buttonSaidaEstoque
             // 
+            this.buttonSaidaEstoque.Enabled = false;
             this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
@@ -214,6 +216,7 @@
             // 
             // buttonEntradaEstoque
             // 
+            this.buttonEntradaEstoque.Enabled = false;
             this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
@@ -416,13 +419,16 @@
             this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorDescricao.TabIndex = 9;
             this.buttonPesquisaPorDescricao.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorDescricao.Click += new System.EventHandler(this.buttonPesquisaPorDescricao_Click);
             // 
             // textBoxPesquisaPordescricao
             // 
+            this.textBoxPesquisaPordescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxPesquisaPordescricao.Location = new System.Drawing.Point(93, 69);
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPordescricao.TabIndex = 8;
+            this.textBoxPesquisaPordescricao.TextChanged += new System.EventHandler(this.textBoxPesquisaPordescricao_TextChanged);
             // 
             // buttonPesquisaPorCodigo
             // 
@@ -432,6 +438,7 @@
             this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorCodigo.TabIndex = 2;
             this.buttonPesquisaPorCodigo.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorCodigo.Click += new System.EventHandler(this.buttonPesquisaPorCodigo_Click);
             // 
             // label11
             // 
@@ -479,8 +486,10 @@
             this.leadTimeDataGridViewTextBoxColumn});
             this.dataGridViewProdutos.DataSource = this.produtoBindingSource;
             this.dataGridViewProdutos.Location = new System.Drawing.Point(256, 444);
+            this.dataGridViewProdutos.MultiSelect = false;
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
+            this.dataGridViewProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
             // 

@@ -62,15 +62,17 @@ namespace HSA_Estoque
 
         private void buttonCadastrarNovoProduto_Click(object sender, EventArgs e)
         {
-            FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), new Presenter.Unidade());
+            FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), 
+                new Presenter.Unidade(), new Presenter.Historico());
             formProduto.ShowDialog();
+            carregaProdutos();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            labelSemMaterial.Text = String.Format(labelSemMaterial.Text, _semMaterial.Count());
-            labelProdutosAcabando.Text = String.Format(labelProdutosAcabando.Text, _produtosAcabando.Count());
-            labelProdutosOK.Text = String.Format(labelProdutosOK.Text, _produtosOK.Count());
+            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
             produtoBindingSource.DataSource= _todosProdutos;
         }
 
@@ -93,6 +95,69 @@ namespace HSA_Estoque
         private void tableLayoutPanelSemMaterial_Click(object sender, EventArgs e)
         {
             produtoBindingSource.DataSource = _semMaterial;
+        }
+
+        private void buttonEditarProduto_Click(object sender, EventArgs e)
+        {
+            FormProduto formEditarProduto = new FormProduto(new Presenter.Produto(), 
+                new Presenter.Tipo(), new Presenter.Unidade(), new Presenter.Historico(), (Model.Produto)produtoBindingSource.Current);
+
+            formEditarProduto.ShowDialog();
+
+            carregaProdutos();
+        }
+
+        private void carregaProdutos()
+        {
+            _todosProdutos = _presenterProduto.showAll;
+
+            _semMaterial = (from p in _todosProdutos
+                            where p.quantidadeTotal <= 0
+                            select p).ToList();
+
+            _produtosAcabando = (from p in _todosProdutos
+                                 where p.quantidadeTotal <= p.quantidadeMinima && p.quantidadeTotal != 0
+                                 select p).ToList();
+
+            _produtosOK = (from p in _todosProdutos
+                           where p.quantidadeTotal > p.quantidadeMinima
+                           select p).ToList();
+
+            produtoBindingSource.DataSource = _todosProdutos;
+
+            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
+        }
+
+        private void textBoxPesquisaPordescricao_TextChanged(object sender, EventArgs e)
+        {
+            //TextBox tb = (TextBox)sender;
+            //if (tb.Text.Length > 4)
+            //{
+            //    AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+                
+            //    var suggestions = (from p in _todosProdutos
+            //                                   select p.descricao).ToArray();
+
+            //    autoComplete.AddRange(suggestions);
+
+            //    tb.AutoCompleteCustomSource = autoComplete;
+            //    tb.AutoCompleteMode= AutoCompleteMode.Suggest;
+            //    tb.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //}
+        }
+
+        private void buttonPesquisaPorDescricao_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByDescricao(textBoxPesquisaPordescricao.Text);
+        }
+
+        private void buttonPesquisaPorCodigo_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByID(textBoxPesquisaPorCodigo.Text);
         }
     }
 }
