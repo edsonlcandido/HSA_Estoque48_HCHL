@@ -62,15 +62,17 @@ namespace HSA_Estoque
 
         private void buttonCadastrarNovoProduto_Click(object sender, EventArgs e)
         {
-            FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), new Presenter.Unidade());
+            FormProduto formProduto = new FormProduto(new Presenter.Produto(), new Presenter.Tipo(), 
+                new Presenter.Unidade(), new Presenter.Historico());
             formProduto.ShowDialog();
+            carregaProdutos();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            labelSemMaterial.Text = String.Format(labelSemMaterial.Text, _semMaterial.Count());
-            labelProdutosAcabando.Text = String.Format(labelProdutosAcabando.Text, _produtosAcabando.Count());
-            labelProdutosOK.Text = String.Format(labelProdutosOK.Text, _produtosOK.Count());
+            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
             produtoBindingSource.DataSource= _todosProdutos;
         }
 
@@ -98,10 +100,15 @@ namespace HSA_Estoque
         private void buttonEditarProduto_Click(object sender, EventArgs e)
         {
             FormProduto formEditarProduto = new FormProduto(new Presenter.Produto(), 
-                new Presenter.Tipo(), new Presenter.Unidade(), (Model.Produto)produtoBindingSource.Current);
+                new Presenter.Tipo(), new Presenter.Unidade(), new Presenter.Historico(), (Model.Produto)produtoBindingSource.Current);
 
             formEditarProduto.ShowDialog();
 
+            carregaProdutos();
+        }
+
+        private void carregaProdutos()
+        {
             _todosProdutos = _presenterProduto.showAll;
 
             _semMaterial = (from p in _todosProdutos
@@ -117,6 +124,10 @@ namespace HSA_Estoque
                            select p).ToList();
 
             produtoBindingSource.DataSource = _todosProdutos;
+
+            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
         }
     }
 }
