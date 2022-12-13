@@ -54,6 +54,8 @@
             this.labelDataInclusao = new System.Windows.Forms.Label();
             this.buttonEditarProduto = new System.Windows.Forms.Button();
             this.buttonAdicionaProduto = new System.Windows.Forms.Button();
+            this.buttonAdministrarTipo = new System.Windows.Forms.Button();
+            this.buttonAdministrarUnidade = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -282,11 +284,35 @@
             this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
             this.buttonAdicionaProduto.Click += new System.EventHandler(this.buttonAdicionaProduto_Click);
             // 
+            // buttonAdministrarTipo
+            // 
+            this.buttonAdministrarTipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdministrarTipo.Location = new System.Drawing.Point(366, 208);
+            this.buttonAdministrarTipo.Name = "buttonAdministrarTipo";
+            this.buttonAdministrarTipo.Size = new System.Drawing.Size(100, 26);
+            this.buttonAdministrarTipo.TabIndex = 26;
+            this.buttonAdministrarTipo.Text = "Administrar";
+            this.buttonAdministrarTipo.UseVisualStyleBackColor = true;
+            this.buttonAdministrarTipo.Click += new System.EventHandler(this.buttonAdministrarTipo_Click);
+            // 
+            // buttonAdministrarUnidade
+            // 
+            this.buttonAdministrarUnidade.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdministrarUnidade.Location = new System.Drawing.Point(366, 240);
+            this.buttonAdministrarUnidade.Name = "buttonAdministrarUnidade";
+            this.buttonAdministrarUnidade.Size = new System.Drawing.Size(100, 26);
+            this.buttonAdministrarUnidade.TabIndex = 27;
+            this.buttonAdministrarUnidade.Text = "Administrar";
+            this.buttonAdministrarUnidade.UseVisualStyleBackColor = true;
+            this.buttonAdministrarUnidade.Click += new System.EventHandler(this.buttonAdministrarUnidade_Click);
+            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 468);
+            this.Controls.Add(this.buttonAdministrarUnidade);
+            this.Controls.Add(this.buttonAdministrarTipo);
             this.Controls.Add(this.buttonEditarProduto);
             this.Controls.Add(this.buttonAdicionaProduto);
             this.Controls.Add(this.textBoxDataInclusão);
@@ -351,5 +377,7 @@
         private System.Windows.Forms.Label labelDataInclusao;
         private System.Windows.Forms.Button buttonAdicionaProduto;
         private System.Windows.Forms.Button buttonEditarProduto;
+        private System.Windows.Forms.Button buttonAdministrarTipo;
+        private System.Windows.Forms.Button buttonAdministrarUnidade;
     }
 }

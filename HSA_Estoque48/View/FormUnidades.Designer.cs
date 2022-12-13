@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxUnidadeName = new System.Windows.Forms.TextBox();
-            this.buttonAdiciona = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUnidadeName = new System.Windows.Forms.TextBox();
+            this.buttonAdiciona = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -61,34 +61,6 @@
             this.dataGridViewMain.TabIndex = 0;
             this.dataGridViewMain.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellEndEdit);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome";
-            // 
-            // textBoxUnidadeName
-            // 
-            this.textBoxUnidadeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUnidadeName.Location = new System.Drawing.Point(14, 29);
-            this.textBoxUnidadeName.Name = "textBoxUnidadeName";
-            this.textBoxUnidadeName.Size = new System.Drawing.Size(292, 26);
-            this.textBoxUnidadeName.TabIndex = 3;
-            // 
-            // buttonAdiciona
-            // 
-            this.buttonAdiciona.Location = new System.Drawing.Point(14, 61);
-            this.buttonAdiciona.Name = "buttonAdiciona";
-            this.buttonAdiciona.Size = new System.Drawing.Size(84, 29);
-            this.buttonAdiciona.TabIndex = 4;
-            this.buttonAdiciona.Text = "Adiciona";
-            this.buttonAdiciona.UseVisualStyleBackColor = true;
-            this.buttonAdiciona.Click += new System.EventHandler(this.buttonAdiciona_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -107,6 +79,35 @@
             // unidadeBindingSource
             // 
             this.unidadeBindingSource.DataSource = typeof(HSA_Estoque.Model.Unidade);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nome";
+            // 
+            // textBoxUnidadeName
+            // 
+            this.textBoxUnidadeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUnidadeName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxUnidadeName.Location = new System.Drawing.Point(14, 29);
+            this.textBoxUnidadeName.Name = "textBoxUnidadeName";
+            this.textBoxUnidadeName.Size = new System.Drawing.Size(292, 26);
+            this.textBoxUnidadeName.TabIndex = 3;
+            // 
+            // buttonAdiciona
+            // 
+            this.buttonAdiciona.Location = new System.Drawing.Point(14, 61);
+            this.buttonAdiciona.Name = "buttonAdiciona";
+            this.buttonAdiciona.Size = new System.Drawing.Size(84, 29);
+            this.buttonAdiciona.TabIndex = 4;
+            this.buttonAdiciona.Text = "Adiciona";
+            this.buttonAdiciona.UseVisualStyleBackColor = true;
+            this.buttonAdiciona.Click += new System.EventHandler(this.buttonAdiciona_Click);
             // 
             // FormUnidades
             // 

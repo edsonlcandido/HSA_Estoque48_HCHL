@@ -63,6 +63,7 @@ namespace HSA_Estoque.View
             var listaUnidade = from unidade in _presenterUnidade.showAll
                                where unidade.visible == true
                                select unidade.name;
+
             comboBoxTipo.DataSource = listaTipo.ToList();
             comboBoxUnidade.DataSource = listaUnidade.ToList();
 
@@ -147,6 +148,42 @@ namespace HSA_Estoque.View
             _presenterHistorico.alteracaoProduto();
 
             this.Close();
+        }
+
+        private void buttonAdministrarTipo_Click(object sender, EventArgs e)
+        {
+            FormTipos formTipos = new FormTipos(new Presenter.Tipo());
+            formTipos.ShowDialog();
+
+            var listaTipo = from tipo in _presenterTipo.showAll
+                            where tipo.visible == true
+                            select tipo.name;
+
+            var listaUnidade = from unidade in _presenterUnidade.showAll
+                               where unidade.visible == true
+                               select unidade.name;
+
+            comboBoxTipo.DataSource = listaTipo.ToList();
+            comboBoxUnidade.DataSource = listaUnidade.ToList();
+
+        }
+
+        private void buttonAdministrarUnidade_Click(object sender, EventArgs e)
+        {
+            FormUnidades formTipos = new FormUnidades(new Presenter.Unidade());
+            formTipos.ShowDialog();
+
+            var listaTipo = from tipo in _presenterTipo.showAll
+                            where tipo.visible == true
+                            select tipo.name;
+
+            var listaUnidade = from unidade in _presenterUnidade.showAll
+                               where unidade.visible == true
+                               select unidade.name;
+
+            comboBoxTipo.DataSource = listaTipo.ToList();
+            comboBoxUnidade.DataSource = listaUnidade.ToList();
+
         }
     }
 }
