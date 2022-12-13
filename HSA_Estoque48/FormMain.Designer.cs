@@ -417,6 +417,7 @@
             this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorDescricao.TabIndex = 9;
             this.buttonPesquisaPorDescricao.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorDescricao.Click += new System.EventHandler(this.buttonPesquisaPorDescricao_Click);
             // 
             // textBoxPesquisaPordescricao
             // 
@@ -425,6 +426,7 @@
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPordescricao.TabIndex = 8;
+            this.textBoxPesquisaPordescricao.TextChanged += new System.EventHandler(this.textBoxPesquisaPordescricao_TextChanged);
             // 
             // buttonPesquisaPorCodigo
             // 
@@ -434,6 +436,7 @@
             this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorCodigo.TabIndex = 2;
             this.buttonPesquisaPorCodigo.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorCodigo.Click += new System.EventHandler(this.buttonPesquisaPorCodigo_Click);
             // 
             // label11
             // 

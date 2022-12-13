@@ -129,5 +129,35 @@ namespace HSA_Estoque
             labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
             labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
         }
+
+        private void textBoxPesquisaPordescricao_TextChanged(object sender, EventArgs e)
+        {
+            //TextBox tb = (TextBox)sender;
+            //if (tb.Text.Length > 4)
+            //{
+            //    AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+                
+            //    var suggestions = (from p in _todosProdutos
+            //                                   select p.descricao).ToArray();
+
+            //    autoComplete.AddRange(suggestions);
+
+            //    tb.AutoCompleteCustomSource = autoComplete;
+            //    tb.AutoCompleteMode= AutoCompleteMode.Suggest;
+            //    tb.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //}
+        }
+
+        private void buttonPesquisaPorDescricao_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByDescricao(textBoxPesquisaPordescricao.Text);
+        }
+
+        private void buttonPesquisaPorCodigo_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByID(textBoxPesquisaPorCodigo.Text);
+        }
     }
 }
