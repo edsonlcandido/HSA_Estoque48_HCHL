@@ -17,17 +17,20 @@ namespace HSA_Estoque.View
         Presenter.Produto _presenterProduto;
         Presenter.Tipo _presenterTipo;
         Presenter.Unidade _presenterUnidade;
+        Presenter.Historico _presenterHistorico;
         FormProduto()
         {
             InitializeComponent();
         }
 
-        public FormProduto(Presenter.Produto presenterProduto, Presenter.Tipo presenterTipo, Presenter.Unidade presenterUnidade)
+        public FormProduto(Presenter.Produto presenterProduto, Presenter.Tipo presenterTipo, 
+            Presenter.Unidade presenterUnidade, Historico presenterHistorico)
         {
             InitializeComponent();
-            _presenterProduto = presenterProduto;            
+            _presenterProduto = presenterProduto;
             _presenterTipo = presenterTipo;
             _presenterUnidade = presenterUnidade;
+            _presenterHistorico = presenterHistorico;
 
             var listaTipo = from tipo in _presenterTipo.showAll
                             where tipo.visible == true
@@ -41,14 +44,17 @@ namespace HSA_Estoque.View
 
             buttonEditarProduto.Visible = false;
             buttonEditarProduto.Enabled = false;
+            
         }
 
-        public FormProduto(Produto presenterProduto, Tipo presenterTipo, Unidade presenterUnidade, Model.Produto modelProduto)
+        public FormProduto(Produto presenterProduto, Tipo presenterTipo, Unidade presenterUnidade, 
+            Presenter.Historico presenterHistorico, Model.Produto modelProduto)
         {
             InitializeComponent();
             _presenterProduto = presenterProduto;
             _presenterTipo = presenterTipo;
             _presenterUnidade = presenterUnidade;
+            _presenterHistorico = presenterHistorico;
 
             var listaTipo = from tipo in _presenterTipo.showAll
                             where tipo.visible == true
@@ -108,7 +114,10 @@ namespace HSA_Estoque.View
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
 
-            if (_presenterProduto.add() > 1)
+            _presenterHistorico.produtoId = Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
+
+            if (_presenterProduto.add() > 1 && _presenterHistorico.inclusaoProduto() > 0)
             {
                 MessageBox.Show("Produto incluido com sucesso.");
                 this.Close();
@@ -133,6 +142,10 @@ namespace HSA_Estoque.View
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
 
             _presenterProduto.update();
+
+            _presenterHistorico.produtoId = Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterHistorico.alteracaoProduto();
+
             this.Close();
         }
     }
