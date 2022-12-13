@@ -88,12 +88,15 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\IHistoricoModel.cs" />
+    <Compile Include="Model\Historico.cs" />
     <Compile Include="Model\IProdutoModel.cs" />
     <Compile Include="Model\IUnidadeModel.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\ITipoModel.cs" />
+    <Compile Include="Presenter\Historico.cs" />
     <Compile Include="Presenter\Produto.cs" />
     <Compile Include="Presenter\Unidade.cs" />
     <Compile Include="Presenter\Tipo.cs" />
@@ -104,6 +107,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\Historico.cs" />
+    <Compile Include="Repository\IHistorcoRepository.cs" />
     <Compile Include="Repository\IProdutoRepository.cs" />
     <Compile Include="Repository\IUnidadeRepository.cs" />
     <Compile Include="Repository\ITipoRepository.cs" />
