@@ -189,6 +189,7 @@
             // 
             // buttonSaidaEstoque
             // 
+            this.buttonSaidaEstoque.Enabled = false;
             this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
@@ -215,6 +216,7 @@
             // 
             // buttonEntradaEstoque
             // 
+            this.buttonEntradaEstoque.Enabled = false;
             this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
