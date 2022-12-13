@@ -67,6 +67,7 @@
             // 
             // textBoxProdutoId
             // 
+            this.textBoxProdutoId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoId.Location = new System.Drawing.Point(142, 16);
             this.textBoxProdutoId.Name = "textBoxProdutoId";
             this.textBoxProdutoId.Size = new System.Drawing.Size(200, 26);
@@ -74,6 +75,7 @@
             // 
             // textBoxProdutoDescricao
             // 
+            this.textBoxProdutoDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoDescricao.Location = new System.Drawing.Point(142, 48);
             this.textBoxProdutoDescricao.Name = "textBoxProdutoDescricao";
             this.textBoxProdutoDescricao.Size = new System.Drawing.Size(430, 26);
@@ -190,6 +192,7 @@
             // 
             // textBoxProdutoLocalizacao
             // 
+            this.textBoxProdutoLocalizacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoLocalizacao.Location = new System.Drawing.Point(142, 272);
             this.textBoxProdutoLocalizacao.Name = "textBoxProdutoLocalizacao";
             this.textBoxProdutoLocalizacao.Size = new System.Drawing.Size(200, 26);
@@ -206,6 +209,7 @@
             // 
             // textBoxProdutoCaixa
             // 
+            this.textBoxProdutoCaixa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoCaixa.Location = new System.Drawing.Point(142, 304);
             this.textBoxProdutoCaixa.Name = "textBoxProdutoCaixa";
             this.textBoxProdutoCaixa.Size = new System.Drawing.Size(200, 26);

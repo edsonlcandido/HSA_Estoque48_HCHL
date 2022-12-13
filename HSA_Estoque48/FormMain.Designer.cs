@@ -420,6 +420,7 @@
             // 
             // textBoxPesquisaPordescricao
             // 
+            this.textBoxPesquisaPordescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxPesquisaPordescricao.Location = new System.Drawing.Point(93, 69);
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
