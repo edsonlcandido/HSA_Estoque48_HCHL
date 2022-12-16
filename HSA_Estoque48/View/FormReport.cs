@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace HSA_Estoque.View
 {
-    public partial class FormReportHistorico : Form
+    public partial class FormReport : Form
     {
         DataTable _dt;
-        public FormReportHistorico()
+        public FormReport()
         {
             InitializeComponent();
             List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
@@ -23,7 +23,7 @@ namespace HSA_Estoque.View
             dataGridViewMain.Refresh();
         }
 
-        public FormReportHistorico(DataTable dt)
+        public FormReport(DataTable dt)
         {
             InitializeComponent();
             _dt = dt;

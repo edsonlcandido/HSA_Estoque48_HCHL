@@ -164,8 +164,8 @@ namespace HSA_Estoque
             List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
             
 
-            FormReportHistorico formReportHistorico = new FormReportHistorico();
-            formReportHistorico.ShowDialog();
+            FormReport formReport = new FormReport();
+            formReport.ShowDialog();
         }
 
         DataTable listToDataTable<T>(List<T> listObj)
@@ -212,9 +212,9 @@ namespace HSA_Estoque
             dataTable.Columns["unidade"].ColumnName = "Unidade";
             dataTable.Columns["localizacao"].ColumnName = "Localização";
             dataTable.Columns["caixa"].ColumnName = "Caixa";
-            FormReportHistorico formReportHistorico = new FormReportHistorico(dataTable);
-            formReportHistorico.dataGridViewMain.DataSource = dataTable;
-            formReportHistorico.ShowDialog();
+            FormReport formReport = new FormReport(dataTable);
+            formReport.dataGridViewMain.DataSource = dataTable;
+            formReport.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace HSA_Estoque.View
 {
-    partial class FormReportHistorico
+    partial class FormReport
     {
         /// <summary>
         /// Required designer variable.
