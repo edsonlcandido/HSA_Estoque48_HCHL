@@ -42,11 +42,12 @@ namespace HSA_Estoque.Presenter
             this.tipoMovimentacao= "Retirada";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao= this.dataMovimentacao;
-            modelHistorico.usuario = this.usuario;
-            modelHistorico.quantidadeMovimentada = this.quantidadeMovimentada;
+            modelHistorico.usuario = this.usuario;            
             modelHistorico.tipoMovimentacao = this.tipoMovimentacao;
+            modelHistorico.quantidadeMovimentada = this.quantidadeMovimentada;
             modelHistorico.produtoId = this.produtoId;
-            modelHistorico.notaFiscal = this.notaFiscal;
+            modelHistorico.solicitante = this.solicitante;
+            modelHistorico.pedidoCentroCusto = this.pedidoCentroCusto;
             modelHistorico.obs = this.obs;
             _historicoRepository.Add(modelHistorico);
         }
