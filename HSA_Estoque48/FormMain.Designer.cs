@@ -216,7 +216,6 @@
             // 
             // buttonEntradaEstoque
             // 
-            this.buttonEntradaEstoque.Enabled = false;
             this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
@@ -229,6 +228,7 @@
             this.buttonEntradaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEntradaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEntradaEstoque.UseVisualStyleBackColor = true;
+            this.buttonEntradaEstoque.Click += new System.EventHandler(this.buttonEntradaEstoque_Click);
             // 
             // tableLayoutPanelItensOK
             // 
@@ -428,7 +428,6 @@
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPordescricao.TabIndex = 8;
-            this.textBoxPesquisaPordescricao.TextChanged += new System.EventHandler(this.textBoxPesquisaPordescricao_TextChanged);
             // 
             // buttonPesquisaPorCodigo
             // 

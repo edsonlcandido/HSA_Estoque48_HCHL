@@ -1,4 +1,5 @@
-﻿using HSA_Estoque.Presenter;
+﻿using HSA_Estoque.Model;
+using HSA_Estoque.Presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,13 +19,14 @@ namespace HSA_Estoque.View
         Presenter.Tipo _presenterTipo;
         Presenter.Unidade _presenterUnidade;
         Presenter.Historico _presenterHistorico;
+
         FormProduto()
         {
             InitializeComponent();
         }
 
         public FormProduto(Presenter.Produto presenterProduto, Presenter.Tipo presenterTipo, 
-            Presenter.Unidade presenterUnidade, Historico presenterHistorico)
+            Presenter.Unidade presenterUnidade, Presenter.Historico presenterHistorico)
         {
             InitializeComponent();
             _presenterProduto = presenterProduto;
@@ -47,8 +49,9 @@ namespace HSA_Estoque.View
             
         }
 
-        public FormProduto(Produto presenterProduto, Tipo presenterTipo, Unidade presenterUnidade, 
-            Presenter.Historico presenterHistorico, Model.Produto modelProduto)
+        public FormProduto(Presenter.Produto presenterProduto, Presenter.Tipo presenterTipo, 
+            Presenter.Unidade presenterUnidade, Presenter.Historico presenterHistorico, 
+            Model.Produto modelProduto)
         {
             InitializeComponent();
             _presenterProduto = presenterProduto;

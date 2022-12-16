@@ -103,6 +103,16 @@ namespace HSA_Estoque.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Entrada16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Entrada16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Entrada32x32 {
             get {
                 object obj = ResourceManager.GetObject("Entrada32x32", resourceCulture);
