@@ -140,6 +140,7 @@
             this.resumoToolStripMenuItem.Name = "resumoToolStripMenuItem";
             this.resumoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.resumoToolStripMenuItem.Text = "Resumo";
+            this.resumoToolStripMenuItem.Click += new System.EventHandler(this.resumoToolStripMenuItem_Click);
             // 
             // panel1
             // 

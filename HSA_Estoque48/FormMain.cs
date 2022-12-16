@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -159,7 +160,60 @@ namespace HSA_Estoque
 
         private void movimentaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            InitializeComponent();
+            List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
+            
+
             FormReportHistorico formReportHistorico = new FormReportHistorico();
+            formReportHistorico.ShowDialog();
+        }
+
+        DataTable listToDataTable<T>(List<T> listObj)
+        {
+            DataTable dt = new DataTable("Report");
+            Type type = typeof(T);
+            PropertyInfo[] properties = type.GetProperties();
+
+            foreach (PropertyInfo property in properties)
+            {
+                Type columnType = property.PropertyType;
+                dt.Columns.Add(property.Name, columnType);
+            }
+
+            foreach (Object obj in listObj)
+            {
+                DataRow dr = dt.NewRow();
+                dr.BeginEdit();
+                foreach (PropertyInfo property in properties)
+                {
+                    if (property.GetValue(obj, null) != null)
+                    {
+                        dr[property.Name] = property.GetValue(obj, null);
+                    }
+                }
+                dr.EndEdit();
+                dt.Rows.Add(dr);
+            }
+            return dt;
+        }
+
+        private void resumoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Model.Produto> produtos = new Repository.Produto().findAll().ToList();
+            DataTable dataTable = listToDataTable(produtos);
+            dataTable.Columns["id"].ColumnName = "Código";
+            dataTable.Columns["Código"].SetOrdinal(0);
+            dataTable.Columns["descricao"].ColumnName = "Descrição";
+            dataTable.Columns["quantidadeMinima"].ColumnName = "Qtd. mín.";
+            dataTable.Columns["quantidadeMaxima"].ColumnName = "Qtd. máx.";
+            dataTable.Columns["quantidadeTotal"].ColumnName = "Qtd. atual";
+            dataTable.Columns["leadTime"].ColumnName = "Lead time";
+            dataTable.Columns["tipo"].ColumnName = "Tipo";
+            dataTable.Columns["unidade"].ColumnName = "Unidade";
+            dataTable.Columns["localizacao"].ColumnName = "Localização";
+            dataTable.Columns["caixa"].ColumnName = "Caixa";
+            FormReportHistorico formReportHistorico = new FormReportHistorico(dataTable);
+            formReportHistorico.dataGridViewMain.DataSource = dataTable;
             formReportHistorico.ShowDialog();
         }
     }
