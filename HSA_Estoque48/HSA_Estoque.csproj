@@ -108,7 +108,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Repository\Historico.cs" />
-    <Compile Include="Repository\IHistorcoRepository.cs" />
+    <Compile Include="Repository\IHistoricoRepository.cs" />
     <Compile Include="Repository\IProdutoRepository.cs" />
     <Compile Include="Repository\IUnidadeRepository.cs" />
     <Compile Include="Repository\ITipoRepository.cs" />

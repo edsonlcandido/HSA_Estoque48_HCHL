@@ -28,5 +28,6 @@ namespace HSA_Estoque.Model
         public string notaFiscal { get; set; }
         [DisplayName("Obs.")]
         public string obs { get; set; }
+        public Produto produto { get ; set; }
     }
 }

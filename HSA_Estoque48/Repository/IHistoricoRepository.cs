@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Repository
 {
-    public interface IHistorcoRepository
+    public interface IHistoricoRepository
     {
         int Add(Model.Historico modelHistorico);
-        IEnumerable<Model.Unidade> findAll();
+        IEnumerable<Model.Historico> findAll();
+
+        IEnumerable<Model.Historico> reportAll();
     }
 }
