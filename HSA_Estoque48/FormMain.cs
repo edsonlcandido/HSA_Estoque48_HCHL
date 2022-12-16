@@ -130,24 +130,6 @@ namespace HSA_Estoque
             labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
         }
 
-        private void textBoxPesquisaPordescricao_TextChanged(object sender, EventArgs e)
-        {
-            //TextBox tb = (TextBox)sender;
-            //if (tb.Text.Length > 4)
-            //{
-            //    AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
-                
-            //    var suggestions = (from p in _todosProdutos
-            //                                   select p.descricao).ToArray();
-
-            //    autoComplete.AddRange(suggestions);
-
-            //    tb.AutoCompleteCustomSource = autoComplete;
-            //    tb.AutoCompleteMode= AutoCompleteMode.Suggest;
-            //    tb.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //}
-        }
-
         private void buttonPesquisaPorDescricao_Click(object sender, EventArgs e)
         {
             Repository.Produto produtoRepository = new Repository.Produto();
@@ -158,6 +140,21 @@ namespace HSA_Estoque
         {
             Repository.Produto produtoRepository = new Repository.Produto();
             produtoBindingSource.DataSource = produtoRepository.filterByID(textBoxPesquisaPorCodigo.Text);
+        }
+
+        private void buttonEntradaEstoque_Click(object sender, EventArgs e)
+        {
+            FormEntradaProduto formEntradaProduto = new FormEntradaProduto((Model.Produto)produtoBindingSource.Current);
+            formEntradaProduto.ShowDialog();
+            carregaProdutos();
+        }
+
+        private void buttonSaidaEstoque_Click(object sender, EventArgs e)
+        {
+            View.FormSaidaProduto formSaidaProduto = new View.FormSaidaProduto((Model.Produto)produtoBindingSource.Current);
+
+            formSaidaProduto.ShowDialog();
+            carregaProdutos();
         }
     }
 }
