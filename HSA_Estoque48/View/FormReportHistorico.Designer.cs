@@ -36,7 +36,7 @@
             this.quantidadeMovimentadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoMovimentacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solicitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pedidoCentroCustoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notaFiscalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,16 +60,17 @@
             this.quantidadeMovimentadaDataGridViewTextBoxColumn,
             this.tipoMovimentacaoDataGridViewTextBoxColumn,
             this.produtoIdDataGridViewTextBoxColumn,
-            this.produtoDataGridViewTextBoxColumn,
+            this.produtoDescricao,
             this.solicitanteDataGridViewTextBoxColumn,
             this.pedidoCentroCustoDataGridViewTextBoxColumn,
             this.notaFiscalDataGridViewTextBoxColumn,
             this.obsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.historicoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 84);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(932, 435);
             this.dataGridView1.TabIndex = 0;
             // 
             // historicoBindingSource
@@ -78,10 +79,12 @@
             // 
             // dataMovimentacaoDataGridViewTextBoxColumn
             // 
+            this.dataMovimentacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataMovimentacaoDataGridViewTextBoxColumn.DataPropertyName = "dataMovimentacao";
             this.dataMovimentacaoDataGridViewTextBoxColumn.HeaderText = "Data da movimentação";
             this.dataMovimentacaoDataGridViewTextBoxColumn.Name = "dataMovimentacaoDataGridViewTextBoxColumn";
             this.dataMovimentacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataMovimentacaoDataGridViewTextBoxColumn.Width = 145;
             // 
             // usuarioDataGridViewTextBoxColumn
             // 
@@ -100,7 +103,7 @@
             // tipoMovimentacaoDataGridViewTextBoxColumn
             // 
             this.tipoMovimentacaoDataGridViewTextBoxColumn.DataPropertyName = "tipoMovimentacao";
-            this.tipoMovimentacaoDataGridViewTextBoxColumn.HeaderText = "Tipo de Movimentação";
+            this.tipoMovimentacaoDataGridViewTextBoxColumn.HeaderText = "Tipo de movimentação";
             this.tipoMovimentacaoDataGridViewTextBoxColumn.Name = "tipoMovimentacaoDataGridViewTextBoxColumn";
             this.tipoMovimentacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -111,12 +114,14 @@
             this.produtoIdDataGridViewTextBoxColumn.Name = "produtoIdDataGridViewTextBoxColumn";
             this.produtoIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // produtoDataGridViewTextBoxColumn
+            // produtoDescricao
             // 
-            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "produto.descricao";
-            this.produtoDataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
-            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.produtoDescricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.produtoDescricao.DataPropertyName = "produtoDescricao";
+            this.produtoDescricao.HeaderText = "Descrição";
+            this.produtoDescricao.Name = "produtoDescricao";
+            this.produtoDescricao.ReadOnly = true;
+            this.produtoDescricao.Width = 88;
             // 
             // solicitanteDataGridViewTextBoxColumn
             // 
@@ -148,12 +153,15 @@
             // 
             // FormReportHistorico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormReportHistorico";
             this.Text = "FormReportHistorico";
+            this.Load += new System.EventHandler(this.FormReportHistorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -163,16 +171,17 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource historicoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataMovimentacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeMovimentadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoMovimentacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produtoDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn solicitanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pedidoCentroCustoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notaFiscalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn obsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource historicoBindingSource;
     }
 }

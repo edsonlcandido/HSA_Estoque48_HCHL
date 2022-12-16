@@ -16,9 +16,15 @@ namespace HSA_Estoque.View
         {
             InitializeComponent();
             List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
+            var reportHistoricos = new Repository.Historico().reportAll();
             historicoBindingSource.DataSource = modelHistorico;
             dataGridView1.DataSource = historicoBindingSource;
             dataGridView1.Refresh();
+        }
+
+        private void FormReportHistorico_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

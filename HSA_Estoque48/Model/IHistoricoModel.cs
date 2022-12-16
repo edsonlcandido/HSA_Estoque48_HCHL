@@ -19,5 +19,6 @@ namespace HSA_Estoque.Model
         string notaFiscal { get; set; }
         string obs { get; set; }
         Produto produto { get; set; }
+        
     }
 }
