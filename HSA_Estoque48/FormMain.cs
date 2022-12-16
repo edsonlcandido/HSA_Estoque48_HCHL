@@ -146,6 +146,15 @@ namespace HSA_Estoque
         {
             FormEntradaProduto formEntradaProduto = new FormEntradaProduto((Model.Produto)produtoBindingSource.Current);
             formEntradaProduto.ShowDialog();
+            carregaProdutos();
+        }
+
+        private void buttonSaidaEstoque_Click(object sender, EventArgs e)
+        {
+            View.FormSaidaProduto formSaidaProduto = new View.FormSaidaProduto((Model.Produto)produtoBindingSource.Current);
+
+            formSaidaProduto.ShowDialog();
+            carregaProdutos();
         }
     }
 }

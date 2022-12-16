@@ -10,51 +10,56 @@ using System.Windows.Forms;
 
 namespace HSA_Estoque.View
 {
-    public partial class FormEntradaProduto : Form
+    public partial class FormSaidaProduto : Form
     {
         Model.Produto _modelProduto;
-        FormEntradaProduto()
+        FormSaidaProduto()
         {
             InitializeComponent();
         }
 
-        public FormEntradaProduto(Model.Produto modelProduto)
+        public FormSaidaProduto(Model.Produto modelProduto)
         {
             InitializeComponent();
-            _modelProduto =modelProduto;
+            _modelProduto = modelProduto;
 
             textBoxProdutoId.Text = _modelProduto.id.ToString();
             textBoxProdutoDescricao.Text = _modelProduto.descricao;
             textBoxProdutoQuantidadeTotal.Text = _modelProduto.quantidadeTotal.ToString();
             textBoxProdutoQuantidadeMinima.Text = _modelProduto.quantidadeMinima.ToString();
             textBoxProdutoQuantidadeMaxima.Text = _modelProduto.quantidadeMaxima.ToString();
-            textBoxInseridoPor.Text = Environment.UserName;
         }
 
-        private void buttonAdicionaProduto_Click(object sender, EventArgs e)
+        private void FormSaidaProduto_Load(object sender, EventArgs e)
+        {
+            textBoxEntreguePor.Text = Environment.UserName;
+        }
+
+        private void buttonRetirarProduto_Click(object sender, EventArgs e)
         {
             Presenter.Produto presenterProduto = new Presenter.Produto();
             presenterProduto.id = _modelProduto.id;
             presenterProduto.descricao = _modelProduto.descricao;
             presenterProduto.quantidadeMinima = _modelProduto.quantidadeMinima;
             presenterProduto.quantidadeMaxima = _modelProduto.quantidadeMaxima;
-            presenterProduto.quantidadeTotal = _modelProduto.quantidadeTotal + Convert.ToDouble(textBoxQuantidadeA_SerIncluida.Text);
+            presenterProduto.quantidadeTotal = _modelProduto.quantidadeTotal - Convert.ToDouble(textBoxQuantidadeNecessaria.Text);
             presenterProduto.leadTime = _modelProduto.leadTime;
             presenterProduto.tipo = _modelProduto.tipo;
             presenterProduto.unidade = _modelProduto.unidade;
             presenterProduto.localizacao = _modelProduto.localizacao;
             presenterProduto.caixa = _modelProduto.caixa;
-            
+
 
             Presenter.Historico presenterHistorico = new Presenter.Historico();
             presenterHistorico.produtoId = Convert.ToInt32(_modelProduto.id);
-            presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxQuantidadeA_SerIncluida.Text);
-            presenterHistorico.notaFiscal = textBoxNumeroNF.Text;
+            presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxQuantidadeNecessaria.Text);
+            presenterHistorico.solicitante = textBoxSolicitante.Text;
+            presenterHistorico.pedidoCentroCusto = textBoxPedido_CC.Text;
 
             try
             {
                 presenterProduto.update();
-                presenterHistorico.entradaProduto();
+                presenterHistorico.retiradaProduto();
             }
             catch (Exception ex)
             {
@@ -62,11 +67,6 @@ namespace HSA_Estoque.View
             }
 
             this.Close();
-        }
-
-        private void FormEntradaProduto_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

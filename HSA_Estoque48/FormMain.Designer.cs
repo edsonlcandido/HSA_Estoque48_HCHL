@@ -37,11 +37,7 @@
             this.movimentaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resumoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonEditarProduto = new System.Windows.Forms.Button();
-            this.buttonCadastrarNovoProduto = new System.Windows.Forms.Button();
-            this.buttonSaidaEstoque = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonEntradaEstoque = new System.Windows.Forms.Button();
             this.tableLayoutPanelItensOK = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelProdutosOK = new System.Windows.Forms.Label();
@@ -55,13 +51,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonPesquisaPorDescricao = new System.Windows.Forms.Button();
             this.textBoxPesquisaPordescricao = new System.Windows.Forms.TextBox();
-            this.buttonPesquisaPorCodigo = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.buttonPesquisaPorDescricao = new System.Windows.Forms.Button();
+            this.buttonPesquisaPorCodigo = new System.Windows.Forms.Button();
+            this.buttonEditarProduto = new System.Windows.Forms.Button();
+            this.buttonCadastrarNovoProduto = new System.Windows.Forms.Button();
+            this.buttonSaidaEstoque = new System.Windows.Forms.Button();
+            this.buttonEntradaEstoque = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localizacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,54 +155,6 @@
             this.panel1.Size = new System.Drawing.Size(250, 699);
             this.panel1.TabIndex = 1;
             // 
-            // buttonEditarProduto
-            // 
-            this.buttonEditarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarProduto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.EditarProduto32x32;
-            this.buttonEditarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditarProduto.Location = new System.Drawing.Point(5, 355);
-            this.buttonEditarProduto.Name = "buttonEditarProduto";
-            this.buttonEditarProduto.Size = new System.Drawing.Size(241, 53);
-            this.buttonEditarProduto.TabIndex = 4;
-            this.buttonEditarProduto.Text = "Editar produto";
-            this.buttonEditarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEditarProduto.UseVisualStyleBackColor = true;
-            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
-            // 
-            // buttonCadastrarNovoProduto
-            // 
-            this.buttonCadastrarNovoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCadastrarNovoProduto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrarNovoProduto.Image = global::HSA_Estoque.Properties.Resources.CadastrarProduto32x32;
-            this.buttonCadastrarNovoProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastrarNovoProduto.Location = new System.Drawing.Point(5, 273);
-            this.buttonCadastrarNovoProduto.Name = "buttonCadastrarNovoProduto";
-            this.buttonCadastrarNovoProduto.Size = new System.Drawing.Size(241, 53);
-            this.buttonCadastrarNovoProduto.TabIndex = 3;
-            this.buttonCadastrarNovoProduto.Text = "Cadastrar novo produto";
-            this.buttonCadastrarNovoProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastrarNovoProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCadastrarNovoProduto.UseVisualStyleBackColor = true;
-            this.buttonCadastrarNovoProduto.Click += new System.EventHandler(this.buttonCadastrarNovoProduto_Click);
-            // 
-            // buttonSaidaEstoque
-            // 
-            this.buttonSaidaEstoque.Enabled = false;
-            this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
-            this.buttonSaidaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaidaEstoque.Location = new System.Drawing.Point(5, 191);
-            this.buttonSaidaEstoque.Name = "buttonSaidaEstoque";
-            this.buttonSaidaEstoque.Size = new System.Drawing.Size(241, 53);
-            this.buttonSaidaEstoque.TabIndex = 2;
-            this.buttonSaidaEstoque.Text = "Saída";
-            this.buttonSaidaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaidaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSaidaEstoque.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,22 +165,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Controle de estoque";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonEntradaEstoque
-            // 
-            this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
-            this.buttonEntradaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEntradaEstoque.Location = new System.Drawing.Point(5, 109);
-            this.buttonEntradaEstoque.Name = "buttonEntradaEstoque";
-            this.buttonEntradaEstoque.Size = new System.Drawing.Size(241, 53);
-            this.buttonEntradaEstoque.TabIndex = 0;
-            this.buttonEntradaEstoque.Text = "Entrada";
-            this.buttonEntradaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEntradaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEntradaEstoque.UseVisualStyleBackColor = true;
-            this.buttonEntradaEstoque.Click += new System.EventHandler(this.buttonEntradaEstoque_Click);
             // 
             // tableLayoutPanelItensOK
             // 
@@ -411,16 +347,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa produto";
             // 
-            // buttonPesquisaPorDescricao
-            // 
-            this.buttonPesquisaPorDescricao.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
-            this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(361, 66);
-            this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
-            this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
-            this.buttonPesquisaPorDescricao.TabIndex = 9;
-            this.buttonPesquisaPorDescricao.UseVisualStyleBackColor = true;
-            this.buttonPesquisaPorDescricao.Click += new System.EventHandler(this.buttonPesquisaPorDescricao_Click);
-            // 
             // textBoxPesquisaPordescricao
             // 
             this.textBoxPesquisaPordescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -428,16 +354,6 @@
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPordescricao.TabIndex = 8;
-            // 
-            // buttonPesquisaPorCodigo
-            // 
-            this.buttonPesquisaPorCodigo.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
-            this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(361, 28);
-            this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
-            this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
-            this.buttonPesquisaPorCodigo.TabIndex = 2;
-            this.buttonPesquisaPorCodigo.UseVisualStyleBackColor = true;
-            this.buttonPesquisaPorCodigo.Click += new System.EventHandler(this.buttonPesquisaPorCodigo_Click);
             // 
             // label11
             // 
@@ -491,6 +407,90 @@
             this.dataGridViewProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
+            // 
+            // buttonPesquisaPorDescricao
+            // 
+            this.buttonPesquisaPorDescricao.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(361, 66);
+            this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
+            this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
+            this.buttonPesquisaPorDescricao.TabIndex = 9;
+            this.buttonPesquisaPorDescricao.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorDescricao.Click += new System.EventHandler(this.buttonPesquisaPorDescricao_Click);
+            // 
+            // buttonPesquisaPorCodigo
+            // 
+            this.buttonPesquisaPorCodigo.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(361, 28);
+            this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
+            this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
+            this.buttonPesquisaPorCodigo.TabIndex = 2;
+            this.buttonPesquisaPorCodigo.UseVisualStyleBackColor = true;
+            this.buttonPesquisaPorCodigo.Click += new System.EventHandler(this.buttonPesquisaPorCodigo_Click);
+            // 
+            // buttonEditarProduto
+            // 
+            this.buttonEditarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarProduto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.EditarProduto32x32;
+            this.buttonEditarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditarProduto.Location = new System.Drawing.Point(5, 355);
+            this.buttonEditarProduto.Name = "buttonEditarProduto";
+            this.buttonEditarProduto.Size = new System.Drawing.Size(241, 53);
+            this.buttonEditarProduto.TabIndex = 4;
+            this.buttonEditarProduto.Text = "Editar produto";
+            this.buttonEditarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditarProduto.UseVisualStyleBackColor = true;
+            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
+            // 
+            // buttonCadastrarNovoProduto
+            // 
+            this.buttonCadastrarNovoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrarNovoProduto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarNovoProduto.Image = global::HSA_Estoque.Properties.Resources.CadastrarProduto32x32;
+            this.buttonCadastrarNovoProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarNovoProduto.Location = new System.Drawing.Point(5, 273);
+            this.buttonCadastrarNovoProduto.Name = "buttonCadastrarNovoProduto";
+            this.buttonCadastrarNovoProduto.Size = new System.Drawing.Size(241, 53);
+            this.buttonCadastrarNovoProduto.TabIndex = 3;
+            this.buttonCadastrarNovoProduto.Text = "Cadastrar novo produto";
+            this.buttonCadastrarNovoProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarNovoProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCadastrarNovoProduto.UseVisualStyleBackColor = true;
+            this.buttonCadastrarNovoProduto.Click += new System.EventHandler(this.buttonCadastrarNovoProduto_Click);
+            // 
+            // buttonSaidaEstoque
+            // 
+            this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
+            this.buttonSaidaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaidaEstoque.Location = new System.Drawing.Point(5, 191);
+            this.buttonSaidaEstoque.Name = "buttonSaidaEstoque";
+            this.buttonSaidaEstoque.Size = new System.Drawing.Size(241, 53);
+            this.buttonSaidaEstoque.TabIndex = 2;
+            this.buttonSaidaEstoque.Text = "Saída";
+            this.buttonSaidaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaidaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSaidaEstoque.UseVisualStyleBackColor = true;
+            this.buttonSaidaEstoque.Click += new System.EventHandler(this.buttonSaidaEstoque_Click);
+            // 
+            // buttonEntradaEstoque
+            // 
+            this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
+            this.buttonEntradaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEntradaEstoque.Location = new System.Drawing.Point(5, 109);
+            this.buttonEntradaEstoque.Name = "buttonEntradaEstoque";
+            this.buttonEntradaEstoque.Size = new System.Drawing.Size(241, 53);
+            this.buttonEntradaEstoque.TabIndex = 0;
+            this.buttonEntradaEstoque.Text = "Entrada";
+            this.buttonEntradaEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEntradaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEntradaEstoque.UseVisualStyleBackColor = true;
+            this.buttonEntradaEstoque.Click += new System.EventHandler(this.buttonEntradaEstoque_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
