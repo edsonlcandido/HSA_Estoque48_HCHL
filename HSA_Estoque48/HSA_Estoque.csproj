@@ -127,6 +127,12 @@
     <Compile Include="View\FormProduto.Designer.cs">
       <DependentUpon>FormProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormReportHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormReportHistorico.Designer.cs">
+      <DependentUpon>FormReportHistorico.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormSaidaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <EmbeddedResource Include="View\FormProduto.resx">
       <DependentUpon>FormProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormReportHistorico.resx">
+      <DependentUpon>FormReportHistorico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormSaidaProduto.resx">
       <DependentUpon>FormSaidaProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HSA_Estoque.Model.Historico.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Tipo.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Unidade.datasource" />

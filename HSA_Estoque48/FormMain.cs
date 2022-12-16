@@ -156,5 +156,11 @@ namespace HSA_Estoque
             formSaidaProduto.ShowDialog();
             carregaProdutos();
         }
+
+        private void movimentaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReportHistorico formReportHistorico = new FormReportHistorico();
+            formReportHistorico.ShowDialog();
+        }
     }
 }

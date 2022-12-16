@@ -17,8 +17,7 @@ namespace HSA_Estoque
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
+            Application.SetCompatibleTextRenderingDefault(false);            
             Application.Run(new FormMain(new Presenter.Produto()));
             //Application.Run(new View.FormSaidaProduto());
         }
