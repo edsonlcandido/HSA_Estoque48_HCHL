@@ -73,7 +73,7 @@
             this.textBoxProdutoId.Location = new System.Drawing.Point(142, 16);
             this.textBoxProdutoId.Name = "textBoxProdutoId";
             this.textBoxProdutoId.Size = new System.Drawing.Size(200, 26);
-            this.textBoxProdutoId.TabIndex = 1;
+            this.textBoxProdutoId.TabIndex = 0;
             // 
             // textBoxProdutoDescricao
             // 
@@ -81,7 +81,7 @@
             this.textBoxProdutoDescricao.Location = new System.Drawing.Point(142, 48);
             this.textBoxProdutoDescricao.Name = "textBoxProdutoDescricao";
             this.textBoxProdutoDescricao.Size = new System.Drawing.Size(430, 26);
-            this.textBoxProdutoDescricao.TabIndex = 3;
+            this.textBoxProdutoDescricao.TabIndex = 1;
             // 
             // label2
             // 
@@ -97,7 +97,7 @@
             this.textBoxProdutoQuantidadeTotal.Location = new System.Drawing.Point(142, 80);
             this.textBoxProdutoQuantidadeTotal.Name = "textBoxProdutoQuantidadeTotal";
             this.textBoxProdutoQuantidadeTotal.Size = new System.Drawing.Size(100, 26);
-            this.textBoxProdutoQuantidadeTotal.TabIndex = 5;
+            this.textBoxProdutoQuantidadeTotal.TabIndex = 2;
             // 
             // label3
             // 
@@ -113,7 +113,7 @@
             this.textBoxProdutoQuantidadeMinima.Location = new System.Drawing.Point(142, 112);
             this.textBoxProdutoQuantidadeMinima.Name = "textBoxProdutoQuantidadeMinima";
             this.textBoxProdutoQuantidadeMinima.Size = new System.Drawing.Size(100, 26);
-            this.textBoxProdutoQuantidadeMinima.TabIndex = 7;
+            this.textBoxProdutoQuantidadeMinima.TabIndex = 3;
             // 
             // label4
             // 
@@ -129,7 +129,7 @@
             this.textBoxProdutoQuantidadeMaxima.Location = new System.Drawing.Point(142, 144);
             this.textBoxProdutoQuantidadeMaxima.Name = "textBoxProdutoQuantidadeMaxima";
             this.textBoxProdutoQuantidadeMaxima.Size = new System.Drawing.Size(100, 26);
-            this.textBoxProdutoQuantidadeMaxima.TabIndex = 9;
+            this.textBoxProdutoQuantidadeMaxima.TabIndex = 4;
             // 
             // label5
             // 
@@ -145,7 +145,7 @@
             this.textBoxProdutoLeadTime.Location = new System.Drawing.Point(142, 176);
             this.textBoxProdutoLeadTime.Name = "textBoxProdutoLeadTime";
             this.textBoxProdutoLeadTime.Size = new System.Drawing.Size(100, 26);
-            this.textBoxProdutoLeadTime.TabIndex = 11;
+            this.textBoxProdutoLeadTime.TabIndex = 5;
             // 
             // label6
             // 
@@ -172,7 +172,7 @@
             this.comboBoxTipo.Location = new System.Drawing.Point(142, 208);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxTipo.TabIndex = 13;
+            this.comboBoxTipo.TabIndex = 6;
             // 
             // comboBoxUnidade
             // 
@@ -181,7 +181,7 @@
             this.comboBoxUnidade.Location = new System.Drawing.Point(142, 240);
             this.comboBoxUnidade.Name = "comboBoxUnidade";
             this.comboBoxUnidade.Size = new System.Drawing.Size(100, 26);
-            this.comboBoxUnidade.TabIndex = 15;
+            this.comboBoxUnidade.TabIndex = 7;
             // 
             // label8
             // 
@@ -198,7 +198,7 @@
             this.textBoxProdutoLocalizacao.Location = new System.Drawing.Point(142, 272);
             this.textBoxProdutoLocalizacao.Name = "textBoxProdutoLocalizacao";
             this.textBoxProdutoLocalizacao.Size = new System.Drawing.Size(200, 26);
-            this.textBoxProdutoLocalizacao.TabIndex = 17;
+            this.textBoxProdutoLocalizacao.TabIndex = 8;
             // 
             // label9
             // 
@@ -215,7 +215,7 @@
             this.textBoxProdutoCaixa.Location = new System.Drawing.Point(142, 304);
             this.textBoxProdutoCaixa.Name = "textBoxProdutoCaixa";
             this.textBoxProdutoCaixa.Size = new System.Drawing.Size(200, 26);
-            this.textBoxProdutoCaixa.TabIndex = 19;
+            this.textBoxProdutoCaixa.TabIndex = 9;
             // 
             // label10
             // 
@@ -232,7 +232,7 @@
             this.textBoxInseridoPor.Location = new System.Drawing.Point(142, 336);
             this.textBoxInseridoPor.Name = "textBoxInseridoPor";
             this.textBoxInseridoPor.Size = new System.Drawing.Size(200, 26);
-            this.textBoxInseridoPor.TabIndex = 21;
+            this.textBoxInseridoPor.TabIndex = 10;
             // 
             // labelInseridoPor
             // 
@@ -249,7 +249,7 @@
             this.textBoxDataInclusão.Location = new System.Drawing.Point(142, 368);
             this.textBoxDataInclusão.Name = "textBoxDataInclusão";
             this.textBoxDataInclusão.Size = new System.Drawing.Size(100, 26);
-            this.textBoxDataInclusão.TabIndex = 23;
+            this.textBoxDataInclusão.TabIndex = 11;
             // 
             // labelDataInclusao
             // 
@@ -266,7 +266,7 @@
             this.buttonEditarProduto.Location = new System.Drawing.Point(121, 426);
             this.buttonEditarProduto.Name = "buttonEditarProduto";
             this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonEditarProduto.TabIndex = 25;
+            this.buttonEditarProduto.TabIndex = 13;
             this.buttonEditarProduto.Text = "Salvar";
             this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEditarProduto.UseVisualStyleBackColor = true;
@@ -278,7 +278,7 @@
             this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 426);
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonAdicionaProduto.TabIndex = 24;
+            this.buttonAdicionaProduto.TabIndex = 12;
             this.buttonAdicionaProduto.Text = "Adicionar";
             this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
