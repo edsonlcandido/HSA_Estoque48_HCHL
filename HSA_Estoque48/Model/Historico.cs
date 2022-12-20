@@ -29,7 +29,5 @@ namespace HSA_Estoque.Model
         [DisplayName("Obs.")]
         public string obs { get; set; }
         public Produto produto { get ; set; }
-        [DisplayName("Descrição")]
-        public string produtoDescricao { get { return produto.descricao; } }
     }
 }

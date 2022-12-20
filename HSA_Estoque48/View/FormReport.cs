@@ -13,14 +13,9 @@ namespace HSA_Estoque.View
     public partial class FormReport : Form
     {
         DataTable _dt;
-        public FormReport()
+        FormReport()
         {
             InitializeComponent();
-            List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
-            var reportHistoricos = new Repository.Historico().reportAll();
-            historicoBindingSource.DataSource = modelHistorico;
-            dataGridViewMain.DataSource = historicoBindingSource;
-            dataGridViewMain.Refresh();
         }
 
         public FormReport(DataTable dt)
@@ -31,7 +26,7 @@ namespace HSA_Estoque.View
 
         private void FormReportHistorico_Load(object sender, EventArgs e)
         {
-
+            dataGridViewMain.DataSource = _dt;
         }
     }
 }

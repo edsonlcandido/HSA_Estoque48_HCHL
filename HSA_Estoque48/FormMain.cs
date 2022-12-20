@@ -160,11 +160,19 @@ namespace HSA_Estoque
 
         private void movimentaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
             List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
-            
+            DataTable dataTable = listToDataTable(modelHistorico);
+            dataTable.Columns.Remove("produto");
+            dataTable.Columns.Add("Descrição");
+            dataTable.Columns["Descrição"].SetOrdinal(5);
+            int rowIndex = 0;
+            foreach (Model.Historico hist in modelHistorico)
+            {
+                dataTable.Rows[rowIndex]["Descrição"] = hist.produto.descricao;
+                rowIndex++;
+            }
 
-            FormReport formReport = new FormReport();
+            FormReport formReport = new FormReport(dataTable);
             formReport.ShowDialog();
         }
 
@@ -176,8 +184,17 @@ namespace HSA_Estoque
 
             foreach (PropertyInfo property in properties)
             {
+                var displayNameAttribute = property.GetCustomAttributes(typeof(DisplayNameAttribute), false);
                 Type columnType = property.PropertyType;
-                dt.Columns.Add(property.Name, columnType);
+
+                try
+                {
+                    dt.Columns.Add((displayNameAttribute[0] as DisplayNameAttribute).DisplayName, columnType);
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    dt.Columns.Add(property.Name, columnType);
+                }
             }
 
             foreach (Object obj in listObj)
@@ -188,7 +205,15 @@ namespace HSA_Estoque
                 {
                     if (property.GetValue(obj, null) != null)
                     {
-                        dr[property.Name] = property.GetValue(obj, null);
+                        var displayNameAttribute = property.GetCustomAttributes(typeof(DisplayNameAttribute), false);
+                        try
+                        {
+                            dr[(displayNameAttribute[0] as DisplayNameAttribute).DisplayName] = property.GetValue(obj, null);
+                        }
+                        catch (IndexOutOfRangeException ex)
+                        {
+                            dr[property.Name] = property.GetValue(obj, null);
+                        }
                     }
                 }
                 dr.EndEdit();
@@ -201,19 +226,7 @@ namespace HSA_Estoque
         {
             List<Model.Produto> produtos = new Repository.Produto().findAll().ToList();
             DataTable dataTable = listToDataTable(produtos);
-            dataTable.Columns["id"].ColumnName = "Código";
-            dataTable.Columns["Código"].SetOrdinal(0);
-            dataTable.Columns["descricao"].ColumnName = "Descrição";
-            dataTable.Columns["quantidadeMinima"].ColumnName = "Qtd. mín.";
-            dataTable.Columns["quantidadeMaxima"].ColumnName = "Qtd. máx.";
-            dataTable.Columns["quantidadeTotal"].ColumnName = "Qtd. atual";
-            dataTable.Columns["leadTime"].ColumnName = "Lead time";
-            dataTable.Columns["tipo"].ColumnName = "Tipo";
-            dataTable.Columns["unidade"].ColumnName = "Unidade";
-            dataTable.Columns["localizacao"].ColumnName = "Localização";
-            dataTable.Columns["caixa"].ColumnName = "Caixa";
-            FormReport formReport = new FormReport(dataTable);
-            formReport.dataGridViewMain.DataSource = dataTable;
+            FormReport formReport = new FormReport(dataTable);            
             formReport.ShowDialog();
         }
     }
