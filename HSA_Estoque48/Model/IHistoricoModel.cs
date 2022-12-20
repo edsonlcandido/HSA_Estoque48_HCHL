@@ -18,5 +18,7 @@ namespace HSA_Estoque.Model
         string pedidoCentroCusto { get; set; }
         string notaFiscal { get; set; }
         string obs { get; set; }
+        Produto produto { get; set; }
+        
     }
 }

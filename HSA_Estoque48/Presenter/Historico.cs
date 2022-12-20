@@ -11,7 +11,7 @@ namespace HSA_Estoque.Presenter
     public class Historico : IHistoricoModel
     {
         List<Historico> _showAll;
-        IHistorcoRepository _historicoRepository;
+        IHistoricoRepository _historicoRepository;
         public Historico() {
             _historicoRepository = new Repository.Historico();
             dataMovimentacao = DateTime.Now;
@@ -88,5 +88,6 @@ namespace HSA_Estoque.Presenter
         public string pedidoCentroCusto { get ; set ; }
         public string notaFiscal { get ; set ; }
         public string obs { get ; set ; }
+        public Model.Produto produto { get ; set ; }
     }
 }

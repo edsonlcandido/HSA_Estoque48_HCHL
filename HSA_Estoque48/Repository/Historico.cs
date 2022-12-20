@@ -9,7 +9,7 @@ using Dapper;
 
 namespace HSA_Estoque.Repository
 {
-    public class Historico : IHistorcoRepository
+    public class Historico : IHistoricoRepository
     {
         string CONNECTIONSTRING = HSA_Estoque.Properties.Settings.Default["ConnectionString"].ToString();
         public int Add(Model.Historico modelHistorico)
@@ -46,9 +46,56 @@ namespace HSA_Estoque.Repository
             return last_id;
         }
 
-        public IEnumerable<Model.Unidade> findAll()
+        public IEnumerable<Model.Historico> findAll()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                return connection.Query<Model.Historico>(@"
+                    SELECT dataMovimentacao,
+                           usuario,
+                           quantidadeMovimentada,
+                           tipoMovimentacao,
+                           produtoId,
+                           solicitante,
+                           pedidoCentroCusto,
+                           notaFiscal,
+                           obs
+                      FROM historico;
+                ");
+            }
         }
+
+        public IEnumerable<Model.Historico> reportAll()
+        {
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                var historicos =  connection.Query<Model.Historico, Model.Produto, Model.Historico>(@"
+                    SELECT h.dataMovimentacao,
+                           h.usuario,
+                           h.quantidadeMovimentada,
+                           h.tipoMovimentacao,
+                           h.produtoId,
+                           h.solicitante,
+                           h.pedidoCentroCusto,
+                           h.notaFiscal,
+                           h.obs,
+                           p.id,
+                           p.descricao,
+                           p.quantidadeMinima,
+                           p.quantidadeMaxima,
+                           p.quantidadeTotal,
+                           p.leadTime,
+                           p.tipo,
+                           p.unidade,
+                           p.localizacao,
+                           p.caixa
+                      FROM historico AS h
+                           JOIN
+                           produtos AS p ON h.produtoId = p.id;
+                ",(historico, produto) => { historico.produto = produto; return historico; } );
+                return historicos;
+            }
+        }
+
     }
 }

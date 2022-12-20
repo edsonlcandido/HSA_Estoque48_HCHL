@@ -14,9 +14,9 @@ namespace HSA_Estoque.Model
         public DateTime dataMovimentacao { get; set; }
         [DisplayName("Usuário")]
         public string usuario { get; set; }
-        [DisplayName("Qtd. moveimentada")]
+        [DisplayName("Qtd. movimentada")]
         public double quantidadeMovimentada { get; set; }
-        [DisplayName("Tipo de Movimentação")]
+        [DisplayName("Tipo de movimentação")]
         public string tipoMovimentacao { get; set; }
         [DisplayName("Código")]
         public int produtoId { get; set; }
@@ -28,5 +28,6 @@ namespace HSA_Estoque.Model
         public string notaFiscal { get; set; }
         [DisplayName("Obs.")]
         public string obs { get; set; }
+        public Produto produto { get ; set; }
     }
 }
