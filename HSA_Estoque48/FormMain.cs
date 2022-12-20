@@ -173,6 +173,7 @@ namespace HSA_Estoque
             }
 
             FormReport formReport = new FormReport(dataTable);
+            formReport.title = "Movimentação";
             formReport.ShowDialog();
         }
 
@@ -226,7 +227,8 @@ namespace HSA_Estoque
         {
             List<Model.Produto> produtos = new Repository.Produto().findAll().ToList();
             DataTable dataTable = listToDataTable(produtos);
-            FormReport formReport = new FormReport(dataTable);            
+            FormReport formReport = new FormReport(dataTable);
+            formReport.title = "Produtos";
             formReport.ShowDialog();
         }
     }

@@ -31,8 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.exportarParaExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMain
@@ -43,31 +46,54 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMain.Location = new System.Drawing.Point(1, 84);
+            this.dataGridViewMain.Location = new System.Drawing.Point(1, 32);
             this.dataGridViewMain.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.ReadOnly = true;
-            this.dataGridViewMain.Size = new System.Drawing.Size(932, 435);
+            this.dataGridViewMain.Size = new System.Drawing.Size(883, 522);
             this.dataGridViewMain.TabIndex = 0;
             // 
             // historicoBindingSource
             // 
             this.historicoBindingSource.DataSource = typeof(HSA_Estoque.Model.Historico);
             // 
-            // FormReportHistorico
+            // menuStrip1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarParaExcelToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(884, 29);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // exportarParaExcelToolStripMenuItem
+            // 
+            this.exportarParaExcelToolStripMenuItem.Name = "exportarParaExcelToolStripMenuItem";
+            this.exportarParaExcelToolStripMenuItem.Size = new System.Drawing.Size(153, 25);
+            this.exportarParaExcelToolStripMenuItem.Text = "Exportar para excel";
+            this.exportarParaExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarParaExcelToolStripMenuItem_Click);
+            // 
+            // FormReport
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(884, 554);
             this.Controls.Add(this.dataGridViewMain);
-            this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "FormReportHistorico";
-            this.Text = "FormReportHistorico";
+            this.Name = "FormReport";
+            this.Text = "FormReport";
             this.Load += new System.EventHandler(this.FormReportHistorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -75,5 +101,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource historicoBindingSource;
         internal System.Windows.Forms.DataGridView dataGridViewMain;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem exportarParaExcelToolStripMenuItem;
     }
 }
