@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -155,6 +156,78 @@ namespace HSA_Estoque
 
             formSaidaProduto.ShowDialog();
             carregaProdutos();
+        }
+
+        private void movimentaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
+            DataTable dataTable = listToDataTable(modelHistorico);
+            dataTable.Columns.Remove("produto");
+            dataTable.Columns.Add("Descrição");
+            dataTable.Columns["Descrição"].SetOrdinal(5);
+            int rowIndex = 0;
+            foreach (Model.Historico hist in modelHistorico)
+            {
+                dataTable.Rows[rowIndex]["Descrição"] = hist.produto.descricao;
+                rowIndex++;
+            }
+
+            FormReport formReport = new FormReport(dataTable);
+            formReport.ShowDialog();
+        }
+
+        DataTable listToDataTable<T>(List<T> listObj)
+        {
+            DataTable dt = new DataTable("Report");
+            Type type = typeof(T);
+            PropertyInfo[] properties = type.GetProperties();
+
+            foreach (PropertyInfo property in properties)
+            {
+                var displayNameAttribute = property.GetCustomAttributes(typeof(DisplayNameAttribute), false);
+                Type columnType = property.PropertyType;
+
+                try
+                {
+                    dt.Columns.Add((displayNameAttribute[0] as DisplayNameAttribute).DisplayName, columnType);
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    dt.Columns.Add(property.Name, columnType);
+                }
+            }
+
+            foreach (Object obj in listObj)
+            {
+                DataRow dr = dt.NewRow();
+                dr.BeginEdit();
+                foreach (PropertyInfo property in properties)
+                {
+                    if (property.GetValue(obj, null) != null)
+                    {
+                        var displayNameAttribute = property.GetCustomAttributes(typeof(DisplayNameAttribute), false);
+                        try
+                        {
+                            dr[(displayNameAttribute[0] as DisplayNameAttribute).DisplayName] = property.GetValue(obj, null);
+                        }
+                        catch (IndexOutOfRangeException ex)
+                        {
+                            dr[property.Name] = property.GetValue(obj, null);
+                        }
+                    }
+                }
+                dr.EndEdit();
+                dt.Rows.Add(dr);
+            }
+            return dt;
+        }
+
+        private void resumoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Model.Produto> produtos = new Repository.Produto().findAll().ToList();
+            DataTable dataTable = listToDataTable(produtos);
+            FormReport formReport = new FormReport(dataTable);            
+            formReport.ShowDialog();
         }
     }
 }
