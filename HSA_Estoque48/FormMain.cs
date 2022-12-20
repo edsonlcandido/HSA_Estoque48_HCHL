@@ -135,12 +135,14 @@ namespace HSA_Estoque
         {
             Repository.Produto produtoRepository = new Repository.Produto();
             produtoBindingSource.DataSource = produtoRepository.filterByDescricao(textBoxPesquisaPordescricao.Text);
+            textBoxPesquisaPordescricao.Clear();
         }
 
         private void buttonPesquisaPorCodigo_Click(object sender, EventArgs e)
         {
             Repository.Produto produtoRepository = new Repository.Produto();
             produtoBindingSource.DataSource = produtoRepository.filterByID(textBoxPesquisaPorCodigo.Text);
+            textBoxPesquisaPorCodigo.Clear();
         }
 
         private void buttonEntradaEstoque_Click(object sender, EventArgs e)
