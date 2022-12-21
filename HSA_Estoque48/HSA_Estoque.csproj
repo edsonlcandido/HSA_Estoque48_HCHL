@@ -102,6 +102,7 @@
     <Compile Include="Presenter\Produto.cs" />
     <Compile Include="Presenter\Unidade.cs" />
     <Compile Include="Presenter\Tipo.cs" />
+    <Compile Include="Presenter\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
