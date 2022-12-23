@@ -33,9 +33,9 @@
             this.textBoxUsuarioName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             this.buttonAdiciona.TabIndex = 8;
             this.buttonAdiciona.Text = "Adiciona";
             this.buttonAdiciona.UseVisualStyleBackColor = true;
+            this.buttonAdiciona.Click += new System.EventHandler(this.buttonAdiciona_Click);
             // 
             // textBoxUsuarioName
             // 
@@ -78,7 +79,7 @@
             this.dataGridViewMain.AutoGenerateColumns = false;
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeDataGridViewTextBoxColumn,
+            this.nome,
             this.isAdminDataGridViewCheckBoxColumn});
             this.dataGridViewMain.DataSource = this.usuarioBindingSource;
             this.dataGridViewMain.Location = new System.Drawing.Point(4, 91);
@@ -87,17 +88,14 @@
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.Size = new System.Drawing.Size(335, 594);
             this.dataGridViewMain.TabIndex = 5;
+            this.dataGridViewMain.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellEndEdit);
             // 
-            // usuarioBindingSource
+            // nome
             // 
-            this.usuarioBindingSource.DataSource = typeof(HSA_Estoque.Model.Usuario);
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome de usuário";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
             // 
             // isAdminDataGridViewCheckBoxColumn
             // 
@@ -107,6 +105,10 @@
             this.isAdminDataGridViewCheckBoxColumn.HeaderText = "Administrador";
             this.isAdminDataGridViewCheckBoxColumn.Name = "isAdminDataGridViewCheckBoxColumn";
             this.isAdminDataGridViewCheckBoxColumn.Width = 112;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(HSA_Estoque.Model.Usuario);
             // 
             // FormUsuario
             // 
@@ -118,9 +120,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewMain);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUsuario";
             this.Text = "Administrar Usuarios";
+            this.Load += new System.EventHandler(this.FormUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -136,6 +139,7 @@
         private System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isAdminDataGridViewCheckBoxColumn;
     }
 }

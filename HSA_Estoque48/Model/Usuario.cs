@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Model
 {
-    public class Usuario : IUsuario
+    public class Usuario : IUsuarioModel
     {
         [DisplayName("#")]
         public int id { get; set; } 
         [DisplayName("Nome de usuário")]
-        public string Nome { get; set; }
+        public string nome { get; set; }
         [DisplayName("Administrador")]
         public bool isAdmin { get; set; }
 

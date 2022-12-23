@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HSA_Estoque.Model
 {
-    public interface IUsuario
+    public interface IUsuarioModel
     {
         int id { get; set; }
-        string Nome { get; set; }
+        string nome { get; set; }
         bool isAdmin { get; set; }
     }
 }

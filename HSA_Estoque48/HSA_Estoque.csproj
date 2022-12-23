@@ -88,17 +88,24 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewProdutos.Designer.cs">
+      <DependentUpon>FormViewProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\IHistoricoModel.cs" />
     <Compile Include="Model\Historico.cs" />
     <Compile Include="Model\IProdutoModel.cs" />
     <Compile Include="Model\IUnidadeModel.cs" />
-    <Compile Include="Model\IUsuario.cs" />
+    <Compile Include="Model\IUsuarioModel.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\ITipoModel.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Presenter\Historico.cs" />
+    <Compile Include="Repository\IUsuarioRepository.cs" />
     <Compile Include="Presenter\Produto.cs" />
     <Compile Include="Presenter\Unidade.cs" />
     <Compile Include="Presenter\Tipo.cs" />
@@ -118,6 +125,7 @@
     <Compile Include="Repository\Produto.cs" />
     <Compile Include="Repository\Unidade.cs" />
     <Compile Include="Repository\Tipo.cs" />
+    <Compile Include="Repository\Usuario.cs" />
     <Compile Include="View\FormEntradaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewProdutos.resx">
+      <DependentUpon>FormViewProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
