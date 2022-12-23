@@ -15,9 +15,10 @@ namespace HSA_Estoque.Repository
 
         public int add(Model.Produto produtoModel)
         {
+            int lastRow;
             using(IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
             {
-                var affectedRows = connection.Execute(@"
+                lastRow = connection.Query<int>(@"
                     INSERT INTO produtos (
                                              id,
                                              descricao,
@@ -42,10 +43,11 @@ namespace HSA_Estoque.Repository
                                              @localizacao,
                                              @caixa
                                          );
+                        SELECT last_insert_rowid();
                     ",
-                    produtoModel);
+                    produtoModel).Single();
             }
-            return produtoModel.id;
+            return lastRow;
         }
 
         public IEnumerable<Model.Produto> filterByDescricao(string descricao)

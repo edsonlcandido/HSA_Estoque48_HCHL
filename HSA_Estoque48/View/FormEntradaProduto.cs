@@ -47,7 +47,7 @@ namespace HSA_Estoque.View
             
 
             Presenter.Historico presenterHistorico = new Presenter.Historico();
-            presenterHistorico.produtoId = Convert.ToInt32(_modelProduto.id);
+            presenterHistorico.produtoId = _modelProduto.id;
             presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxQuantidadeA_SerIncluida.Text);
             presenterHistorico.notaFiscal = textBoxNumeroNF.Text;
 

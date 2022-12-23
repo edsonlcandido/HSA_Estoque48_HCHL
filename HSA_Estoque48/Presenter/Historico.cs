@@ -83,7 +83,7 @@ namespace HSA_Estoque.Presenter
         public string usuario { get ; set ; }
         public double quantidadeMovimentada { get ; set ; }
         public string tipoMovimentacao { get ; set ; }
-        public int produtoId { get ; set ; }
+        public string produtoId { get ; set ; }
         public string solicitante { get ; set ; }
         public string pedidoCentroCusto { get ; set ; }
         public string notaFiscal { get ; set ; }
