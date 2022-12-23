@@ -8,7 +8,7 @@ namespace HSA_Estoque.Model
 {
     public interface IProdutoModel
     {
-        int id { get; set; }
+        string id { get; set; }
         string descricao { get; set; }
         double quantidadeMinima { get; set; }
         double quantidadeMaxima { get; set; }

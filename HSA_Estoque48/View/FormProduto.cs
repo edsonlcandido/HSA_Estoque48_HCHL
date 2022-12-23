@@ -107,7 +107,7 @@ namespace HSA_Estoque.View
 
         private void buttonAdicionaProduto_Click(object sender, EventArgs e)
         {
-            _presenterProduto.id =Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterProduto.id =textBoxProdutoId.Text;
             _presenterProduto.descricao = textBoxProdutoDescricao.Text;
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
@@ -118,7 +118,7 @@ namespace HSA_Estoque.View
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
 
-            _presenterHistorico.produtoId = Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterHistorico.produtoId = textBoxProdutoId.Text;
             _presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
 
             if (_presenterProduto.add() > 1 && _presenterHistorico.inclusaoProduto() > 0)
@@ -134,7 +134,7 @@ namespace HSA_Estoque.View
 
         private void buttonEditarProduto_Click(object sender, EventArgs e)
         {
-            _presenterProduto.id = Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterProduto.id = textBoxProdutoId.Text;
             _presenterProduto.descricao = textBoxProdutoDescricao.Text;
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
@@ -147,7 +147,7 @@ namespace HSA_Estoque.View
 
             _presenterProduto.update();
 
-            _presenterHistorico.produtoId = Convert.ToInt32(textBoxProdutoId.Text);
+            _presenterHistorico.produtoId = textBoxProdutoId.Text;
             _presenterHistorico.alteracaoProduto();
 
             this.Close();

@@ -10,7 +10,7 @@ namespace HSA_Estoque.Model
     public class Produto : IProdutoModel
     {
         [DisplayName("Código")]
-        public int id { get ; set ; }
+        public string id { get ; set ; }
         [DisplayName("Descrição")]
         public string descricao { get ; set ; }
 
