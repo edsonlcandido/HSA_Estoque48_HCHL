@@ -15,7 +15,7 @@ namespace HSA_Estoque.Presenter
         public Produto()
         {
             _repository = new Repository.Produto();
-            id = 0;
+            id = "0";
             descricao = "PRODUTO SEM CADASTRO";
             quantidadeMinima = 0;
             quantidadeMaxima = 0;
@@ -64,7 +64,7 @@ namespace HSA_Estoque.Presenter
             }
         }
 
-        public int id { get; set ; }
+        public string id { get; set ; }
         public string descricao { get ; set ; }
         public double quantidadeMinima { get ; set ; }
         public double quantidadeMaxima { get ; set ; }
