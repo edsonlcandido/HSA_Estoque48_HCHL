@@ -19,7 +19,7 @@ namespace HSA_Estoque.Model
         [DisplayName("Tipo de movimentação")]
         public string tipoMovimentacao { get; set; }
         [DisplayName("Código")]
-        public int produtoId { get; set; }
+        public string produtoId { get; set; }
         [DisplayName("Solicitante")]
         public string solicitante { get; set; }
         [DisplayName("Pedido ou C/C")]

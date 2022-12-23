@@ -13,7 +13,7 @@ namespace HSA_Estoque.Model
         string usuario { get; set; }
         double quantidadeMovimentada { get; set; }
         string tipoMovimentacao { get; set; }
-        int produtoId { get; set; }
+        string produtoId { get; set; }
         string solicitante { get; set; }
         string pedidoCentroCusto { get; set; }
         string notaFiscal { get; set; }
