@@ -23,7 +23,27 @@ namespace HSA_Estoque
 
         private void FormViewProdutos_Load(object sender, EventArgs e)
         {
+            produtoBindingSource.DataSource = _todosProdutos;
+        }
 
+        private void buttonPesquisaPorDescricao_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByDescricao(textBoxPesquisaPordescricao.Text);
+            textBoxPesquisaPordescricao.Clear();
+        }
+
+        private void buttonPesquisaPorCodigo_Click(object sender, EventArgs e)
+        {
+            Repository.Produto produtoRepository = new Repository.Produto();
+            produtoBindingSource.DataSource = produtoRepository.filterByID(textBoxPesquisaPorCodigo.Text);
+            textBoxPesquisaPorCodigo.Clear();
+        }
+
+        private void buttonLimparFiltro_Click(object sender, EventArgs e)
+        {
+            _todosProdutos = _presenterProduto.showAll;
+            produtoBindingSource.DataSource = _todosProdutos;
         }
     }
 }
