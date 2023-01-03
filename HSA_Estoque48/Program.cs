@@ -21,8 +21,16 @@ namespace HSA_Estoque
 
             var todosUsuarios = new Presenter.Usuario().showAll;
 
+            var adminUser = todosUsuarios.Find(u => u.nome.ToUpper().Contains(Environment.UserName.ToUpper()));
 
-            Application.Run(new FormMain(new Presenter.Produto()));
+            if (adminUser.isAdmin)
+            {
+                Application.Run(new FormMain(new Presenter.Produto()));
+            }
+            else
+            {
+                Application.Run(new FormViewProdutos(new Presenter.Produto()));
+            }            
             //Application.Run(new View.FormSaidaProduto());
         }
     }
