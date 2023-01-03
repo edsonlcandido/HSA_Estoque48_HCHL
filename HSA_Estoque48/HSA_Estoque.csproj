@@ -280,6 +280,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\202301022214-change id produtos to text.sql" />
+    <Content Include="Migrations\202301022248-create table usuarios.sql" />
+    <Content Include="Migrations\202302032311-insert admin users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,5 +1,6 @@
 ﻿CREATE TABLE usuarios (
-    id      INT     PRIMARY KEY,
+    id      INTEGER PRIMARY KEY AUTOINCREMENT
+                    UNIQUE,
     nome    TEXT,
     isAdmin BOOLEAN
 );

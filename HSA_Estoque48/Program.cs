@@ -22,7 +22,7 @@ namespace HSA_Estoque
             var todosUsuarios = new Presenter.Usuario().showAll;
 
 
-            Application.Run(new FormViewProdutos(new Presenter.Produto()));
+            Application.Run(new FormMain(new Presenter.Produto()));
             //Application.Run(new View.FormSaidaProduto());
         }
     }
