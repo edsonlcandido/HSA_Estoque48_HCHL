@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace HSA_Estoque.Model
     public class Produto : IProdutoModel
     {
         [DisplayName("Código")]
+        [DataType(DataType.Text)]
         public string id { get ; set ; }
         [DisplayName("Descrição")]
         public string descricao { get ; set ; }
