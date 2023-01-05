@@ -33,6 +33,8 @@ namespace HSA_Estoque.Model
         public string localizacao { get ; set ; }
         [DisplayName("Caixa")]
         public string caixa { get ; set ; }
+        [DisplayName("Obs")]
+        public string obs { get; set; }
 
         public static explicit operator Produto(Presenter.Produto presenterProduto)
         {
@@ -47,6 +49,7 @@ namespace HSA_Estoque.Model
             modelProduto.unidade = presenterProduto.unidade;
             modelProduto.localizacao = presenterProduto.localizacao;
             modelProduto.caixa = presenterProduto.caixa;
+            modelProduto.obs = presenterProduto.obs;
 
             return modelProduto;
         }

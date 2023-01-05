@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduto));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxProdutoId = new System.Windows.Forms.TextBox();
             this.textBoxProdutoDescricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxProdutoQuantidadeTotal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelQtdInicial = new System.Windows.Forms.Label();
             this.textBoxProdutoQuantidadeMinima = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxProdutoQuantidadeMaxima = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.buttonAdicionaProduto = new System.Windows.Forms.Button();
             this.buttonAdministrarTipo = new System.Windows.Forms.Button();
             this.buttonAdministrarUnidade = new System.Windows.Forms.Button();
+            this.textBoxObs = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -99,14 +102,14 @@
             this.textBoxProdutoQuantidadeTotal.Size = new System.Drawing.Size(100, 26);
             this.textBoxProdutoQuantidadeTotal.TabIndex = 2;
             // 
-            // label3
+            // labelQtdInicial
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Qtd. inicial";
+            this.labelQtdInicial.AutoSize = true;
+            this.labelQtdInicial.Location = new System.Drawing.Point(12, 84);
+            this.labelQtdInicial.Name = "labelQtdInicial";
+            this.labelQtdInicial.Size = new System.Drawing.Size(81, 18);
+            this.labelQtdInicial.TabIndex = 4;
+            this.labelQtdInicial.Text = "Qtd. inicial";
             // 
             // textBoxProdutoQuantidadeMinima
             // 
@@ -245,6 +248,7 @@
             // 
             // textBoxDataInclusão
             // 
+            this.textBoxDataInclusão.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxDataInclusão.Enabled = false;
             this.textBoxDataInclusão.Location = new System.Drawing.Point(142, 368);
             this.textBoxDataInclusão.Name = "textBoxDataInclusão";
@@ -263,7 +267,7 @@
             // buttonEditarProduto
             // 
             this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.Editar16x16;
-            this.buttonEditarProduto.Location = new System.Drawing.Point(121, 426);
+            this.buttonEditarProduto.Location = new System.Drawing.Point(121, 477);
             this.buttonEditarProduto.Name = "buttonEditarProduto";
             this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
             this.buttonEditarProduto.TabIndex = 13;
@@ -275,7 +279,7 @@
             // buttonAdicionaProduto
             // 
             this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
-            this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 426);
+            this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 477);
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
             this.buttonAdicionaProduto.TabIndex = 12;
@@ -306,11 +310,31 @@
             this.buttonAdministrarUnidade.UseVisualStyleBackColor = true;
             this.buttonAdministrarUnidade.Click += new System.EventHandler(this.buttonAdministrarUnidade_Click);
             // 
+            // textBoxObs
+            // 
+            this.textBoxObs.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxObs.Location = new System.Drawing.Point(142, 400);
+            this.textBoxObs.Multiline = true;
+            this.textBoxObs.Name = "textBoxObs";
+            this.textBoxObs.Size = new System.Drawing.Size(430, 71);
+            this.textBoxObs.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 404);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 18);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Obs";
+            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 468);
+            this.ClientSize = new System.Drawing.Size(584, 521);
+            this.Controls.Add(this.textBoxObs);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.buttonAdministrarUnidade);
             this.Controls.Add(this.buttonAdministrarTipo);
             this.Controls.Add(this.buttonEditarProduto);
@@ -334,12 +358,13 @@
             this.Controls.Add(this.textBoxProdutoQuantidadeMinima);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxProdutoQuantidadeTotal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelQtdInicial);
             this.Controls.Add(this.textBoxProdutoDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxProdutoId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProduto";
             this.Text = "HSA Estoque - Inclusão de produto";
@@ -356,7 +381,7 @@
         private System.Windows.Forms.TextBox textBoxProdutoDescricao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxProdutoQuantidadeTotal;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelQtdInicial;
         private System.Windows.Forms.TextBox textBoxProdutoQuantidadeMinima;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxProdutoQuantidadeMaxima;
@@ -379,5 +404,7 @@
         private System.Windows.Forms.Button buttonEditarProduto;
         private System.Windows.Forms.Button buttonAdministrarTipo;
         private System.Windows.Forms.Button buttonAdministrarUnidade;
+        private System.Windows.Forms.TextBox textBoxObs;
+        private System.Windows.Forms.Label label11;
     }
 }

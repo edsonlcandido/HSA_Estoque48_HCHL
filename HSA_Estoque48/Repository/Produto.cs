@@ -29,7 +29,8 @@ namespace HSA_Estoque.Repository
                                              tipo,
                                              unidade,
                                              localizacao,
-                                             caixa
+                                             caixa,
+                                             obs
                                          )
                                          VALUES (
                                              @id,
@@ -41,7 +42,8 @@ namespace HSA_Estoque.Repository
                                              @tipo,
                                              @unidade,
                                              @localizacao,
-                                             @caixa
+                                             @caixa,
+                                             @obs
                                          );
                         SELECT last_insert_rowid();
                     ",
@@ -64,7 +66,8 @@ namespace HSA_Estoque.Repository
                            tipo,
                            unidade,
                            localizacao,
-                           caixa       
+                           caixa,
+                           obs
                       FROM produtos
                       WHERE descricao LIKE @descricao;
                 ", new { descricao = "%" + descricao + "%"});
@@ -85,7 +88,8 @@ namespace HSA_Estoque.Repository
                            tipo,
                            unidade,
                            localizacao,
-                           caixa       
+                           caixa,
+                           obs
                       FROM produtos
                       WHERE id LIKE @id;
                 ", new { id = "%" + id + "%" });
@@ -106,8 +110,10 @@ namespace HSA_Estoque.Repository
                            tipo,
                            unidade,
                            localizacao,
-                           caixa
-                      FROM produtos;
+                           caixa,
+                           obs
+                      FROM produtos
+                     ORDER BY descricao;
                 ");
             }
         }
@@ -126,7 +132,8 @@ namespace HSA_Estoque.Repository
                            tipo,
                            unidade,
                            localizacao,
-                           caixa
+                           caixa,
+                           obs
                       FROM produtos
                      WHERE id = @id;
                 ", new {id = id});
@@ -147,7 +154,8 @@ namespace HSA_Estoque.Repository
                            tipo = @tipo,
                            unidade = @unidade,
                            localizacao = @localizacao,
-                           caixa = @caixa
+                           caixa = @caixa,
+                           obs = @obs
                      WHERE id = @id;
                 ", produtoModel);
             }

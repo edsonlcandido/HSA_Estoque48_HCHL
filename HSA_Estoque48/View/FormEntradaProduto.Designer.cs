@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEntradaProduto));
             this.textBoxInseridoPor = new System.Windows.Forms.TextBox();
             this.labelInseridoPor = new System.Windows.Forms.Label();
             this.textBoxProdutoQuantidadeMaxima = new System.Windows.Forms.TextBox();
@@ -49,6 +50,7 @@
             // 
             // textBoxInseridoPor
             // 
+            this.textBoxInseridoPor.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxInseridoPor.Enabled = false;
             this.textBoxInseridoPor.Location = new System.Drawing.Point(153, 259);
             this.textBoxInseridoPor.Name = "textBoxInseridoPor";
@@ -219,7 +221,8 @@
             this.Controls.Add(this.textBoxProdutoId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEntradaProduto";
             this.Text = "HSA Estoque - Entrada de produto";
             this.Load += new System.EventHandler(this.FormEntradaProduto_Load);

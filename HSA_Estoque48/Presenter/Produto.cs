@@ -2,6 +2,7 @@
 using HSA_Estoque.Repository;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace HSA_Estoque.Presenter
             unidade = "TBD";
             localizacao = "ALMOXARIFADO";
             caixa = "TBD";
+            obs = "";
         }
 
         public int add()
@@ -46,6 +48,7 @@ namespace HSA_Estoque.Presenter
             this.unidade= modelProduto.unidade;
             this.localizacao= modelProduto.localizacao;
             this.caixa= modelProduto.caixa;
+            this.obs = modelProduto.obs;
 
             return (Model.Produto)this;
         }
@@ -74,5 +77,6 @@ namespace HSA_Estoque.Presenter
         public string unidade { get ; set ; }
         public string localizacao { get ; set ; }
         public string caixa { get ; set ; }
+        public string obs { get ; set ; }
     }
 }
