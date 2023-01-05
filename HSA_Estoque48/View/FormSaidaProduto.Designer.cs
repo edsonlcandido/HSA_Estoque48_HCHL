@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSaidaProduto));
             this.textBoxQuantidadeNecessaria = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxPedido_CC = new System.Windows.Forms.TextBox();
@@ -188,7 +189,7 @@
             // 
             // textBoxEntreguePor
             // 
-            this.textBoxEntreguePor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxEntreguePor.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxEntreguePor.Enabled = false;
             this.textBoxEntreguePor.Location = new System.Drawing.Point(153, 294);
             this.textBoxEntreguePor.Name = "textBoxEntreguePor";
@@ -241,7 +242,8 @@
             this.Controls.Add(this.textBoxProdutoId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSaidaProduto";
             this.Text = "HSA Estoque - Retirada de produto";
             this.Load += new System.EventHandler(this.FormSaidaProduto_Load);
