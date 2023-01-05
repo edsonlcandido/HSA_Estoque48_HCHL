@@ -64,6 +64,7 @@
             this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localizacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +75,6 @@
             this.quantidadeMaximaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leadTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanelItensOK.SuspendLayout();
@@ -506,6 +506,10 @@
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
             // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -516,12 +520,12 @@
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
-            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
             this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 400;
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 105;
             // 
             // localizacaoDataGridViewTextBoxColumn
             // 
@@ -590,10 +594,6 @@
             this.obs.Name = "obs";
             this.obs.ReadOnly = true;
             this.obs.Width = 200;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
             // 
             // FormMain
             // 
