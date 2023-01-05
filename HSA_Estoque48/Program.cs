@@ -17,8 +17,20 @@ namespace HSA_Estoque
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new FormMain(new Presenter.Produto()));
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var todosUsuarios = new Presenter.Usuario().showAll;
+
+            var adminUser = todosUsuarios.Find(u => u.nome.ToUpper().Contains(Environment.UserName.ToUpper()));
+
+            if (adminUser.isAdmin)
+            {
+                Application.Run(new FormMain(new Presenter.Produto()));
+            }
+            else
+            {
+                Application.Run(new FormViewProdutos(new Presenter.Produto()));
+            }            
             //Application.Run(new View.FormSaidaProduto());
         }
     }

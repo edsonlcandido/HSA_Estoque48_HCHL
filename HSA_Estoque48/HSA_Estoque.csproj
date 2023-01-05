@@ -88,18 +88,28 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewProdutos.Designer.cs">
+      <DependentUpon>FormViewProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\IHistoricoModel.cs" />
     <Compile Include="Model\Historico.cs" />
     <Compile Include="Model\IProdutoModel.cs" />
     <Compile Include="Model\IUnidadeModel.cs" />
+    <Compile Include="Model\IUsuarioModel.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Unidade.cs" />
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\ITipoModel.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Presenter\Historico.cs" />
+    <Compile Include="Repository\IUsuarioRepository.cs" />
     <Compile Include="Presenter\Produto.cs" />
     <Compile Include="Presenter\Unidade.cs" />
     <Compile Include="Presenter\Tipo.cs" />
+    <Compile Include="Presenter\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -115,6 +125,7 @@
     <Compile Include="Repository\Produto.cs" />
     <Compile Include="Repository\Unidade.cs" />
     <Compile Include="Repository\Tipo.cs" />
+    <Compile Include="Repository\Usuario.cs" />
     <Compile Include="View\FormEntradaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,8 +162,17 @@
     <Compile Include="View\FormUnidades.Designer.cs">
       <DependentUpon>FormUnidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewProdutos.resx">
+      <DependentUpon>FormViewProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,6 +197,9 @@
     <EmbeddedResource Include="View\FormUnidades.resx">
       <DependentUpon>FormUnidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="inventory.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -185,6 +208,7 @@
     <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Tipo.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Unidade.datasource" />
+    <None Include="Properties\DataSources\HSA_Estoque.Model.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -256,6 +280,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\202301022214-change id produtos to text.sql" />
+    <Content Include="Migrations\202301022248-create table usuarios.sql" />
+    <Content Include="Migrations\202302032311-insert admin users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

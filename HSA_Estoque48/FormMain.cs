@@ -233,5 +233,11 @@ namespace HSA_Estoque
             formReport.title = "Produtos";
             formReport.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUsuario formUsuario = new FormUsuario(new Presenter.Usuario());
+            formUsuario.ShowDialog();
+        }
     }
 }
