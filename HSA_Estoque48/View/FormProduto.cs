@@ -75,6 +75,7 @@ namespace HSA_Estoque.View
             textBoxProdutoQuantidadeTotal.Enabled = false;
             labelInseridoPor.Text = "Alterado por";
             labelDataInclusao.Text = "Data modificação";
+            labelQtdInicial.Text = "Qud. atual";
 
             buttonEditarProduto.Visible = true;
             buttonEditarProduto.Enabled = true;
@@ -108,7 +109,7 @@ namespace HSA_Estoque.View
         private void buttonAdicionaProduto_Click(object sender, EventArgs e)
         {
             _presenterProduto.id =textBoxProdutoId.Text;
-            _presenterProduto.descricao = textBoxProdutoDescricao.Text;
+            _presenterProduto.descricao = textBoxProdutoDescricao.Text.Trim();
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
             _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
@@ -117,6 +118,7 @@ namespace HSA_Estoque.View
             _presenterProduto.unidade = comboBoxUnidade.Text;
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
+            _presenterProduto.obs = textBoxObs.Text;
 
             _presenterHistorico.produtoId = textBoxProdutoId.Text;
             _presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
@@ -135,7 +137,7 @@ namespace HSA_Estoque.View
         private void buttonEditarProduto_Click(object sender, EventArgs e)
         {
             _presenterProduto.id = textBoxProdutoId.Text;
-            _presenterProduto.descricao = textBoxProdutoDescricao.Text;
+            _presenterProduto.descricao = textBoxProdutoDescricao.Text.Trim();
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
             _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
@@ -144,6 +146,7 @@ namespace HSA_Estoque.View
             _presenterProduto.unidade = comboBoxUnidade.Text;
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
+            _presenterProduto.obs = textBoxObs.Text;
 
             _presenterProduto.update();
 

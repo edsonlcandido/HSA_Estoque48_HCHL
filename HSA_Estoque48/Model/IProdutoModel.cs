@@ -18,5 +18,6 @@ namespace HSA_Estoque.Model
         string unidade { get; set; }
         string localizacao { get; set; }
         string caixa { get; set; }
+        string obs { get; set; }
     }
 }
