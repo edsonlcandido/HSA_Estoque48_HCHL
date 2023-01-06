@@ -2,6 +2,7 @@
 using HSA_Estoque.View;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Mapping;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,7 +22,17 @@ namespace HSA_Estoque
 
             var todosUsuarios = new Presenter.Usuario().showAll;
 
-            var adminUser = todosUsuarios.Find(u => u.nome.ToUpper().Contains(Environment.UserName.ToUpper()));
+            var adminUser = todosUsuarios.Find(u => u.nome.ToUpper().Equals(Environment.UserName.ToUpper()));
+
+            if (adminUser == null)
+            {
+                MessageBox.Show("Seu usuário não tem permissão para consultar o estqoue de consumiveis.\n" +
+                                "Solicite acesso com o almoxarifado.", 
+                                "USUÁRIO NÃO PERMITIDO", 
+                                MessageBoxButtons.OK, 
+                                MessageBoxIcon.Error);
+                Application.Exit();
+            }
 
             if (adminUser.isAdmin)
             {
@@ -30,7 +41,7 @@ namespace HSA_Estoque
             else
             {
                 Application.Run(new FormViewProdutos(new Presenter.Produto()));
-            }            
+            }
             //Application.Run(new View.FormSaidaProduto());
         }
     }
