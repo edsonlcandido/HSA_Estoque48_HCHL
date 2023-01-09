@@ -97,6 +97,7 @@ namespace HSA_Estoque.View
             //comboBoxUnidade.DropDownStyle = ComboBoxStyle.DropDownList;
             textBoxProdutoLocalizacao.Text=modelProduto.localizacao.ToString();
             textBoxProdutoCaixa.Text=modelProduto.caixa.ToString();
+            textBoxObs.Text = modelProduto.obs.ToString();
         }
 
         private void FormProduto_Load(object sender, EventArgs e)
