@@ -33,7 +33,7 @@ namespace HSA_Estoque.View
         {
             if (textBoxUsuarioName.Text.TrimEnd() != "")
             {
-                _presenterUsuario.nome = textBoxUsuarioName.Text;
+                _presenterUsuario.nome = textBoxUsuarioName.Text.ToUpper().Trim();
                 _presenterUsuario.add();
                 textBoxUsuarioName.Clear();
                 updateDataBinding();
