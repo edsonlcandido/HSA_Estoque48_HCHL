@@ -27,7 +27,8 @@ namespace HSA_Estoque
             if (adminUser == null)
             {
                 MessageBox.Show("Seu usuário não tem permissão para consultar o estoque de consumiveis.\n" +
-                                "Solicite acesso com o almoxarifado.", 
+                                "Solicite acesso com o almoxarifado.\n"+
+                                $"Usuário: {Environment.UserName.ToUpper()}", 
                                 "USUÁRIO NÃO PERMITIDO", 
                                 MessageBoxButtons.OK, 
                                 MessageBoxIcon.Error);
