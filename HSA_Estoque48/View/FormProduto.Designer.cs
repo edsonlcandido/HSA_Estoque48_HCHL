@@ -270,7 +270,7 @@
             this.buttonEditarProduto.Location = new System.Drawing.Point(121, 477);
             this.buttonEditarProduto.Name = "buttonEditarProduto";
             this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonEditarProduto.TabIndex = 13;
+            this.buttonEditarProduto.TabIndex = 14;
             this.buttonEditarProduto.Text = "Salvar";
             this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEditarProduto.UseVisualStyleBackColor = true;
@@ -282,7 +282,7 @@
             this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 477);
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonAdicionaProduto.TabIndex = 12;
+            this.buttonAdicionaProduto.TabIndex = 13;
             this.buttonAdicionaProduto.Text = "Adicionar";
             this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
@@ -317,7 +317,7 @@
             this.textBoxObs.Multiline = true;
             this.textBoxObs.Name = "textBoxObs";
             this.textBoxObs.Size = new System.Drawing.Size(430, 71);
-            this.textBoxObs.TabIndex = 28;
+            this.textBoxObs.TabIndex = 12;
             // 
             // label11
             // 

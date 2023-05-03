@@ -124,7 +124,7 @@ namespace HSA_Estoque.View
             _presenterHistorico.produtoId = textBoxProdutoId.Text;
             _presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
 
-            if (_presenterProduto.add() > 1 && _presenterHistorico.inclusaoProduto() > 0)
+            if (_presenterProduto.add() > 0 && _presenterHistorico.inclusaoProduto() > 0)
             {
                 MessageBox.Show("Produto incluido com sucesso.");
                 this.Close();
