@@ -203,9 +203,7 @@
     <EmbeddedResource Include="View\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="inventory.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="inventory.db" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Historico.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />
@@ -293,6 +291,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\202212211901-create table unidades.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202212211902-createview HistoricoReport.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Migrations\202301022214-change id produtos to text.sql">
