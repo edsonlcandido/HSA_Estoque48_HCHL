@@ -203,7 +203,9 @@
     <EmbeddedResource Include="View\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="inventory.db" />
+    <None Include="inventory.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Historico.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />
@@ -281,30 +283,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icone128x128.ico" />
-    <Content Include="Migrations\202212191900-create table produtos.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202212201900-create table historicos.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202212211900-create table tipos.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202212211901-create table unidades.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202212211902-createview HistoricoReport.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202301022214-change id produtos to text.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202301022248-create table usuarios.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Migrations\202301042117-add obs column to produtos table.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Migrations\202301022214-change id produtos to text.sql" />
+    <Content Include="Migrations\202301022248-create table usuarios.sql" />
+    <Content Include="Migrations\202301042117-add obs column to produtos table.sql" />
+    <Content Include="Migrations\202301032311-insert admin users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
