@@ -114,7 +114,7 @@ namespace HSA_Estoque.View
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
             _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
-            _presenterProduto.leadTime = textBoxProdutoLeadTime.Text==""?0:Convert.ToInt32(textBoxProdutoLeadTime.Text);
+            _presenterProduto.leadTime = textBoxProdutoLeadTime.Text=="" ? 0: Convert.ToInt32(textBoxProdutoLeadTime.Text);
             _presenterProduto.tipo = comboBoxTipo.Text;
             _presenterProduto.unidade = comboBoxUnidade.Text;
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
