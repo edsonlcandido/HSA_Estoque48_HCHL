@@ -1,4 +1,4 @@
-﻿CREATE VIEW HistoricoReport AS
+﻿CREATE VIEW IF NOT EXISTS HistoricoReport AS
     SELECT h.dataMovimentacao,
            h.usuario,
            h.quantidadeMovimentada,

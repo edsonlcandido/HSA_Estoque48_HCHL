@@ -296,9 +296,6 @@
     <Content Include="Migrations\202212211902-createview HistoricoReport.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Migrations\202301022214-change id produtos to text.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Migrations\202301022248-create table usuarios.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
