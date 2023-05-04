@@ -90,7 +90,7 @@ namespace HSA_Estoque.Repository
                            p.localizacao,
                            p.caixa
                       FROM historico AS h
-                           JOIN
+                           LEFT JOIN
                            produtos AS p ON h.produtoId = p.id;
                 ",(historico, produto) => { historico.produto = produto; return historico; } );
                 return historicos;

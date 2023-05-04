@@ -52,6 +52,17 @@ namespace HSA_Estoque.Repository
             return lastRow;
         }
 
+        public void delete(Model.Produto produtoModel)
+        {
+            using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))
+            {
+                var affectedRows = connection.Execute(@"
+                    DELETE FROM produtos
+                          WHERE id = @id
+                ", new { produtoModel.id });
+            }
+        }
+
         public IEnumerable<Model.Produto> filterByDescricao(string descricao)
         {
             using (IDbConnection connection = new SQLiteConnection(CONNECTIONSTRING))

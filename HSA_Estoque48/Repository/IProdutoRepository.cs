@@ -10,6 +10,7 @@ namespace HSA_Estoque.Repository
     {
         int add(Model.Produto produtoModel);
         void update(Model.Produto produtoModel);
+        void delete(Model.Produto produtoModel);
         Model.Produto get(int id);
         IEnumerable<Model.Produto> findAll();
         IEnumerable<Model.Produto> filterByDescricao(string descricao);

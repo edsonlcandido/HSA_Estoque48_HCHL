@@ -46,6 +46,8 @@ namespace HSA_Estoque.View
 
             buttonEditarProduto.Visible = false;
             buttonEditarProduto.Enabled = false;
+            buttonDeletarProduto.Enabled = false;
+            buttonDeletarProduto.Visible = false;
             
         }
 
@@ -149,12 +151,23 @@ namespace HSA_Estoque.View
             _presenterProduto.caixa = textBoxProdutoCaixa.Text;
             _presenterProduto.obs = textBoxObs.Text;
 
-            _presenterProduto.update();
+            try
+            {
+                _presenterProduto.update();
 
-            _presenterHistorico.produtoId = textBoxProdutoId.Text;
-            _presenterHistorico.alteracaoProduto();
+                _presenterHistorico.produtoId = textBoxProdutoId.Text;
+                _presenterHistorico.alteracaoProduto();
 
-            this.Close();
+                MessageBox.Show("Produto alterado com sucesso.");
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+
         }
 
         private void buttonAdministrarTipo_Click(object sender, EventArgs e)
@@ -190,6 +203,39 @@ namespace HSA_Estoque.View
 
             comboBoxTipo.DataSource = listaTipo.ToList();
             comboBoxUnidade.DataSource = listaUnidade.ToList();
+
+        }
+
+        private void buttonDeletar_Click(object sender, EventArgs e)
+        {
+            _presenterProduto.id = textBoxProdutoId.Text;
+            _presenterProduto.descricao = textBoxProdutoDescricao.Text.Trim();
+            _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
+            _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
+            _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
+            _presenterProduto.leadTime = Convert.ToInt32(textBoxProdutoLeadTime.Text);
+            _presenterProduto.tipo = comboBoxTipo.Text;
+            _presenterProduto.unidade = comboBoxUnidade.Text;
+            _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
+            _presenterProduto.caixa = textBoxProdutoCaixa.Text;
+            _presenterProduto.obs = textBoxObs.Text;
+
+            try
+            {
+                _presenterHistorico.produtoId = textBoxProdutoId.Text;
+                _presenterHistorico.remocaoProduto();
+
+                _presenterProduto.delete();
+
+                MessageBox.Show("Produto removido");
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
 
         }
     }

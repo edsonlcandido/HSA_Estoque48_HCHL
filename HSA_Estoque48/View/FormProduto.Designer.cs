@@ -53,12 +53,13 @@
             this.labelInseridoPor = new System.Windows.Forms.Label();
             this.textBoxDataInclusão = new System.Windows.Forms.TextBox();
             this.labelDataInclusao = new System.Windows.Forms.Label();
-            this.buttonEditarProduto = new System.Windows.Forms.Button();
-            this.buttonAdicionaProduto = new System.Windows.Forms.Button();
             this.buttonAdministrarTipo = new System.Windows.Forms.Button();
             this.buttonAdministrarUnidade = new System.Windows.Forms.Button();
             this.textBoxObs = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.buttonDeletarProduto = new System.Windows.Forms.Button();
+            this.buttonEditarProduto = new System.Windows.Forms.Button();
+            this.buttonAdicionaProduto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -264,30 +265,6 @@
             this.labelDataInclusao.TabIndex = 22;
             this.labelDataInclusao.Text = "Data inclusão";
             // 
-            // buttonEditarProduto
-            // 
-            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.Editar16x16;
-            this.buttonEditarProduto.Location = new System.Drawing.Point(121, 477);
-            this.buttonEditarProduto.Name = "buttonEditarProduto";
-            this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonEditarProduto.TabIndex = 14;
-            this.buttonEditarProduto.Text = "Salvar";
-            this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEditarProduto.UseVisualStyleBackColor = true;
-            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
-            // 
-            // buttonAdicionaProduto
-            // 
-            this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
-            this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 477);
-            this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
-            this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
-            this.buttonAdicionaProduto.TabIndex = 13;
-            this.buttonAdicionaProduto.Text = "Adicionar";
-            this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
-            this.buttonAdicionaProduto.Click += new System.EventHandler(this.buttonAdicionaProduto_Click);
-            // 
             // buttonAdministrarTipo
             // 
             this.buttonAdministrarTipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,11 +305,48 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Obs";
             // 
+            // buttonDeletarProduto
+            // 
+            this.buttonDeletarProduto.Image = global::HSA_Estoque.Properties.Resources.Deletar16x16;
+            this.buttonDeletarProduto.Location = new System.Drawing.Point(472, 477);
+            this.buttonDeletarProduto.Name = "buttonDeletarProduto";
+            this.buttonDeletarProduto.Size = new System.Drawing.Size(100, 32);
+            this.buttonDeletarProduto.TabIndex = 30;
+            this.buttonDeletarProduto.Text = "Deletar";
+            this.buttonDeletarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeletarProduto.UseVisualStyleBackColor = true;
+            this.buttonDeletarProduto.Click += new System.EventHandler(this.buttonDeletar_Click);
+            // 
+            // buttonEditarProduto
+            // 
+            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.Editar16x16;
+            this.buttonEditarProduto.Location = new System.Drawing.Point(121, 477);
+            this.buttonEditarProduto.Name = "buttonEditarProduto";
+            this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
+            this.buttonEditarProduto.TabIndex = 14;
+            this.buttonEditarProduto.Text = "Salvar";
+            this.buttonEditarProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditarProduto.UseVisualStyleBackColor = true;
+            this.buttonEditarProduto.Click += new System.EventHandler(this.buttonEditarProduto_Click);
+            // 
+            // buttonAdicionaProduto
+            // 
+            this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
+            this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 477);
+            this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
+            this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);
+            this.buttonAdicionaProduto.TabIndex = 13;
+            this.buttonAdicionaProduto.Text = "Adicionar";
+            this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
+            this.buttonAdicionaProduto.Click += new System.EventHandler(this.buttonAdicionaProduto_Click);
+            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 521);
+            this.Controls.Add(this.buttonDeletarProduto);
             this.Controls.Add(this.textBoxObs);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.buttonAdministrarUnidade);
@@ -406,5 +420,6 @@
         private System.Windows.Forms.Button buttonAdministrarUnidade;
         private System.Windows.Forms.TextBox textBoxObs;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button buttonDeletarProduto;
     }
 }
