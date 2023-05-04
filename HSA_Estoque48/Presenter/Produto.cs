@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace HSA_Estoque.Presenter
@@ -33,6 +34,10 @@ namespace HSA_Estoque.Presenter
         {
             return _repository.add((Model.Produto)this);
         }
+        public void delete()
+        {
+            _repository.delete((Model.Produto)this);
+        }
 
         public Model.Produto get(int id)
         {
@@ -55,6 +60,10 @@ namespace HSA_Estoque.Presenter
 
         public void update()
         {
+            if (this.quantidadeTotal < 0)
+            {
+                throw new Exception("Quantidade retirada não pode ser maior que a quantidade em estoque");
+            }
             _repository.update((Model.Produto)this);
         }
 

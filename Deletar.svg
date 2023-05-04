@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg831"
+   sodipodi:docname="Deletar.svg"
+   width="512"
+   height="512"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs835" />
+  <sodipodi:namedview
+     id="namedview833"
+     pagecolor="#373737"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.625"
+     inkscape:cx="224"
+     inkscape:cy="256.30769"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg831" />
+  <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+  <path
+     d="M 154.51429,17.69 C 160.68572,6.848 173.37142,0 187.20001,0 H 324.8 c 13.82858,0 26.51429,6.848 32.68571,17.69 L 365.71429,32 H 475.42857 C 495.65714,32 512,46.33 512,64 512,81.67 495.65714,96 475.42857,96 H 36.571429 C 16.377142,96 0,81.67 0,64 0,46.33 16.377142,32 36.571429,32 H 146.28571 Z M 35.542857,128 H 475.42857 v 320 c 0,35.3 -32.79999,64 -73.14285,64 h -293.6 C 69.31429,512 35.542857,483.3 35.542857,448 Z m 91.428573,80 v 224 c 0,8.8 9.25715,16 18.28572,16 11.0857,0 18.28571,-7.2 18.28571,-16 V 208 c 0,-8.8 -7.20001,-16 -18.28571,-16 -9.02857,0 -18.28572,7.2 -18.28572,16 z m 109.71429,0 v 224 c 0,8.8 9.25714,16 18.28571,16 11.08571,0 19.31429,-7.2 19.31429,-16 V 208 c 0,-8.8 -8.22858,-16 -19.31429,-16 -9.02857,0 -18.28571,7.2 -18.28571,16 z m 110.74285,0 v 224 c 0,8.8 8.22858,16 18.28572,16 C 375.77143,448 384,440.8 384,432 V 208 c 0,-8.8 -8.22857,-16 -18.28571,-16 -10.05714,0 -18.28572,7.2 -18.28572,16 z"
+     id="path829"
+     style="stroke-width:1.06904;stroke:none;fill:#0f0f0f;fill-opacity:1" />
+</svg>

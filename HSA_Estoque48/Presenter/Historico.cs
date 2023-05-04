@@ -78,6 +78,18 @@ namespace HSA_Estoque.Presenter
             modelHistorico.obs = this.obs;
             _historicoRepository.Add(modelHistorico);
         }
+        public void remocaoProduto()
+        {
+            this.obs = $@"Produto foi removido";
+            this.tipoMovimentacao = "Remoção";
+            Model.Historico modelHistorico = new Model.Historico();
+            modelHistorico.dataMovimentacao = this.dataMovimentacao;
+            modelHistorico.tipoMovimentacao = this.tipoMovimentacao;
+            modelHistorico.usuario = this.usuario;
+            modelHistorico.produtoId = this.produtoId;
+            modelHistorico.obs = this.obs;
+            _historicoRepository.Add(modelHistorico);
+        }
 
         public DateTime dataMovimentacao { get ; set ; }
         public string usuario { get ; set ; }

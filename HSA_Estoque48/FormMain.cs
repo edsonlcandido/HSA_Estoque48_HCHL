@@ -170,7 +170,7 @@ namespace HSA_Estoque
             int rowIndex = 0;
             foreach (Model.Historico hist in modelHistorico)
             {
-                dataTable.Rows[rowIndex]["Descrição"] = hist.produto.descricao;
+                dataTable.Rows[rowIndex]["Descrição"] = hist.produto==null ? "": hist.produto.descricao;
                 rowIndex++;
             }
 
