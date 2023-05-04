@@ -114,7 +114,7 @@ namespace HSA_Estoque.View
             _presenterProduto.quantidadeTotal = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
             _presenterProduto.quantidadeMinima = Convert.ToDouble(textBoxProdutoQuantidadeMinima.Text);
             _presenterProduto.quantidadeMaxima = Convert.ToDouble(textBoxProdutoQuantidadeMaxima.Text);
-            _presenterProduto.leadTime = Convert.ToInt32(textBoxProdutoLeadTime.Text);
+            _presenterProduto.leadTime = textBoxProdutoLeadTime.Text==""?0:Convert.ToInt32(textBoxProdutoLeadTime.Text);
             _presenterProduto.tipo = comboBoxTipo.Text;
             _presenterProduto.unidade = comboBoxUnidade.Text;
             _presenterProduto.localizacao = textBoxProdutoLocalizacao.Text;
@@ -124,7 +124,7 @@ namespace HSA_Estoque.View
             _presenterHistorico.produtoId = textBoxProdutoId.Text;
             _presenterHistorico.quantidadeMovimentada = Convert.ToDouble(textBoxProdutoQuantidadeTotal.Text);
 
-            if (_presenterProduto.add() > 1 && _presenterHistorico.inclusaoProduto() > 0)
+            if (_presenterProduto.add() > 0 && _presenterHistorico.inclusaoProduto() > 0)
             {
                 MessageBox.Show("Produto incluido com sucesso.");
                 this.Close();
