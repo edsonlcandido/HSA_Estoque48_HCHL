@@ -203,7 +203,6 @@
     <EmbeddedResource Include="View\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="inventory.db" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Historico.datasource" />
     <None Include="Properties\DataSources\HSA_Estoque.Model.Produto.datasource" />

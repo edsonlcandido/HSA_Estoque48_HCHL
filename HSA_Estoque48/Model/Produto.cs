@@ -13,15 +13,15 @@ namespace HSA_Estoque.Model
         [DisplayName("Código")]
         [DataType(DataType.Text)]
         public string id { get ; set ; }
-        [DisplayName("Descrição")]
+        [DisplayName("Descripción")]
         public string descricao { get ; set ; }
 
-        [DisplayName("Qtd. mín.")]
+        [DisplayName("Cant. mín.")]
         public double quantidadeMinima { get ; set ; }
 
-        [DisplayName("Qtd. máx.")] 
+        [DisplayName("Cant. máx.")] 
         public double quantidadeMaxima { get ; set ; }
-        [DisplayName("Qtd. atual")]
+        [DisplayName("Cant. atual")]
         public double quantidadeTotal { get ; set ; }
         [DisplayName("Lead time")]
         public int leadTime { get ; set ; }
@@ -29,9 +29,9 @@ namespace HSA_Estoque.Model
         public string tipo { get ; set ; }
         [DisplayName("Unidade")]
         public string unidade { get ; set ; }
-        [DisplayName("Localização")]
+        [DisplayName("Unicación")]
         public string localizacao { get ; set ; }
-        [DisplayName("Caixa")]
+        [DisplayName("Caja")]
         public string caixa { get ; set ; }
         [DisplayName("Obs")]
         public string obs { get; set; }

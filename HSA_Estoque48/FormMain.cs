@@ -71,9 +71,9 @@ namespace HSA_Estoque
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
-            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
-            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
+            labelSemMaterial.Text = String.Format(labelSemMaterial.Text, _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format(labelProdutosAcabando.Text, _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format(labelProdutosOK.Text, _produtosOK.Count());
             produtoBindingSource.DataSource= _todosProdutos;
         }
 
@@ -126,9 +126,9 @@ namespace HSA_Estoque
 
             produtoBindingSource.DataSource = _todosProdutos;
 
-            labelSemMaterial.Text = String.Format("{0} itens estão sem estoque", _semMaterial.Count());
-            labelProdutosAcabando.Text = String.Format("{0} itens estão com quantidades inferior ao minimo", _produtosAcabando.Count());
-            labelProdutosOK.Text = String.Format("{0} itens estão com a quantidades ok", _produtosOK.Count());
+            labelSemMaterial.Text = String.Format(labelSemMaterial.Text, _semMaterial.Count());
+            labelProdutosAcabando.Text = String.Format(labelProdutosAcabando.Text, _produtosAcabando.Count());
+            labelProdutosOK.Text = String.Format(labelProdutosOK.Text, _produtosOK.Count());
         }
 
         private void buttonPesquisaPorDescricao_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace HSA_Estoque
             }
 
             FormReport formReport = new FormReport(dataTable);
-            formReport.title = "Movimentação";
+            formReport.title = "Movimiento";
             formReport.ShowDialog();
         }
 
@@ -230,7 +230,7 @@ namespace HSA_Estoque
             List<Model.Produto> produtos = new Repository.Produto().findAll().ToList();
             DataTable dataTable = listToDataTable(produtos);
             FormReport formReport = new FormReport(dataTable);
-            formReport.title = "Produtos";
+            formReport.title = "Productos";
             formReport.ShowDialog();
         }
 
@@ -238,6 +238,11 @@ namespace HSA_Estoque
         {
             FormUsuario formUsuario = new FormUsuario(new Presenter.Usuario());
             formUsuario.ShowDialog();
+        }
+
+        private void produtoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
