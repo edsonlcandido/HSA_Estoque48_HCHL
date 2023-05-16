@@ -52,7 +52,7 @@
             // 
             this.textBoxInseridoPor.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxInseridoPor.Enabled = false;
-            this.textBoxInseridoPor.Location = new System.Drawing.Point(153, 259);
+            this.textBoxInseridoPor.Location = new System.Drawing.Point(169, 259);
             this.textBoxInseridoPor.Name = "textBoxInseridoPor";
             this.textBoxInseridoPor.Size = new System.Drawing.Size(200, 26);
             this.textBoxInseridoPor.TabIndex = 7;
@@ -62,14 +62,14 @@
             this.labelInseridoPor.AutoSize = true;
             this.labelInseridoPor.Location = new System.Drawing.Point(12, 263);
             this.labelInseridoPor.Name = "labelInseridoPor";
-            this.labelInseridoPor.Size = new System.Drawing.Size(90, 18);
+            this.labelInseridoPor.Size = new System.Drawing.Size(111, 18);
             this.labelInseridoPor.TabIndex = 32;
-            this.labelInseridoPor.Text = "Inserido por";
+            this.labelInseridoPor.Text = "Introducido por";
             // 
             // textBoxProdutoQuantidadeMaxima
             // 
             this.textBoxProdutoQuantidadeMaxima.Enabled = false;
-            this.textBoxProdutoQuantidadeMaxima.Location = new System.Drawing.Point(153, 154);
+            this.textBoxProdutoQuantidadeMaxima.Location = new System.Drawing.Point(169, 154);
             this.textBoxProdutoQuantidadeMaxima.Name = "textBoxProdutoQuantidadeMaxima";
             this.textBoxProdutoQuantidadeMaxima.Size = new System.Drawing.Size(100, 26);
             this.textBoxProdutoQuantidadeMaxima.TabIndex = 4;
@@ -79,14 +79,14 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(104, 18);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Qtd. máxima";
+            this.label5.Text = "Cant. máxima";
             // 
             // textBoxProdutoQuantidadeMinima
             // 
             this.textBoxProdutoQuantidadeMinima.Enabled = false;
-            this.textBoxProdutoQuantidadeMinima.Location = new System.Drawing.Point(153, 119);
+            this.textBoxProdutoQuantidadeMinima.Location = new System.Drawing.Point(169, 119);
             this.textBoxProdutoQuantidadeMinima.Name = "textBoxProdutoQuantidadeMinima";
             this.textBoxProdutoQuantidadeMinima.Size = new System.Drawing.Size(100, 26);
             this.textBoxProdutoQuantidadeMinima.TabIndex = 3;
@@ -96,14 +96,14 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 18);
+            this.label4.Size = new System.Drawing.Size(99, 18);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Qtd. mínima";
+            this.label4.Text = "Cant. mínima";
             // 
             // textBoxProdutoQuantidadeTotal
             // 
             this.textBoxProdutoQuantidadeTotal.Enabled = false;
-            this.textBoxProdutoQuantidadeTotal.Location = new System.Drawing.Point(153, 84);
+            this.textBoxProdutoQuantidadeTotal.Location = new System.Drawing.Point(169, 84);
             this.textBoxProdutoQuantidadeTotal.Name = "textBoxProdutoQuantidadeTotal";
             this.textBoxProdutoQuantidadeTotal.Size = new System.Drawing.Size(100, 26);
             this.textBoxProdutoQuantidadeTotal.TabIndex = 2;
@@ -113,15 +113,15 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 18);
+            this.label3.Size = new System.Drawing.Size(107, 18);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Qtd. em estoque";
+            this.label3.Text = "Cant. en stock";
             // 
             // textBoxProdutoDescricao
             // 
             this.textBoxProdutoDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoDescricao.Enabled = false;
-            this.textBoxProdutoDescricao.Location = new System.Drawing.Point(153, 49);
+            this.textBoxProdutoDescricao.Location = new System.Drawing.Point(169, 49);
             this.textBoxProdutoDescricao.Name = "textBoxProdutoDescricao";
             this.textBoxProdutoDescricao.Size = new System.Drawing.Size(430, 26);
             this.textBoxProdutoDescricao.TabIndex = 1;
@@ -131,15 +131,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Descrição";
+            this.label2.Text = "Descripción";
             // 
             // textBoxProdutoId
             // 
             this.textBoxProdutoId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxProdutoId.Enabled = false;
-            this.textBoxProdutoId.Location = new System.Drawing.Point(153, 14);
+            this.textBoxProdutoId.Location = new System.Drawing.Point(169, 14);
             this.textBoxProdutoId.Name = "textBoxProdutoId";
             this.textBoxProdutoId.Size = new System.Drawing.Size(200, 26);
             this.textBoxProdutoId.TabIndex = 0;
@@ -156,7 +156,7 @@
             // textBoxNumeroNF
             // 
             this.textBoxNumeroNF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxNumeroNF.Location = new System.Drawing.Point(153, 224);
+            this.textBoxNumeroNF.Location = new System.Drawing.Point(169, 224);
             this.textBoxNumeroNF.Name = "textBoxNumeroNF";
             this.textBoxNumeroNF.Size = new System.Drawing.Size(200, 26);
             this.textBoxNumeroNF.TabIndex = 6;
@@ -166,13 +166,13 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 228);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
+            this.label6.Size = new System.Drawing.Size(152, 18);
             this.label6.TabIndex = 34;
-            this.label6.Text = "Numero NF";
+            this.label6.Text = "Número de la factura";
             // 
             // textBoxQuantidadeA_SerIncluida
             // 
-            this.textBoxQuantidadeA_SerIncluida.Location = new System.Drawing.Point(153, 189);
+            this.textBoxQuantidadeA_SerIncluida.Location = new System.Drawing.Point(169, 189);
             this.textBoxQuantidadeA_SerIncluida.Name = "textBoxQuantidadeA_SerIncluida";
             this.textBoxQuantidadeA_SerIncluida.Size = new System.Drawing.Size(100, 26);
             this.textBoxQuantidadeA_SerIncluida.TabIndex = 5;
@@ -182,9 +182,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 18);
+            this.label7.Size = new System.Drawing.Size(102, 18);
             this.label7.TabIndex = 36;
-            this.label7.Text = "Qtd. a ser incluída";
+            this.label7.Text = "Cant. a incluir";
             // 
             // buttonAdicionaProduto
             // 
@@ -193,7 +193,7 @@
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 29);
             this.buttonAdicionaProduto.TabIndex = 8;
-            this.buttonAdicionaProduto.Text = "Adicionar";
+            this.buttonAdicionaProduto.Text = "Añadir";
             this.buttonAdicionaProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAdicionaProduto.UseVisualStyleBackColor = true;
             this.buttonAdicionaProduto.Click += new System.EventHandler(this.buttonAdicionaProduto_Click);
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 340);
+            this.ClientSize = new System.Drawing.Size(612, 340);
             this.Controls.Add(this.buttonAdicionaProduto);
             this.Controls.Add(this.textBoxQuantidadeA_SerIncluida);
             this.Controls.Add(this.label7);
@@ -224,7 +224,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEntradaProduto";
-            this.Text = "HSA Estoque - Entrada de produto";
+            this.Text = "HCHL Inventario - entrada de producto";
             this.Load += new System.EventHandler(this.FormEntradaProduto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
