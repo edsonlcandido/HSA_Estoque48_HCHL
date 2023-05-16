@@ -23,7 +23,7 @@ namespace HSA_Estoque.Presenter
 
         public void entradaProduto()
         {
-            this.obs = $@"Foi adicionado {this.quantidadeMovimentada} ao produto";
+            this.obs = $@"Se ha agregado {this.quantidadeMovimentada} al producto";
             this.tipoMovimentacao= "Entrada";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao = this.dataMovimentacao;
@@ -38,7 +38,7 @@ namespace HSA_Estoque.Presenter
 
         public void retiradaProduto()
         {
-            this.obs = $@"Foi feita a retirada de {this.quantidadeMovimentada} do produto";
+            this.obs = $@"Se ha realizado la retirada de {this.quantidadeMovimentada} del producto";
             this.tipoMovimentacao= "Retirada";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao= this.dataMovimentacao;
@@ -54,7 +54,7 @@ namespace HSA_Estoque.Presenter
 
         public int inclusaoProduto()
         {
-            this.obs = $@"Quantidade inicial de {this.quantidadeMovimentada}";
+            this.obs = $@"Cantidad inicial de {this.quantidadeMovimentada}";
             this.tipoMovimentacao = "Inicial";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao = this.dataMovimentacao;
@@ -68,8 +68,8 @@ namespace HSA_Estoque.Presenter
 
         public void alteracaoProduto()
         {
-            this.obs = $@"Produto foi editado";
-            this.tipoMovimentacao = "Edição";
+            this.obs = $@"El producto ha sido editado";
+            this.tipoMovimentacao = "Edición";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao = this.dataMovimentacao;
             modelHistorico.tipoMovimentacao = this.tipoMovimentacao;
@@ -80,8 +80,8 @@ namespace HSA_Estoque.Presenter
         }
         public void remocaoProduto()
         {
-            this.obs = $@"Produto foi removido";
-            this.tipoMovimentacao = "Remoção";
+            this.obs = $@"El producto ha sido eliminado";
+            this.tipoMovimentacao = "Remoción";
             Model.Historico modelHistorico = new Model.Historico();
             modelHistorico.dataMovimentacao = this.dataMovimentacao;
             modelHistorico.tipoMovimentacao = this.tipoMovimentacao;

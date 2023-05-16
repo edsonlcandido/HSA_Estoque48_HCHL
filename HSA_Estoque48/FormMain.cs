@@ -165,12 +165,12 @@ namespace HSA_Estoque
             List<Model.Historico> modelHistorico = new Repository.Historico().reportAll().ToList();
             DataTable dataTable = listToDataTable(modelHistorico);
             dataTable.Columns.Remove("produto");
-            dataTable.Columns.Add("Descrição");
-            dataTable.Columns["Descrição"].SetOrdinal(5);
+            dataTable.Columns.Add("Descripción");
+            dataTable.Columns["Descripción"].SetOrdinal(5);
             int rowIndex = 0;
             foreach (Model.Historico hist in modelHistorico)
             {
-                dataTable.Rows[rowIndex]["Descrição"] = hist.produto==null ? "": hist.produto.descricao;
+                dataTable.Rows[rowIndex]["Descripción"] = hist.produto==null ? "": hist.produto.descricao;
                 rowIndex++;
             }
 
