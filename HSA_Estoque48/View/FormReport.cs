@@ -28,7 +28,7 @@ namespace HSA_Estoque.View
 
         private void FormReportHistorico_Load(object sender, EventArgs e)
         {
-            this.Text = $"{title} - Relatório";
+            this.Text = $"{title} - Informe";
             dataGridViewMain.DataSource = _dt;
         }
 
@@ -36,8 +36,8 @@ namespace HSA_Estoque.View
         {
             using (SaveFileDialog sfd = new SaveFileDialog()
             {
-                Filter = "Planilhas Excel|*.xlsx",
-                Title = "Exportar planilha excel"
+                Filter = "Archivo Excel|*.xlsx",
+                Title = "Exportar archivo excel"
             })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
@@ -71,7 +71,7 @@ namespace HSA_Estoque.View
                         workSheet.get_Range((Excel.Range)(workSheet.Cells[2, 1]), (Excel.Range)(workSheet.Cells[RowsCount + 1, ColumnsCount])).Value = Cells;
 
                         workSheet.SaveAs(sfd.FileName);
-                        Console.WriteLine("Planilha Salva");
+                        Console.WriteLine("Archivo guardado");
                         excelApp.Visible = true;
 
                         //using (XLWorkbook xLWorkbook = new XLWorkbook())
@@ -80,7 +80,7 @@ namespace HSA_Estoque.View
                         //    xLWorkbook.SaveAs(sfd.FileName);
                         //}
 
-                        MessageBox.Show($"{title} exportado para arquivo excel.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"{title} exportado a archivo excel.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {

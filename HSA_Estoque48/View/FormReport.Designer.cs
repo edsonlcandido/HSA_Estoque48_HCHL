@@ -72,8 +72,8 @@
             // exportarParaExcelToolStripMenuItem
             // 
             this.exportarParaExcelToolStripMenuItem.Name = "exportarParaExcelToolStripMenuItem";
-            this.exportarParaExcelToolStripMenuItem.Size = new System.Drawing.Size(153, 25);
-            this.exportarParaExcelToolStripMenuItem.Text = "Exportar para excel";
+            this.exportarParaExcelToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
+            this.exportarParaExcelToolStripMenuItem.Text = "Exportar a excel";
             this.exportarParaExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarParaExcelToolStripMenuItem_Click);
             // 
             // FormReport
@@ -88,7 +88,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormReport";
-            this.Text = "FormReport";
+            this.Text = "Informe";
             this.Load += new System.EventHandler(this.FormReportHistorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
