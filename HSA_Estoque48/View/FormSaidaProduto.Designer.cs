@@ -62,9 +62,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 191);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 18);
+            this.label7.Size = new System.Drawing.Size(126, 18);
             this.label7.TabIndex = 53;
-            this.label7.Text = "Qtd. necessária";
+            this.label7.Text = "Cant. necessaria";
             // 
             // textBoxPedido_CC
             // 
@@ -113,9 +113,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(104, 18);
             this.label5.TabIndex = 47;
-            this.label5.Text = "Qtd. máxima";
+            this.label5.Text = "Cant. máxima";
             // 
             // textBoxProdutoQuantidadeMinima
             // 
@@ -130,9 +130,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 18);
+            this.label4.Size = new System.Drawing.Size(99, 18);
             this.label4.TabIndex = 45;
-            this.label4.Text = "Qtd. mínima";
+            this.label4.Text = "Cant. mínima";
             // 
             // textBoxProdutoQuantidadeTotal
             // 
@@ -147,9 +147,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 18);
+            this.label3.Size = new System.Drawing.Size(107, 18);
             this.label3.TabIndex = 43;
-            this.label3.Text = "Qtd. em estoque";
+            this.label3.Text = "Cant. en stock";
             // 
             // textBoxProdutoDescricao
             // 
@@ -165,9 +165,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 41;
-            this.label2.Text = "Descrição";
+            this.label2.Text = "Descripción";
             // 
             // textBoxProdutoId
             // 
@@ -201,9 +201,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(12, 298);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 18);
+            this.label8.Size = new System.Drawing.Size(108, 18);
             this.label8.TabIndex = 56;
-            this.label8.Text = "Entregue por";
+            this.label8.Text = "Entregado por";
             // 
             // buttonRetirarProduto
             // 
@@ -245,7 +245,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSaidaProduto";
-            this.Text = "HSA Estoque - Retirada de produto";
+            this.Text = "HCHL Inventario - Retiro de producto";
             this.Load += new System.EventHandler(this.FormSaidaProduto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
