@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +64,7 @@
             this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localizacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +75,6 @@
             this.quantidadeMaximaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leadTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanelItensOK.SuspendLayout();
@@ -141,14 +142,14 @@
             // movimentaçãoToolStripMenuItem
             // 
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
-            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.movimentaçãoToolStripMenuItem.Text = "Movimiento";
             this.movimentaçãoToolStripMenuItem.Click += new System.EventHandler(this.movimentaçãoToolStripMenuItem_Click);
             // 
             // resumoToolStripMenuItem
             // 
             this.resumoToolStripMenuItem.Name = "resumoToolStripMenuItem";
-            this.resumoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.resumoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.resumoToolStripMenuItem.Text = "Resumem";
             this.resumoToolStripMenuItem.Click += new System.EventHandler(this.resumoToolStripMenuItem_Click);
             // 
@@ -505,6 +506,11 @@
             this.dataGridViewProdutos.Size = new System.Drawing.Size(745, 280);
             this.dataGridViewProdutos.TabIndex = 7;
             // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
+            this.produtoBindingSource.CurrentChanged += new System.EventHandler(this.produtoBindingSource_CurrentChanged);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -517,7 +523,7 @@
             // 
             this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descripción";
             this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 400;
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -589,11 +595,6 @@
             this.obs.Name = "obs";
             this.obs.ReadOnly = true;
             this.obs.Width = 200;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
-            this.produtoBindingSource.CurrentChanged += new System.EventHandler(this.produtoBindingSource_CurrentChanged);
             // 
             // FormMain
             // 
