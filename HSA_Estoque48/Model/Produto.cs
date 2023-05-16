@@ -27,7 +27,7 @@ namespace HSA_Estoque.Model
         public int leadTime { get ; set ; }
         [DisplayName("Tipo")]
         public string tipo { get ; set ; }
-        [DisplayName("Unidade")]
+        [DisplayName("Unidad")]
         public string unidade { get ; set ; }
         [DisplayName("Unicación")]
         public string localizacao { get ; set ; }

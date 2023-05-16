@@ -10,13 +10,13 @@ namespace HSA_Estoque.Model
 {
     public class Historico : IHistoricoModel
     {
-        [DisplayName("Data da movimentação")]
+        [DisplayName("Fecha del movimiento")]
         public DateTime dataMovimentacao { get; set; }
-        [DisplayName("Usuário")]
+        [DisplayName("Usuario")]
         public string usuario { get; set; }
-        [DisplayName("Qtd. movimentada")]
+        [DisplayName("Cant. movimentada")]
         public double quantidadeMovimentada { get; set; }
-        [DisplayName("Tipo de movimentação")]
+        [DisplayName("Tipo de movimiento")]
         public string tipoMovimentacao { get; set; }
         [DisplayName("Código")]
         public string produtoId { get; set; }
@@ -24,7 +24,7 @@ namespace HSA_Estoque.Model
         public string solicitante { get; set; }
         [DisplayName("Pedido ou C/C")]
         public string pedidoCentroCusto { get; set; }
-        [DisplayName("No.  NF")]
+        [DisplayName("Número de la factura")]
         public string notaFiscal { get; set; }
         [DisplayName("Obs.")]
         public string obs { get; set; }
