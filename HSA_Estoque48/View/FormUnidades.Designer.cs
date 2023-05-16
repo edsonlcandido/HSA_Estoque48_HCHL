@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUnidades));
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUnidadeName = new System.Windows.Forms.TextBox();
             this.buttonAdiciona = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,21 +62,6 @@
             this.dataGridViewMain.TabIndex = 0;
             this.dataGridViewMain.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellEndEdit);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "visible";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Mostrar";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 67;
-            // 
             // unidadeBindingSource
             // 
             this.unidadeBindingSource.DataSource = typeof(HSA_Estoque.Model.Unidade);
@@ -86,9 +71,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nombre";
             // 
             // textBoxUnidadeName
             // 
@@ -106,9 +91,24 @@
             this.buttonAdiciona.Name = "buttonAdiciona";
             this.buttonAdiciona.Size = new System.Drawing.Size(84, 29);
             this.buttonAdiciona.TabIndex = 4;
-            this.buttonAdiciona.Text = "Adiciona";
+            this.buttonAdiciona.Text = "Anãdir";
             this.buttonAdiciona.UseVisualStyleBackColor = true;
             this.buttonAdiciona.Click += new System.EventHandler(this.buttonAdiciona_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "visible";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Mostrar";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Width = 67;
             // 
             // FormUnidades
             // 
@@ -124,7 +124,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(336, 39);
             this.Name = "FormUnidades";
-            this.Text = "Administrar Unidades";
+            this.Text = "Gestionar Unidades";
             this.Load += new System.EventHandler(this.FormTipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).EndInit();
