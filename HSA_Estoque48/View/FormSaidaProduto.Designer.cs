@@ -207,7 +207,7 @@
             // 
             // buttonRetirarProduto
             // 
-            this.buttonRetirarProduto.Image = global::HSA_Estoque.Properties.Resources.Said16x16;
+            this.buttonRetirarProduto.Image = global::HCHL_Inventario.Properties.Resources.Said16x16;
             this.buttonRetirarProduto.Location = new System.Drawing.Point(15, 345);
             this.buttonRetirarProduto.Name = "buttonRetirarProduto";
             this.buttonRetirarProduto.Size = new System.Drawing.Size(100, 29);

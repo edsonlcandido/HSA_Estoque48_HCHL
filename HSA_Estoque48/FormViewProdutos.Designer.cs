@@ -78,7 +78,7 @@
             // 
             // buttonPesquisaPorDescricao
             // 
-            this.buttonPesquisaPorDescricao.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorDescricao.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
             this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(361, 66);
             this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
             this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
@@ -96,7 +96,7 @@
             // 
             // buttonPesquisaPorCodigo
             // 
-            this.buttonPesquisaPorCodigo.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorCodigo.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
             this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(361, 28);
             this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
             this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);

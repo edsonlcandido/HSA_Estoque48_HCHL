@@ -188,7 +188,7 @@
             // 
             // buttonAdicionaProduto
             // 
-            this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Entrada16x16;
+            this.buttonAdicionaProduto.Image = global::HCHL_Inventario.Properties.Resources.Entrada16x16;
             this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 299);
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 29);

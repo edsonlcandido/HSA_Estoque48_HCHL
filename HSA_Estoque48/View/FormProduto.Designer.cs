@@ -307,7 +307,7 @@
             // 
             // buttonDeletarProduto
             // 
-            this.buttonDeletarProduto.Image = global::HSA_Estoque.Properties.Resources.Deletar16x16;
+            this.buttonDeletarProduto.Image = global::HCHL_Inventario.Properties.Resources.Deletar16x16;
             this.buttonDeletarProduto.Location = new System.Drawing.Point(472, 477);
             this.buttonDeletarProduto.Name = "buttonDeletarProduto";
             this.buttonDeletarProduto.Size = new System.Drawing.Size(100, 32);
@@ -319,7 +319,7 @@
             // 
             // buttonEditarProduto
             // 
-            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.Editar16x16;
+            this.buttonEditarProduto.Image = global::HCHL_Inventario.Properties.Resources.Editar16x16;
             this.buttonEditarProduto.Location = new System.Drawing.Point(121, 477);
             this.buttonEditarProduto.Name = "buttonEditarProduto";
             this.buttonEditarProduto.Size = new System.Drawing.Size(100, 32);
@@ -331,7 +331,7 @@
             // 
             // buttonAdicionaProduto
             // 
-            this.buttonAdicionaProduto.Image = global::HSA_Estoque.Properties.Resources.Adiciona16x16;
+            this.buttonAdicionaProduto.Image = global::HCHL_Inventario.Properties.Resources.Adiciona16x16;
             this.buttonAdicionaProduto.Location = new System.Drawing.Point(15, 477);
             this.buttonAdicionaProduto.Name = "buttonAdicionaProduto";
             this.buttonAdicionaProduto.Size = new System.Drawing.Size(100, 32);

@@ -8,8 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1CDA331D-FA1F-4DBA-BA8C-131A30F033E8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HSA_Estoque</RootNamespace>
-    <AssemblyName>HSA_Estoque</AssemblyName>
+    <RootNamespace>HCHL_Inventario</RootNamespace>
+    <AssemblyName>HCHL_Inventario</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

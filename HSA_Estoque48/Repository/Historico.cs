@@ -11,7 +11,7 @@ namespace HSA_Estoque.Repository
 {
     public class Historico : IHistoricoRepository
     {
-        string CONNECTIONSTRING = HSA_Estoque.Properties.Settings.Default["ConnectionString"].ToString();
+        string CONNECTIONSTRING = HCHL_Inventario.Properties.Settings.Default["ConnectionString"].ToString();
         public int Add(Model.Historico modelHistorico)
         {
             int last_id;

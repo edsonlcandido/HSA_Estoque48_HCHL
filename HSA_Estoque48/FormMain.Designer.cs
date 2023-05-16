@@ -172,7 +172,7 @@
             // 
             this.buttonEditarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarProduto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditarProduto.Image = global::HSA_Estoque.Properties.Resources.EditarProduto32x32;
+            this.buttonEditarProduto.Image = global::HCHL_Inventario.Properties.Resources.EditarProduto32x32;
             this.buttonEditarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEditarProduto.Location = new System.Drawing.Point(5, 355);
             this.buttonEditarProduto.Name = "buttonEditarProduto";
@@ -188,7 +188,7 @@
             // 
             this.buttonCadastrarNovoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCadastrarNovoProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrarNovoProduto.Image = global::HSA_Estoque.Properties.Resources.CadastrarProduto32x32;
+            this.buttonCadastrarNovoProduto.Image = global::HCHL_Inventario.Properties.Resources.CadastrarProduto32x32;
             this.buttonCadastrarNovoProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrarNovoProduto.Location = new System.Drawing.Point(5, 273);
             this.buttonCadastrarNovoProduto.Name = "buttonCadastrarNovoProduto";
@@ -204,7 +204,7 @@
             // 
             this.buttonSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaidaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaidaEstoque.Image = global::HSA_Estoque.Properties.Resources.Saida32x32;
+            this.buttonSaidaEstoque.Image = global::HCHL_Inventario.Properties.Resources.Saida32x32;
             this.buttonSaidaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaidaEstoque.Location = new System.Drawing.Point(5, 191);
             this.buttonSaidaEstoque.Name = "buttonSaidaEstoque";
@@ -231,7 +231,7 @@
             // 
             this.buttonEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEntradaEstoque.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEntradaEstoque.Image = global::HSA_Estoque.Properties.Resources.Entrada32x32;
+            this.buttonEntradaEstoque.Image = global::HCHL_Inventario.Properties.Resources.Entrada32x32;
             this.buttonEntradaEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEntradaEstoque.Location = new System.Drawing.Point(5, 109);
             this.buttonEntradaEstoque.Name = "buttonEntradaEstoque";
@@ -426,7 +426,7 @@
             // 
             // buttonPesquisaPorDescricao
             // 
-            this.buttonPesquisaPorDescricao.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorDescricao.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
             this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(378, 66);
             this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
             this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
@@ -444,7 +444,7 @@
             // 
             // buttonPesquisaPorCodigo
             // 
-            this.buttonPesquisaPorCodigo.Image = global::HSA_Estoque.Properties.Resources.Pesquisar16x16;
+            this.buttonPesquisaPorCodigo.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
             this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(378, 28);
             this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
             this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
