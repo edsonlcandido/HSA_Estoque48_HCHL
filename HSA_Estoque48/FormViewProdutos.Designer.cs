@@ -39,12 +39,12 @@
             this.textBoxPesquisaPorCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localizacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
@@ -61,25 +61,25 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 154);
+            this.groupBox1.Size = new System.Drawing.Size(424, 154);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisa produto";
+            this.groupBox1.Text = "Búsqueda por producto";
             // 
             // buttonLimparFiltro
             // 
-            this.buttonLimparFiltro.Location = new System.Drawing.Point(93, 111);
+            this.buttonLimparFiltro.Location = new System.Drawing.Point(140, 111);
             this.buttonLimparFiltro.Name = "buttonLimparFiltro";
             this.buttonLimparFiltro.Size = new System.Drawing.Size(112, 29);
             this.buttonLimparFiltro.TabIndex = 10;
-            this.buttonLimparFiltro.Text = "Limpar filtro";
+            this.buttonLimparFiltro.Text = "Limpiar filtro";
             this.buttonLimparFiltro.UseVisualStyleBackColor = true;
             this.buttonLimparFiltro.Click += new System.EventHandler(this.buttonLimparFiltro_Click);
             // 
             // buttonPesquisaPorDescricao
             // 
             this.buttonPesquisaPorDescricao.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
-            this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(361, 66);
+            this.buttonPesquisaPorDescricao.Location = new System.Drawing.Point(376, 66);
             this.buttonPesquisaPorDescricao.Name = "buttonPesquisaPorDescricao";
             this.buttonPesquisaPorDescricao.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorDescricao.TabIndex = 9;
@@ -89,7 +89,7 @@
             // textBoxPesquisaPordescricao
             // 
             this.textBoxPesquisaPordescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxPesquisaPordescricao.Location = new System.Drawing.Point(93, 69);
+            this.textBoxPesquisaPordescricao.Location = new System.Drawing.Point(108, 69);
             this.textBoxPesquisaPordescricao.Name = "textBoxPesquisaPordescricao";
             this.textBoxPesquisaPordescricao.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPordescricao.TabIndex = 8;
@@ -97,7 +97,7 @@
             // buttonPesquisaPorCodigo
             // 
             this.buttonPesquisaPorCodigo.Image = global::HCHL_Inventario.Properties.Resources.Pesquisar16x16;
-            this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(361, 28);
+            this.buttonPesquisaPorCodigo.Location = new System.Drawing.Point(376, 28);
             this.buttonPesquisaPorCodigo.Name = "buttonPesquisaPorCodigo";
             this.buttonPesquisaPorCodigo.Size = new System.Drawing.Size(32, 32);
             this.buttonPesquisaPorCodigo.TabIndex = 2;
@@ -109,13 +109,13 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(7, 73);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 18);
+            this.label11.Size = new System.Drawing.Size(92, 18);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Descrição";
+            this.label11.Text = "Descripción";
             // 
             // textBoxPesquisaPorCodigo
             // 
-            this.textBoxPesquisaPorCodigo.Location = new System.Drawing.Point(93, 31);
+            this.textBoxPesquisaPorCodigo.Location = new System.Drawing.Point(108, 31);
             this.textBoxPesquisaPorCodigo.Name = "textBoxPesquisaPorCodigo";
             this.textBoxPesquisaPorCodigo.Size = new System.Drawing.Size(262, 26);
             this.textBoxPesquisaPorCodigo.TabIndex = 1;
@@ -153,6 +153,10 @@
             this.dataGridViewProdutos.Size = new System.Drawing.Size(984, 545);
             this.dataGridViewProdutos.TabIndex = 8;
             // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -166,14 +170,14 @@
             // 
             this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quantidadeTotalDataGridViewTextBoxColumn
             // 
             this.quantidadeTotalDataGridViewTextBoxColumn.DataPropertyName = "quantidadeTotal";
-            this.quantidadeTotalDataGridViewTextBoxColumn.HeaderText = "Qtd. atual";
+            this.quantidadeTotalDataGridViewTextBoxColumn.HeaderText = "Cant. atual";
             this.quantidadeTotalDataGridViewTextBoxColumn.Name = "quantidadeTotalDataGridViewTextBoxColumn";
             this.quantidadeTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -181,21 +185,17 @@
             // 
             this.localizacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.localizacaoDataGridViewTextBoxColumn.DataPropertyName = "localizacao";
-            this.localizacaoDataGridViewTextBoxColumn.HeaderText = "Localização";
+            this.localizacaoDataGridViewTextBoxColumn.HeaderText = "Unicación";
             this.localizacaoDataGridViewTextBoxColumn.Name = "localizacaoDataGridViewTextBoxColumn";
             this.localizacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.localizacaoDataGridViewTextBoxColumn.Width = 117;
+            this.localizacaoDataGridViewTextBoxColumn.Width = 102;
             // 
             // caixaDataGridViewTextBoxColumn
             // 
             this.caixaDataGridViewTextBoxColumn.DataPropertyName = "caixa";
-            this.caixaDataGridViewTextBoxColumn.HeaderText = "Caixa";
+            this.caixaDataGridViewTextBoxColumn.HeaderText = "Caja";
             this.caixaDataGridViewTextBoxColumn.Name = "caixaDataGridViewTextBoxColumn";
             this.caixaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(HSA_Estoque.Model.Produto);
             // 
             // FormViewProdutos
             // 
@@ -208,7 +208,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormViewProdutos";
-            this.Text = "HSA Estoque - visualizar insumos";
+            this.Text = "HCHL Inventario - ver insumos";
             this.Load += new System.EventHandler(this.FormViewProdutos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -229,11 +229,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridViewProdutos;
         private System.Windows.Forms.BindingSource produtoBindingSource;
+        private System.Windows.Forms.Button buttonLimparFiltro;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeTotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn localizacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn caixaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonLimparFiltro;
     }
 }
